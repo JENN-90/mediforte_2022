@@ -1,0 +1,303 @@
+.input-box {
+    position: relative;
+    overflow: hidden;
+
+    &:not(:nth-of-type(1)) {
+        margin-top: 14px;
+    }
+
+
+    &.input-btn-idcheck {
+        input {
+            width: calc(100% - 110px);
+        }
+
+        .btn-check {
+            background: #4D5E5F;
+            color: #fff;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 48px;
+            width: 111px;
+            font-size: 1.6rem;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+}
+
+//링크텍스트 (a > 화살표)
+.txt-arr-bl {
+    color: #555555;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    span {
+        display: inline-block;
+        position: relative;
+        padding-right: 15px;
+
+        &::after {
+            content: '';
+            width: 6px;
+            height: 10px;
+            background: url('../images/ic_arrow_right_blue.svg');
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -5px
+        }
+    }
+}
+
+
+.bg-wavebox {
+    background: #5FA3C1;
+    position: relative;
+    padding-top: 70px;
+    margin-top: 50px;
+    height: calc(100% - 200px);
+    padding-left: 24px;
+    padding-right: 24px;
+
+    &::before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 64px;
+        background: #fff url('../images/mypage_wave_bg.png') repeat center -50px;
+    }
+}
+
+
+.title01 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.05em;
+}
+
+.title02 {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #314057;
+}
+
+.txt {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    letter-spacing: -0.08em;
+    color: #707070;
+
+}
+
+.policy {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+
+    a:first-child {
+        margin-right: 14px;
+    }
+
+}
+
+//회원가입동의
+.check-agree {
+    background: #F4F4F4;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 12px 24px 12px 27px;
+    margin-top: 9px;
+}
+
+//자동로그인
+.check-auto {
+    margin-top: 56px;
+    margin-left: 2px;
+}
+
+//로봇이 아닙니다.
+.check-robot {
+    background: #F4F4F4;
+    margin-top: 20px;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 21px 24px 19px 27px;
+
+}
+
+.check-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #707070;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-right: 22px;
+    line-height: 1.4;
+    word-break: keep-all;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked~.checkmark::after {
+            display: block;
+        }
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: #fff;
+        border: 1px solid #707070;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: -1px;
+            top: -1px;
+            width: 16px;
+            height: 16px;
+            background: url('../images/checkmark_dark.svg') no-repeat center / 10px;
+        }
+    }
+
+}
+
+//회원가입, 로그인페이지의 버튼영역 
+.btn-area {
+    margin-top: 24px;
+    text-align: center;
+
+    .btn-confirm {
+        width: 91%;
+    }
+
+    .btn-login {
+        display: block;
+    }
+}
+
+//비밀번호찾기, 아이디찾기 헬프영역 
+.login-help {
+    margin-top: 38px;
+
+    a {
+        margin-bottom: 13px;
+    }
+}
+
+//SNS로그인 버튼
+
+.login-sis-title {
+    color: #707070;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.btn-login-sns {
+    width: 100%;
+
+    margin-top: 18px;
+    display: block;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 400;
+    height: 55px;
+    padding-top: 15px;
+    padding-left: 84px;
+    border-radius: 55px;
+
+    &::before {
+        content: '';
+        width: 70px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &--kakao {
+        background: #F8E800;
+        color: #391B1B;
+        border: 1px solid #F1E958;
+
+        &::before {
+            background-image: url('../images/ic_kakao.svg');
+            background-position-x: 27px;
+        }
+    }
+
+    &--naver {
+        background: #03CF5D;
+        border: 1px solid #04C75A;
+        color: #fff;
+        font-weight: 900;
+
+        &::before {
+            background-image: url('../images/ic_naver.svg');
+            border-right: 1px solid #04C75A;
+            background-position-x: 30px;
+        }
+    }
+}
+
+
+////table 
+.tb-type01 {
+    table {
+        width: 100%;
+        table-layout: fixed;
+        font-size: 1.4rem;
+        color: #fff;
+        letter-spacing: -0.05em;
+
+
+        th,
+        td {
+            padding: 15px 9px;
+        }
+
+        thead th {
+            background: #AFD1E0;
+            color: #326D8F;
+            font-weight: 700;
+        }
+
+        tbody {
+            color: #fff;
+
+            td,
+            th {
+                border-bottom: 1px solid rgba($color: #fff, $alpha: 0.5);
+                padding: 15px 7px;
+            }
+
+            b {
+                font-weight: 700;
+            }
+        }
+    }
+}
