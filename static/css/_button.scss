@@ -1,0 +1,54 @@
+
+.btn {
+    display: block;
+    font-size: 1.4rem;
+
+    //Designed Components  
+    &--round {
+        border-radius: 4rem;
+        padding: 4px 23px
+    }
+
+    &--round-s {
+        border-radius: 5px;
+        padding: 4px 23px
+    }
+
+    &--black {
+        background: #333;
+        color: #ffff;
+    }
+
+    &--lgray {
+        background: #e5e5e5;
+        color: #333;
+    }
+
+    //Control
+    &-prev--arrow {
+        width: 24px;
+        height: 24px;
+        background: url('../images/ic_prev.svg') no-repeat center
+    }
+
+    &-search {
+        width: 24px;
+        height: 24px;
+        background: url('../images/ic_search.svg') no-repeat center;
+    }
+
+    &-mute-alert {
+        width: 16px;
+        height: 16px;
+        background: #fff url('../images/ic_bell.svg') no-repeat center / 16px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: -1px;
+        border: 0;
+        padding: 0;
+
+        &.is-mute {
+            background-image: url('../images/ic_bell_mute.svg')
+        }
+    }
+}

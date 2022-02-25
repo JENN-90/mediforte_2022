@@ -1,10 +1,17 @@
 (() => {
 
     const body = document.querySelector('body');
-    const openMenu = document.querySelector('.btn-menu');
-    const closenMenu = document.querySelector('.btn-close-menu');
-    const menuContainer = document.querySelector('.menu-container');
-    const subHeader = document.querySelector('.subpage .main-header');
+    const chat_mute = document.querySelectorAll('.btn-mute-alert'); 
+    
+    chat_mute.forEach(e => { 
+        e.addEventListener('click' , (event) => {
+           if(e.classList.contains('is-mute')) {
+                e.classList.remove('is-mute')
+           }else{
+            e.classList.add('is-mute')
+           }
+        });
+    })
     // openMenu.addEventListener('click', function (e) {
     //     e.preventDefault();
     //     menuContainer.style.display = "block";
@@ -24,13 +31,7 @@
 
     window.addEventListener('scroll', (e) => {
         ///console.log(pageYOffset);
-        //if (pageYOffset > 0 && ((body.scrollHeight - window.innerHeight) > 200)) {
-       
-        // if (pageYOffset > 64) {
-        //     subHeader.classList.add('fixed')
-        // } else {
-        //     subHeader.classList.remove('fixed')
-        // }
+        //if (pageYOffset > 0 && ((body.scrollHeight - window.innerHeight) > 200))
     });
 
     
