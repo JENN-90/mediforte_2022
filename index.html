@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keyword" content="Mediforte">
+        <meta name="description" content="Mediforte">
+        <meta name="author" content="Mediforte">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
+        <link rel="stylesheet" href="static/css/swiper.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
+        <title>메디포르테</title>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="header__logo">
+                <h1 class="logo"><a href="index.html"><img src="static/images/logo.png" alt="mediforte"></a></h1>
+                <a href="#" class="header__lang header__lang--kor"><span>KOR</span></a>
+            </div>
+
+            <div class="header__search-equip">
+                <a href="#"><span>장비검색하기</span></a>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#">메디포르테 소개</a></li>
+                    <li><a href="#">구매하기</a></li>
+                    <li><a href="#">판매하기</a></li>
+                    <li><a href="#">브랜드관</a></li>
+                    <li><a href="#">뉴스&리뷰</a></li>
+                    <li><a href="#">멤버쉽</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__user">
+                <a href="#" class="header__user__name"><strong>홍길동</strong> 님</a>
+                <button type="button" class="header__user__quick-btn js-open-quick"><span
+                        class="quick-count">33</span></button>
+                <div class="header__quick-container js-quick-container">
+                    <p class="header__quick-status">
+                        홍길동님 <br>
+                        <strong>35개 메시지</strong>가 와있습니다.
+                    </p>
+                    <ul class="header__quick-list">
+                        <li class="header__quick-item header__quick-item--meditalk"><a href="#">메디톡
+                                <strong>(7)</strong></a></li>
+                        <li class="header__quick-item header__quick-item--mycart"><a href="#">마이카트
+                                <strong>(7)</strong></a></li>
+                        <li class="header__quick-item header__quick-item--buy"><a href="#">구매 <strong>(7)</strong></a>
+                        </li>
+                        <li class="header__quick-item header__quick-item--sales"><a href="#">판매 <strong>(7)</strong></a>
+                        </li>
+                        <li class="header__quick-item header__quick-item--calculate"><a href="#">정산
+                                <strong>(7)</strong></a></li>
+                        <li class="header__quick-item header__quick-item--curation"><a href="#">메디큐레이션
+                                <strong>(7)</strong></a></li>
+                        <li class="header__quick-item header__quick-item--mystore"><a href="#">마이스토어</a></li>
+                        <li class="header__quick-item header__quick-item--account"><a href="#">계정</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#" class="header__btn-menu"><span class="blind">모바일메뉴</span></a>
+            <div class="mobile-menu">
+                <div class="container">
+
+                    <a href="#" class="logo-m"><img src="static/images/logo.png" alt="mediforte"></a>
+                    <ul class="menulist">
+                        <li><a href="#">메디포르테 소개</a></li>
+                        <li><a href="#">구매하기</a></li>
+                        <li><a href="#">판매하기</a></li>
+                        <li><a href="#">브랜드관</a></li>
+                        <li><a href="#">뉴스&리뷰</a></li>
+                        <li><a href="#">멤버쉽</a></li>
+                        <li><a href="#">마이페이지</a></li>
+                    </ul>
+                    <ul class="login-menu">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">체험기</a></li>
+                    </ul>
+                    <div class="lang">
+                        <p>LANGUAGE</p>
+                        <ul class="lang-sel">
+                            <li><a href="#">english</a></li>
+                            <li><a href="#">korean</a></li>
+                        </ul>
+                    </div>
+                    <p class="m-contact"><span class="icm-call"><span class="path1"></span><span
+                                class="path2"></span></span>
+                        1588-1588</p>
+                    <!--모바일메뉴닫기-->
+                    <a href="#" class="close-all"><span></span><span></span></a>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero__container">
+                <p class="hero__text">믿을 수 있는 중고의료기기 구매</p>
+                <p class="hero__text"><b>‘메디포르테’</b>와 <b>‘메디큐레이터’</b>가 도와드립니다.</p>
+
+                <div class="hero__search">
+                    <div class="search-select search-select--category">
+                        <select name="selectCategory" id="selectCategory">
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                        </select>
+                    </div>
+                    <div class="search-select search-select--brand">
+                        <select name="selectBrand" id="selectBrand">
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                        </select>
+                    </div>
+                    <div class="search-input">
+                        <input type="text" placeholder="키워드 입력하세요" title="키워드">
+                    </div>
+                    <button type="button" class="go-search"><span>검색하기</span></button>
+                </div>
+
+                <i class="ic-scroll"><span class="blind">scroll down</span></i>
+            </div>
+        </section>
+        <section class="medi-info">
+            <div class="medi-info__core">
+                <div class="core__text-wrap">
+                    <h3>메디포르테는?</h3>
+                    <p class="core__text">의료기기 전문 유통플렛폼입니다.</p>
+                    <p class="core__text2">차별화된 플랫폼 기술과 서비스로 <br>국내외 중고 의료기기의 합리적 선순환 <br>유통을 이끌어갑니다.</p>
+                </div>
+
+                <div class="swiper core-product">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="static/images/main_prd_slide_01.png" alt="RevLite SI">
+                            <p class="core-product__title">RevLite SI</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="static/images/main_prd_slide_01.png" alt="RevLite SI">
+                            <p class="core-product__title">RevLite SI</p>
+                        </div>
+                    </div>
+                    <div class="core-product-next"></div>
+                    <div class="core-product-prev"></div>
+                </div>
+            </div>
+
+            <div class="medi-info__business">
+                <ul>
+                    <li class="business__item">
+                        <i class="icon icon__meditalk"></i>
+                        <dl>
+                            <dt>
+                                <p><span>실시간 상담</span></p> <img src="static/images/main_prd_txt01.png" alt="메디톡">
+                            </dt>
+                            <dd>전문딜러와의 1:1 실시간 상담으로 궁금하신 내용을 바로바로 확인하세요. <br>간편하고 쉬운 메디톡은 제품상담을 더욱 편리하게 도와드립니다. </dd>
+                        </dl>
+                    </li>
+                    <li class="business__item">
+                        <i class="icon icon__medicro"></i>
+                        <dl>
+                            <dt>
+                                <p><span>안전한 매매대금보호 서비스 </span></p> <img src="static/images/main_prd_txt02.png"
+                                    alt="메디크로">
+                            </dt>
+                            <dd>메디포르테는 업계 유일의 안전보호 서비스를 제공합니다. <br>의료기기를 구매하여 제품을 확인하고 검수가 마무리되면 대금이 지급됩니다. </dd>
+                        </dl>
+                    </li>
+                    <li class="business__item">
+                        <i class="icon icon__medidemo"></i>
+                        <dl>
+                            <dt>
+                                <p><span>데모 후 구매 서비스</span> </p> <img src="static/images/main_prd_txt03.png" alt="메디데모">
+                            </dt>
+                            <dd>중고의료기기라 할지라도 성능을 시험해 보실 수 있습니다. <br>메디포르테의 전문 딜러들은 검증된 장비를 데모후 구매가 가능하도록 데모서비스를 제공합니다.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="business__item">
+                        <i class="icon icon__medicurator"></i>
+                        <dl>
+                            <dt>
+                                <p><span>메디포르테와 의사회원들이</span><br><span>인정한 전문딜러</span></p> <img
+                                    src="static/images/main_prd_txt04.png" alt="“메디큐레이터”">
+                            </dt>
+                            <dd>메디포르테에서는 자격과 능력이 검증되신 전문 딜러님들이 활동하고 계십니다. <br>또한 의사회원님들이 추천하고 메디포르테가 인정하는 전문딜러들을
+                                <br>메디큐레이터라 합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="list-and"><img src="static/images/main_prd_txt_and.png" alt="and..."></li>
+                    <li class="business__item">
+                        <i class="icon icon__medicuration"></i>
+                        <dl>
+                            <dt>
+                                <p><span>메디포르테 자체</span><br><span>전문큐레이션 서비스</span></p> <img
+                                    src="static/images/main_prd_txt05.png" alt="전문큐레이션">
+                            </dt>
+                            <dd>메디포르테와 계약된 의료기기 회사들이 보유하고 있는 검증된 의료기기들을 <br>메디포르테가 직접 공급하며, A/S패키지 등을 이용해 완벽한 관리를 받으실 수
+                                있습니다. </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="medi-info__last">“이제 의료기기 유통방법의 혁신을 메디포르테가 이끌어갑니다.”</p>
+        </section>
+
+        <section class="main-medicurator">
+            <div class="main-medicurator__img"></div>
+            <div class="main-medicurator__text">
+                <h3>메디큐레이터란?</h3>
+                <p>메디포르테가 인증한 의료기기 전문딜러입니다. <br>판매 상담과 데모, 설치와 유지관리까지 <br>전반적인 서비스를 제공하는 전문가입니다.
+                </p>
+            </div>
+        </section>
+        <section class="main-review">
+            <div class="main-review__container">
+                <h3>이용후기</h3>
+                <div class="swiper review-slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide review-item">
+                            <div class="review__top">
+                                <div class="review__info">
+                                    <p class="review__avatar"><img src="static/images/chat_profile_base.png"
+                                            alt="avatar"></p>
+                                    <div class="review__name">
+                                        <strong>한*훈</strong>
+                                        <p class="review__date">2021.11.01</p>
+                                    </div>
+                                </div>
+
+                                <div class="review__rate">
+                                    <p class="dealer">김준식 딜러</p>
+                                    <div class="review__rate-star">
+                                        <span class="star star5"></span>
+                                        <i>강력추천!</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__btm">
+                                <p class="review__prd-name">피코슈어PicoSure레이저</p>
+                                <p class="review__buy-date">구입일 2021-10-20</p>
+                                <div class="review__comment">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro nostrum,
+                                        perspiciatis voluptatem ad pariatur veniam molestias odit nobis quisquam
+                                        deleniti ipsum. Harum iste obcaecati laudantium architecto ut eaque molestiae?
+                                        Ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide review-item">
+                            <div class="review__top">
+                                <div class="review__info">
+                                    <p class="review__avatar"><img src="static/images/chat_profile_base.png"
+                                            alt="avatar"></p>
+                                    <div class="review__name">
+                                        <strong>한*훈</strong>
+                                        <p class="review__date">2021.11.01</p>
+                                    </div>
+                                </div>
+
+                                <div class="review__rate">
+                                    <p class="dealer">김준식 딜러</p>
+                                    <div class="review__rate-star">
+                                        <span class="star star1"></span>
+                                        <i>강력추천!</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__btm">
+                                <p class="review__prd-name">피코슈어PicoSure레이저</p>
+                                <p class="review__buy-date">구입일 2021-10-20</p>
+                                <div class="review__comment">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro nostrum,
+                                        perspiciatis voluptatem ad pariatur veniam molestias odit nobis quisquam
+                                        deleniti ipsum. Harum iste obcaecati laudantium architecto ut eaque molestiae?
+                                        Ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide review-item">
+                            <div class="review__top">
+                                <div class="review__info">
+                                    <p class="review__avatar"><img src="static/images/chat_profile_base.png"
+                                            alt="avatar"></p>
+                                    <div class="review__name">
+                                        <strong>한*훈</strong>
+                                        <p class="review__date">2021.11.01</p>
+                                    </div>
+                                </div>
+
+                                <div class="review__rate">
+                                    <p class="dealer">김준식 딜러</p>
+                                    <div class="review__rate-star">
+                                        <span class="star star1"></span>
+                                        <i>강력추천!</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__btm">
+                                <p class="review__prd-name">피코슈어PicoSure레이저</p>
+                                <p class="review__buy-date">구입일 2021-10-20</p>
+                                <div class="review__comment">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro nostrum,
+                                        perspiciatis voluptatem ad pariatur veniam molestias odit nobis quisquam
+                                        deleniti ipsum. Harum iste obcaecati laudantium architecto ut eaque molestiae?
+                                        Ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide review-item">
+                            <div class="review__top">
+                                <div class="review__info">
+                                    <p class="review__avatar"><img src="static/images/chat_profile_base.png"
+                                            alt="avatar"></p>
+                                    <div class="review__name">
+                                        <strong>한*훈</strong>
+                                        <p class="review__date">2021.11.01</p>
+                                    </div>
+                                </div>
+
+                                <div class="review__rate">
+                                    <p class="dealer">김준식 딜러</p>
+                                    <div class="review__rate-star">
+                                        <span class="star star1"></span>
+                                        <i>강력추천!</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__btm">
+                                <p class="review__prd-name">피코슈어PicoSure레이저</p>
+                                <p class="review__buy-date">구입일 2021-10-20</p>
+                                <div class="review__comment">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro nostrum,
+                                        perspiciatis voluptatem ad pariatur veniam molestias odit nobis quisquam
+                                        deleniti ipsum. Harum iste obcaecati laudantium architecto ut eaque molestiae?
+                                        Ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide review-item">
+                            <div class="review__top">
+                                <div class="review__info">
+                                    <p class="review__avatar"><img src="static/images/chat_profile_base.png"
+                                            alt="avatar"></p>
+                                    <div class="review__name">
+                                        <strong>한*훈</strong>
+                                        <p class="review__date">2021.11.01</p>
+                                    </div>
+                                </div>
+
+                                <div class="review__rate">
+                                    <p class="dealer">김준식 딜러</p>
+                                    <div class="review__rate-star">
+                                        <span class="star star1"></span>
+                                        <i>강력추천!</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__btm">
+                                <p class="review__prd-name">피코슈어PicoSure레이저</p>
+                                <p class="review__buy-date">구입일 2021-10-20</p>
+                                <div class="review__comment">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro nostrum,
+                                        perspiciatis voluptatem ad pariatur veniam molestias odit nobis quisquam
+                                        deleniti ipsum. Harum iste obcaecati laudantium architecto ut eaque molestiae?
+                                        Ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide review-item">
+                            <div class="review__top">
+                                <div class="review__info">
+                                    <p class="review__avatar"><img src="static/images/chat_profile_base.png"
+                                            alt="avatar"></p>
+                                    <div class="review__name">
+                                        <strong>한*훈</strong>
+                                        <p class="review__date">2021.11.01</p>
+                                    </div>
+                                </div>
+
+                                <div class="review__rate">
+                                    <p class="dealer">김준식 딜러</p>
+                                    <div class="review__rate-star">
+                                        <span class="star star1"></span>
+                                        <i>강력추천!</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__btm">
+                                <p class="review__prd-name">피코슈어PicoSure레이저</p>
+                                <p class="review__buy-date">구입일 2021-10-20</p>
+                                <div class="review__comment">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro nostrum,
+                                        perspiciatis voluptatem ad pariatur veniam molestias odit nobis quisquam
+                                        deleniti ipsum. Harum iste obcaecati laudantium architecto ut eaque molestiae?
+                                        Ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-sns">
+            <h3>#SNS 소통</h3>
+            <div class="sns-tab">
+                <a href="#" class="sns-tab__facebook js-sns-tab active" data-sns="facebook">
+                    <i class="sns-name">페이스북</i>
+                    <i class="icon"></i>
+                </a>
+                <a href="#" class="sns-tab__blog js-sns-tab" data-sns="blog">
+                    <i class="sns-name">블로그</i>
+                    <i class="icon"></i>
+                </a>
+                <a href="#" class="sns-tab__youtube js-sns-tab" data-sns="youtube">
+                    <i class="sns-name">유튜브</i>
+                    <i class="icon"></i>
+                </a>
+
+                <a href="#" class="sns-tab__instagram"><i class="icon"></i> <i class="blind">인스타그램 새창이동</i></a>
+            </div>
+            <div class="swiper sns-list">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide sns-item sns-item--facebook" data-sns="facebook">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample3.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 사용방법에 대한 동영상사용방법에 대한 동영상사용방법에 대한 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sns-item sns-item--facebook" data-sns="facebook">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample3.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 사용방법에 대한 동영상사용방법에 대한 동영상사용방법에 대한 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sns-item sns-item--facebook" data-sns="facebook">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample3.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 사용방법에 대한 동영상사용방법에 대한 동영상사용방법에 대한 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sns-item sns-item--facebook" data-sns="facebook">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample3.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sns-item sns-item--facebook" data-sns="facebook">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample3.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 사용방법에 대한 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sns-item sns-item--blog" data-sns="youtube">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 사용방법에 대한 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sns-item sns-item--blog" data-sns="youtube">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 사용방법에 대한 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sns-item sns-item--blog" data-sns="youtube">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 사용방법에 대한 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sns-item sns-item--blog" data-sns="blog">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample2.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 사용방법에 대한 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sns-item sns-item--blog" data-sns="blog">
+                        <div class="sns-item__thumb">
+                            <img src="static/images/sample3.png" alt="sns thumb">
+                        </div>
+                        <div class="sns-item__desc">
+                            <p class="sns-item__title">콴타코리아의 루비레이져 사용방법에 대한 동영상</p>
+                            <p class="sns-item__date">2020-10-20</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="core-product-next"></div>
+                <div class="core-product-prev"></div>
+            </div>
+        </section>
+
+        <section class="main-newsletter">
+            <div class="newsletter__container">
+                <h3>메디포르테 뉴스레터신청하기 </h3>
+                <div class="newsletter__form">
+                    <div class="inputbox"><input type="text" placeholder="이메일 주소를 입력해주세요"></div>
+                    <button type="button">구독하기</button>
+                </div>
+            </div>
+        </section>
+        <section class="main-news">
+            <div class="news__title">
+                <h3>NEWS & NOTICE <span>다양한 소식을 쉽고 빠르게 만나보세요.</span></h3>
+                <div class="controls">
+                    <div class="core-product-next"></div>
+                    <div class="core-product-prev"></div>
+                </div>
+            </div>
+            <div class="news__container">
+                <div class="swiper news-list">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="static/images/main_prd_slide_01.png" alt="RevLite SI">
+                            <p class="core-product__title">RevLite SI</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="static/images/main_prd_slide_01.png" alt="RevLite SI">
+                            <p class="core-product__title">RevLite SI</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <script src="static/js/jquery-1.12.1.min.js"></script>
+        <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
+        <script src="static/js/swiper.min.js"></script>
+        <script src="static/js/front.js"></script>
+    </body>
+
+</html>

@@ -14,11 +14,13 @@ html {
     -webkit-text-size-adjust: 100%; //Prevent adjustments of font size after orientation changes in iOS.
 
     //custom
+    min-width: 360px;
     height: 100%;
     -webkit-text-size-adjust: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 62.5%;
 
+    
     @media (max-width: 1024px) {
         font-size: 9.5px;
     }
@@ -47,6 +49,7 @@ html {
         letter-spacing: -0.4px;
         color: var(--gray-700);
         height: calc(var(--vh, 1vh) * 100);
+        
     }
 }
 

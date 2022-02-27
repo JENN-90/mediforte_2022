@@ -1,3 +1,30 @@
+.btn-open-chat {
+     width: 60px; height: 60px; 
+     background-color: #242428;
+     border-radius: 100%; 
+     position: fixed; 
+     right: 25px; bottom: 25px; 
+     background-image: url('../images/chat_button.png');
+     background-repeat: no-repeat; 
+     background-position: center;
+     box-shadow: 2px 5px 0 rgba($color: #000000, $alpha: 0.1);
+     cursor: pointer;
+
+     .chat-counter {
+        position: absolute; 
+        right: -5px; top: -7px;
+        background: #ee0c39; 
+        width: 23px;
+        height: 23px;
+        line-height: 23px; 
+        font-style: normal;
+        border-radius: 100%; 
+        text-align: center; 
+        color:#fff;
+        font-size: 12px;
+     }
+}
+
 
 .btn {
     display: block;
@@ -23,6 +50,11 @@
         background: #e5e5e5;
         color: #333;
     }
+        &--white {
+            background: #fff;
+            color: #333;
+            text-align: center;
+        }
 
     //Control
     &-prev--arrow {
@@ -40,15 +72,17 @@
     &-mute-alert {
         width: 16px;
         height: 16px;
-        background: #fff url('../images/ic_bell.svg') no-repeat center / 16px;
+        background: #fff url('../images/ic_mute_n.svg') no-repeat center / 24px;
         display: inline-block;
         vertical-align: top;
         margin-top: -1px;
         border: 0;
         padding: 0;
+        margin-left: 3px;
+        cursor: pointer;
 
         &.is-mute {
-            background-image: url('../images/ic_bell_mute.svg')
+            background-image: url('../images/ic_mute_y.svg')
         }
     }
 }

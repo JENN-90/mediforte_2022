@@ -71,7 +71,7 @@
 
 //@include ellipsis-milti(max-height, line-clamp)
 @mixin ellipsis-multi($max-height, $line-clamp) {
-	white-space: nowrap;
+	//white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
     display: -webkit-box;
@@ -140,6 +140,8 @@ $breakpoints: (
 	"tablet2": 830px,
 	"tablet-wide": 1024px,
 	"custom12": 1200px,
+	"custom13": 1360px,
+	"custom14": 1400px,
 	"custom16": 1600px,
 	"custom19": 1920px,
 );

@@ -1,82 +1,257 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keyword" content="Mediforte">
-    <meta name="description" content="Mediforte">
-    <meta name="author" content="Mediforte">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
-    <title>messenger app ui</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keyword" content="Mediforte">
+        <meta name="description" content="Mediforte">
+        <meta name="author" content="Mediforte">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
+        <title>메디포르테</title>
+    </head>
 
-<body>
+    <body>
 
-
-    <div class="chat chat--list">
-        <div class="chat__header">
-            <a href="#" class="open-chat-option js-chat-opt"><span class="blind">채팅메뉴열기</span></a>
-            <a href="#" class="close-chat js-chat-close"><span class="blind">채팅메뉴열기</span></a>
+        <div class="btn-open-chat js-open-chat">
+            <span class="blind">채팅하기</span>
+            <i class="chat-counter">3</i>
         </div>
-        <div class="chat-product">
-            <div class="chat-product__thumb">
-                <img src="static/images/sample.png" alt="sample">
+        <div class="chat chat--list-home" style="display: block;">
+            <div class="chat__header">
+                <a href="#" class="open-chat-option js-chat-opt"><span class="blind">채팅메뉴열기</span></a>
+                <div class="chat__opt">
+                    <button type="button" class="chat__opt--notify js-alert-notify">알람켜기</button>
+                    <button type="button" class="chat__opt--block js-alert-block">차단</button>
+                    <button type="button" class="chat__opt--report js-alert-report">신고</button>
+                    <button type="button" class="chat__opt--exit js-alert-exit">나가기</button>
+                </div>
+                <a href="#" class="close-chat js-chat-close"><span class="blind">채팅닫기</span></a>
             </div>
-            <dl class="chat-product__desc">
-                <dt>피코슈어PicoSure레이저</dt>
-                <dd class="price">18,900,000원</dd>
-            </dl>
-            <a href="#" class="btn btn--round btn--black">구매하기</a>
+            <div class="chat-product">
+                <div class="chat-product__thumb">
+                    <img src="static/images/sample.png" alt="sample">
+                </div>
+                <dl class="chat-product__desc">
+                    <dt>피코슈어PicoSure레이저</dt>
+                    <dd class="price">18,900,000원</dd>
+                </dl>
+                <a href="#" class="btn btn--round btn--black">구매하기</a>
+            </div>
+
+            <ul class="chat-list">
+                <li class="is-unread">
+                    <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
+                    <div class="chat-list__content">
+                        <p class="chat-list__nickname">이은정</p>
+                        <div class="chat-list__conv">
+                            <p>안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</p>
+                            <span class="chat-list__date">4일</span>
+                        </div>
+                    </div>
+                    <p class="chat-list__state"><i></i></p>
+                </li>
+                <li class="is-unread">
+                    <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
+                    <div class="chat-list__content">
+                        <p class="chat-list__nickname">이은정</p>
+                        <div class="chat-list__conv">
+                            <p>안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</p>
+                            <span class="chat-list__date">4일</span>
+                        </div>
+                    </div>
+                    <p class="chat-list__state"><i></i></p>
+                </li>
+                <li>
+                    <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
+                    <div class="chat-list__content">
+                        <p class="chat-list__nickname">이은정 <button type="button" class="btn-mute-alert"><span
+                                    class="blind">알림설정</span></button></p>
+                        <div class="chat-list__conv">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis non iusto exercitationem
+                                molestiae dolorem ea dolor eligendi officia atque omnis laborum eius veritatis cum,
+                                soluta
+                                nesciunt explicabo accusamus laudantium quisquam! </p>
+                            <span class="chat-list__date">4일</span>
+                        </div>
+                    </div>
+                    <p class="chat-list__state"><i></i></p>
+                </li>
+                <li>
+                    <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
+                    <div class="chat-list__content">
+                        <p class="chat-list__nickname">Byeongchang Lee <button type="button"
+                                class="btn-mute-alert is-mute"><span class="blind">알림설정</span></button></p>
+                        <div class="chat-list__conv">
+                            <p>You: 감사합니다. 즐건 주말 보내세요</p>
+                            <span class="chat-list__date">4일</span>
+                        </div>
+                    </div>
+                    <p class="chat-list__state"><i></i></p>
+                </li>
+                <li>
+                    <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
+                    <div class="chat-list__content">
+                        <p class="chat-list__nickname">Byeongchang Lee <button type="button"
+                                class="btn-mute-alert is-mute"><span class="blind">알림설정</span></button></p>
+                        <div class="chat-list__conv">
+                            <p>You: 감사합니다. 즐건 주말 보내세요</p>
+                            <span class="chat-list__date">4일</span>
+                        </div>
+                    </div>
+                    <p class="chat-list__state"><i></i></p>
+                </li>
+                <li>
+                    <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
+                    <div class="chat-list__content">
+                        <p class="chat-list__nickname">Byeongchang Lee <button type="button"
+                                class="btn-mute-alert is-mute"><span class="blind">알림설정</span></button></p>
+                        <div class="chat-list__conv">
+                            <p>You: 감사합니다. 즐건 주말 보내세요</p>
+                            <span class="chat-list__date">4일</span>
+                        </div>
+                    </div>
+                    <p class="chat-list__state"><i></i></p>
+                </li>
+                <li>
+                    <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
+                    <div class="chat-list__content">
+                        <p class="chat-list__nickname">Byeongchang Lee <button type="button"
+                                class="btn-mute-alert is-mute"><span class="blind">알림설정</span></button></p>
+                        <div class="chat-list__conv">
+                            <p>You: 감사합니다. 즐건 주말 보내세요</p>
+                            <span class="chat-list__date">4일</span>
+                        </div>
+                    </div>
+                    <p class="chat-list__state"><i></i></p>
+                </li>
+            </ul>
         </div>
 
-        <ul class="chat-list">
-            <li class="is-unread">
-                <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
-                <div class="chat-list__content">
-                    <p class="chat-list__nickname">이은정</p>
-                    <p class="chat-list__conv">안녕하세요 <span class="chat-list__date">4일</span></p>
+
+
+        <!-- alert message 1.notify  -->
+        <div class="chat-alert chat-alert--notify" style="display: none;">
+            <div class="chat-alert__box">
+                <div class="chat-alert__title">
+                    <h3>Jeong-Han Kim님과의 대화 알림설정을 하시겠습니까?</h3>
                 </div>
-                <p class="chat-list__state"><i></i></p>
-            </li>
-            <li class="is-unread">
-                <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
-                <div class="chat-list__content">
-                    <p class="chat-list__nickname">이은정</p>
-                    <p class="chat-list__conv">안녕하세요 <span class="chat-list__date">4일</span></p>
+                <div class="chat-alert__content">
+                    <p class="plain-text">상대방과 대화에 대한 알림설정을 하시겠습니까?</p>
+                    <button type="button" type="button"
+                        class="btn btn--round-s btn--lgray js-btn-notify">알림설정하기</button>
                 </div>
-                <p class="chat-list__state"><i></i></p>
-            </li>
-            <li>
-                <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
-                <div class="chat-list__content">
-                    <p class="chat-list__nickname">이은정 <button class="btn-mute-alert"><span
-                                class="blind">알림설정</span></button></p>
-                    <div class="chat-list__conv">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis non iusto exercitationem
-                            molestiae dolorem ea dolor eligendi officia atque omnis laborum eius veritatis cum, soluta
-                            nesciunt explicabo accusamus laudantium quisquam! </p>
-                        <span class="chat-list__date">4일</span>
-                    </div>
+                <p class="btn-close-alert js-close-alert"><span class="blind">닫기</span></p>
+            </div>
+        </div>
+
+        <!-- alert message 2.block -->
+        <div class="chat-alert chat-alert--block" style="display: none;">
+            <div class="chat-alert__box">
+                <div class="chat-alert__title">
+                    <h3>Jeong-Han Kim님을 차단하시겠습니까? </h3>
                 </div>
-                <p class="chat-list__state"><i></i></p>
-            </li>
-            <li>
-                <p class="chat-list__thumb"><img src="static/images/sample.png" alt="sample"></p>
-                <div class="chat-list__content">
-                    <p class="chat-list__nickname">이은정 <button class="btn-mute-alert is-mute"><span
-                                class="blind">알림설정</span></button></p>
-                    <p class="chat-list__conv">안녕하세요 <span class="chat-list__date">4일</span></p>
+                <div class="chat-alert__content">
+                    <p class="plain-text">차단 시 상대방과의 대화방은 삭제되며 <br>
+                        상대방이 내 상점과 상품에 댓글을 쓸 수 없게 됩니다.</p>
+                    <button type="button" class="btn btn--round-s btn--lgray js-btn-block">차단하기</button>
                 </div>
-                <p class="chat-list__state"><i></i></p>
-            </li>
-        </ul>
-    </div>
-    <script src="static/js/jquery-1.12.1.min.js"></script>
-    <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
-    <script src="static/js/front.js"></script>
-</body>
+                <p class="btn-close-alert js-close-alert"><span class="blind">닫기</span></p>
+            </div>
+        </div>
+
+
+        <!-- alert message 3.report -->
+        <div class="chat-alert chat-alert--report" style="display: none;">
+            <div class="chat-alert__box">
+                <div class="chat-alert__title chat-alert__title--warn">
+                    <h3>어떤 문제가 있는지 알려주세요 </h3>
+                </div>
+                <div class="chat-alert__content">
+                    <form action="">
+                        <ul class="report-select report-select-step1">
+                            <li class="report-select__list">
+                                <label for="reportSelectType1" class="radio-box">
+                                    <input type="radio" id="reportSelectType1" name="reportSelectType" checked>허위매물
+                                    <span class="checkmark radio-box__checkmark"></span>
+                                </label>
+                            </li>
+                            <li class="report-select__list"><label for="reportSelectType2" class="radio-box">
+                                    <input type="radio" id="reportSelectType2" name="reportSelectType">비매너행위
+                                    <span class="checkmark radio-box__checkmark"></span>
+                                </label>
+                                <ul class="report-select report-select-step2">
+                                    <li class="report-select__list"><label for="reportSelectType2_1" class="check-box">
+                                            <input type="checkbox" id="reportSelectType2_1">거래파기
+                                            <span class="checkmark check-box__checkmark"></span>
+                                        </label></li>
+                                    <li class="report-select__list"><label for="reportSelectType2_2" class="check-box">
+                                            <input type="checkbox" id="reportSelectType2_2">늦은 납품
+                                            <span class="checkmark check-box__checkmark"></span>
+                                        </label></li>
+                                    <li class="report-select__list"><label for="reportSelectType2_3" class="check-box">
+                                            <input type="checkbox" id="reportSelectType2_3">불친절한 응대
+                                            <span class="checkmark check-box__checkmark"></span>
+                                        </label></li>
+                                    <li class="report-select__list"><label for="reportSelectType2_4" class="check-box">
+                                            <input type="checkbox" id="reportSelectType2_4">기타
+                                            <span class="checkmark check-box__checkmark"></span>
+                                        </label></li>
+                                </ul>
+                            </li>
+                            <li class="report-select__list">
+                                <label for="reportSelectType3" class="radio-box">
+                                    <input type="radio" id="reportSelectType3" name="reportSelectType">언어폭력
+                                    <span class="checkmark radio-box__checkmark"></span>
+                                </label>
+                            </li>
+                            <li class="report-select__list">
+                                <label for="reportSelectType4" class="radio-box">
+                                    <input type="radio" id="reportSelectType4" name="reportSelectType">거래사기
+                                    <span class="checkmark radio-box__checkmark"></span>
+                                </label>
+                            </li>
+                            <li class="report-select__list">
+                                <label for="reportSelectType5" class="radio-box">
+                                    <input type="radio" id="reportSelectType5" name="reportSelectType">직거래 유도
+                                    <span class="checkmark radio-box__checkmark"></span>
+                                </label>
+                            </li>
+                            <li class="report-select__list">
+                                <label for="reportSelectType6" class="radio-box">
+                                    <input type="radio" id="reportSelectType6" name="reportSelectType">기타 사유
+                                    <span class="checkmark radio-box__checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+
+                        <button type="button" class="btn btn--round-s btn--lgray js-btn-report">신고하기</button>
+                    </form>
+                </div>
+                <p class="btn-close-alert js-close-alert"><span class="blind">닫기</span></p>
+            </div>
+        </div>
+
+        <!-- alert message 4.exit -->
+        <div class="chat-alert chat-alert--exit" style="display: none;">
+            <div class="chat-alert__box">
+                <div class="chat-alert__title">
+                    <h3>Jeong-Han Kim님과의 채팅방에서 나가시겠습니까?</h3>
+                </div>
+                <div class="chat-alert__content">
+                    <p class="plain-text">대화방을 나가시면 대화 내용이 모두 삭제가 됩니다. <br>
+                        대화방을 나가시겠습니까?</p>
+                    <button type="button" class="btn btn--round-s btn--lgray js-btn-exit">채팅방 나가기</button>
+                </div>
+                <p class="btn-close-alert js-close-alert"><span class="blind">닫기</span></p>
+            </div>
+        </div>
+
+        <script src="static/js/jquery-1.12.1.min.js"></script>
+        <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
+        <script src="static/js/front.js"></script>
+    </body>
 
 </html>
