@@ -1,0 +1,18 @@
+/* Header */
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0 20px 26px;
+    background-color: #fff;
+
+    &__logo {
+        width: 120px;
+        height: 24px;
+        background-position: 0 0;
+    }
+}
+

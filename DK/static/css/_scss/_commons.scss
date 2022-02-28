@@ -1,0 +1,9 @@
+.ic-sprite {
+    background-image: url('../images/ic_sprite.png');
+    background-repeat: no-repeat;
+}
+
+@mixin sprite {
+    background-image: url('../images/ic_sprite.png');
+    background-repeat: no-repeat;
+}

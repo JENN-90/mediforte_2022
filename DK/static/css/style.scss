@@ -1,0 +1,244 @@
+/* 
+    .btn  button 버튼타입
+    .js-  javascript 이벤트 핸들링이 필요한 경우/click, enter, scroll.. (js-open , js-scroll.. ) 
+    .is-  state 상태(read/unread, active/inactive ...)  
+*/
+
+@import '_scss/vars'; //color
+@import '_scss/mixins'; //mixin
+@import '_scss/nomalize'; //reset
+@import '_scss/commons'; //reset
+@import '_scss/header'; //reset
+
+
+/*
+        z-index
+        
+        btn-nav         101
+        lnb             100
+        header          200
+        skipToContent   9999
+
+*/
+
+
+/* Doc title */
+.doc-title {
+    height: 29px;
+    @include sprite;
+    margin-bottom: 23px;
+
+    &--popular {
+        width: 171px;
+        background-position: 0 -24px;
+    }
+}
+
+
+.contents-wrapper{
+    background: #f9f9f9;
+}
+.contents-inner {
+    max-width: 1010px;
+    background: #eee;
+    padding: 45px 30px 30px 38px;
+    transition: 0.3s;
+
+    //lnb 열림
+    &.is-lnbOpen {
+        padding-left: 241px;
+    }
+}
+
+/* Navigation */
+.btn-nav {
+    width: 28px;
+    height: 300px;
+    position: fixed;
+    top: 162px;
+    padding: 0;
+    left: 0;
+    z-index: 101;
+    background-color: #ffcc56;
+    border: 1px solid #f8bb4f;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 2px 3px rgba($color: #000000, $alpha: 0.26);
+    transition: 0.3s;
+
+    &.is-open {
+        left: 241px;
+
+        &::after {
+            transform: rotate(0) translate3D(-50%, -50%, 0);
+        }
+    }
+
+    &::after {
+        content: '';
+        width: 16px;
+        height: 24px;
+        @include sprite;
+        @include push--center;
+        transform-origin: left top;
+        background-position: 0 -179px;
+        transform: rotate(180deg) translate3D(-50%, -50%, 0);
+    }
+}
+
+.lnb {
+    position: fixed;
+    left: -241px;
+    top: 0;
+    z-index: 100;
+    width: 241px;
+    height: 100%;
+    border-right: 1px solid var(--border);
+    padding-top: 112px;
+    padding-left: 27px;
+    background-color: #fff;
+    transition: 0.3s;
+
+    &.is-open {
+        left: 0;
+    }
+
+    li {
+        &:not(:first-of-type) {
+            margin-top: 66px;
+        }
+    }
+
+    .nav-list__sub {
+        padding-left: 10px;
+
+        li {
+            margin-top: 21px;
+
+            &:not(:first-of-type) {
+                margin-top: 14px;
+            }
+        }
+
+        .nav__item {
+            height: 15px;
+        }
+    }
+
+    .nav__item {
+        display: block;
+        height: 17px;
+
+        //이미지글자 지정
+        &--popular {
+            width: 96px;
+            background-position: 0 -54px;
+        }
+
+        &--tag {
+            width: 31px;
+            background-position: 0 -101px;
+        }
+
+        //2차메뉴 
+        &--blog {
+            width: 73px;
+            background-position: 0 -71px;
+
+            &.is-selected {
+                background-position: -73px -71px;
+            }
+        }
+
+        &--story {
+            width: 68px;
+            background-position: 0 -87px;
+        }
+
+        &--reply {
+            width: 85px;
+            background-position: 0 -118px;
+        }
+
+        &--trip {
+            width: 59px;
+            background-position: 0 -133px;
+        }
+
+        &--issuepost {
+            width: 100px;
+            background-position: 0 -148px;
+        }
+
+        &--subs100 {
+            width: 72px;
+            background-position: 0 -163px;
+        }
+    }
+}
+
+
+.tabUI {
+    border-top: 2px solid #a6a8ab;
+
+    li {
+        background-color: #f3f3f5;
+        border-bottom: 1px solid #c6cbce;
+        border-left: 1px solid #c6ccce; 
+        transition: background 0.3s;
+
+        &:first-child{
+             border-left: 0; 
+        }
+
+        &.is-active {
+            background-color: #fff;
+            border-bottom: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__list--type2 {
+        >li {
+            width: 50%;
+            height: 46px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        >span {
+            display: block;
+            height: 15px;
+            line-height: 0;
+            text-indent: -9999px;
+            font-size: 0;
+            overflow: hidden;
+        }
+
+        &--blog {
+            width: 73px;
+            background-position: 0 -71px;
+        }
+
+        &--story {
+            width: 68px;
+            background-position: 0 -87px;
+        }
+    }
+
+    &__content {
+        padding: 20px 20px 20px 20px; 
+        background-color:#fff;
+    }
+}
+
