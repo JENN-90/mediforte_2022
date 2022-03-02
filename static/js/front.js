@@ -28,14 +28,151 @@
     const gnb_quick_cont = document.querySelector('.js-quick-container');
 
 
+    const partner_slide_stop = document.querySelector('.partner-pause');
+    const partner_slide_play = document.querySelector('.partner-play');
+
+    var main_product = new Swiper(".core-product", {
+        navigation: {
+            nextEl: ".core-product-next",
+            prevEl: ".core-product-prev",
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+
+    //REVIEW
+    var main_review = new Swiper(".review-slide", {
+        slidesPerView: 3,
+        spaceBetween: 7,
+        //slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 1.3,
+                spaceBetween: 10,
+            },
+        }
+    });
+
+    //SNS
+    var main_snslist_opt = {
+        slidesPerView: 7,
+        spaceBetween: 2,
+        //slidesPerGroup: 3,
+        //loop: true,
+        loopFillGroupWithBlank: true,
+        breakpoints: {
+            1880: {
+                slidesPerView: 6.2,
+
+            },
+            1700: {
+                slidesPerView: 5.5
+            },
+            1024: {
+                slidesPerView: 4.5
+            },
+            768: {
+                slidesPerView: 3.5
+            },
+            640: {
+                slidesPerView: 2.5
+            },
+            480: {
+                slidesPerView: 1.8
+            },
+        }
+    }
+
+
+    var main_snslist = new Swiper(".sns-list", main_snslist_opt);
+
+    snsButtons = $('.js-sns-tab');
+    snsWrapper = $('.sns-list .swiper-wrapper');
+    snsItem = $('.sns-item')
+
+    snsButtons.on('click', function (e) {
+        e.preventDefault();
+        snsButtons.removeClass('active')
+        $(this).addClass('active');
+
+        main_snslist.destroy();
+
+
+        var $this = $(this),
+            datasns = $this.attr('data-sns');
+
+
+        snsItem.remove();
+        snsWrapper.append(snsItem.filter(`[data-sns="${datasns}"]`));
+        main_snslist = new Swiper(".sns-list", main_snslist_opt);
+    });
+
+    var main_news = new Swiper(".news-list", {
+        navigation: {
+            nextEl: ".news-next",
+            prevEl: ".news-prev",
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+
+    var main_partners = new Swiper(".partner__list", {
+        navigation: {
+            nextEl: ".partner-next",
+            prevEl: ".partner-prev",
+        },
+        slidesPerView: 7,
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        breakpoints: {
+            1400: {
+                //slidesPerView: 5,
+                //spaceBetween: 20,
+            },
+        }
+    });
+
+
+
     window.addEventListener('click', (e) => {
         let tg = e.target;
 
-        // if (e.target !== e.currentTarget) {
-        //     let clickedItem = e.target.id;
-        //     //alert("Hello " + clickedItem);
-        // }
         // e.stopPropagation();
+        if (tg === partner_slide_stop) {
+            main_partners.autoplay.stop();
+        } else if (tg === partner_slide_play) {
+            main_partners.autoplay.start();
+        }
         if (tg === btn_mobile_menu) {
             console.log('block');
             menu_mobile.style.display = "block";
@@ -132,105 +269,7 @@
         return ($(selector).length > 0);
     }
 
-    var main_product = new Swiper(".core-product", {
-        navigation: {
-            nextEl: ".core-product-next",
-            prevEl: ".core-product-prev",
-        },
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        loop: true,
-    });
 
-    //REVIEW
-    var main_review = new Swiper(".review-slide", {
-        slidesPerView: 3,
-        spaceBetween: 7,
-        //slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            1024: {
-                slidesPerView: 1.3,
-                spaceBetween: 10,
-            },
-        }
-    });
-
-
-
-    //SNS
-    var main_snslist_opt = {
-        slidesPerView: 7,
-        spaceBetween: 2,
-        //slidesPerGroup: 3,
-        //loop: true,
-        loopFillGroupWithBlank: true,
-        breakpoints: {
-            1880: {
-                slidesPerView: 6.2,
-
-            },
-            1700: {
-                slidesPerView: 5.5
-            },
-            1024: {
-                slidesPerView: 4.5
-            },
-            768: {
-                slidesPerView: 3.5
-            },
-            640: {
-                slidesPerView: 2.5
-            },
-            480: {
-                slidesPerView: 1.8
-            },
-        }
-    }
-
-
-    var main_snslist = new Swiper(".sns-list", main_snslist_opt);
-
-    snsButtons = $('.js-sns-tab');
-    snsWrapper = $('.sns-list .swiper-wrapper');
-    snsItem = $('.sns-item')
-
-    snsButtons.on('click', function (e) {
-        e.preventDefault();
-        snsButtons.removeClass('active')
-        $(this).addClass('active');
-
-        main_snslist.destroy();
-
-
-        var $this = $(this),
-            datasns = $this.attr('data-sns');
-
-
-        snsItem.remove();
-        snsWrapper.append(snsItem.filter(`[data-sns="${datasns}"]`));
-        main_snslist = new Swiper(".sns-list", main_snslist_opt);
-    });
 
 
 })();
