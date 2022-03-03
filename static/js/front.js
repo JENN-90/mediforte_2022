@@ -31,6 +31,8 @@
     const partner_slide_stop = document.querySelector('.partner-pause');
     const partner_slide_play = document.querySelector('.partner-play');
 
+    const searchbtn = document.querySelector('.header__search-equip a ');
+
     var main_product = new Swiper(".core-product", {
         navigation: {
             nextEl: ".core-product-next",
@@ -162,10 +164,15 @@
         }
     });
 
+    $('.header__search-equip').on('click', function () {
+        
+    })
 
 
     window.addEventListener('click', (e) => {
         let tg = e.target;
+        let tg2 = e.currentTarget;
+        
 
         // e.stopPropagation();
         if (tg === partner_slide_stop) {
@@ -228,12 +235,16 @@
             }
         }
 
+
+        
         $('.js-close-alert').click((e) => {
             e.preventDefault();
             $('.chat-alert').hide()
-        })
+        });
 
-    })
+    });
+
+
 
 
     //CHAT MUTE

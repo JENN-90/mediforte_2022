@@ -72,6 +72,7 @@
         background: #ff3333;
         color: #fff;
         padding: 0;
+        overflow: hidden;
 
         span::before {
             content: '';
@@ -118,7 +119,7 @@
         .go-search {
             width: auto;
             padding: 0 18px;
-            max-width: 110px;
+            max-width: 120px;
         }
     }
 
@@ -1405,12 +1406,222 @@
     .partner {
 
         &__title {
-             width: 100%;
+            width: 100%;
         }
 
         &__list {
-             width: 100%;
-             margin-top: 2rem
+            width: 100%;
+            margin-top: 2rem
         }
+    }
+}
+
+
+.footer {
+    background-color: #292929;
+    color: #fff;
+
+    &__policy {
+        border-bottom: 1px solid #404040;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            color: #fff;
+            font-size: 1.6rem;
+            display: block;
+            padding: 0 22px;
+
+        }
+    }
+
+    &__logo {
+        width: 148px;
+        height: 84px;
+        @include push--auto;
+        display: block;
+        background: url('../images/logo_white.png') no-repeat center;
+        margin-top: 15px;
+    }
+
+    &__contact-list {
+        font-size: 15px;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 6px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+    }
+
+    address {
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        margin-top: 3px
+    }
+
+    &__cs {
+        text-align: center;
+        padding: 22px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cccccc;
+
+        .cs-mail {
+            margin-left: 10px;
+            color: #ccc;
+        }
+
+        &-number {
+            display: flex;
+            align-items: center;
+            font-size: 3.2rem;
+            color: #fff;
+
+            >span {
+                font-size: 1.6rem;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    &__cs-top {
+        color: #fff;
+    }
+
+    &__cs-btm {
+        padding-top: 0;
+    }
+
+    &__ads {
+        margin-left: 20px;
+
+        a {
+            display: inline-block;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 20px;
+            margin-left: 5px;
+            padding: 3px 10px;
+        }
+    }
+
+    &__sns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 40px 0;
+
+        >a {
+            display: block;
+            background: #4c4c4c;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            margin: 0 4px;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-repeat: no-repeat;
+                @include push--center;
+                background-size: 40px;
+            }
+
+            &.sns--instagram::after {
+                background-image: url('../images/ic_sns_insta_white.svg')
+            }
+
+            &.sns--kakao::after {
+                background-image: url('../images/ic_sns_kakaostory_white.svg')
+            }
+
+            &.sns--facebook::after {
+                background-image: url('../images/ic_sns_face_white.svg')
+            }
+
+            &.sns--youtube::after {
+                background-image: url('../images/ic_sns_youtube_white.svg')
+            }
+
+            &.sns--blog::after {
+                background-image: url('../images/ic_sns_blog_white.svg')
+            }
+        }
+    }
+
+    &__copy {
+        color: #666666;
+        text-align: center;
+        font-size: 13px;
+        padding: 20px;
+        border-top: 1px solid #666;
+    }
+}
+
+@include mq('tablet-small') {
+
+    .footer {
+        &__policy {
+            flex-wrap: wrap;
+            padding: 10px;
+            height: auto;
+
+            a {
+                font-size: 13px;
+                padding: 0 10px;
+                margin: 5px;
+            }
+        }
+
+        &__container {
+            padding: 2rem;
+            font-style: 13px;
+        }
+
+        &__contact-list {
+            font-size: 13px;
+        }
+
+        address {
+            font-size: 12px
+        }
+
+        &__cs-top {
+            flex-wrap: wrap;
+        }
+
+        &__cs-number {
+            margin-bottom: 10px;
+        }
+
+        &__ads {
+            margin-left: 0;
+        }
+
+        &__cs {
+            flex-wrap: wrap;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+
+            .cs-mail {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
     }
 }

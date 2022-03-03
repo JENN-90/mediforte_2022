@@ -255,6 +255,16 @@
 
 }
 
+@include mq('custom15') {
+    .header__nav a {
+        font-size: 1.6rem;
+    }
+
+    .header__search-equip a {
+        font-size: 1.6rem
+    }
+}
+
 @include mq('custom14') {
 
     .header {
@@ -299,7 +309,7 @@
 
 
         &__search-equip {
-            display: none
+           display: none;
         }
 
 
@@ -471,13 +481,7 @@
                 }
             }
 
-            &::after {
-                content: "\e930";
-                position: absolute;
-                font-family: "icomoon" !important;
-                right: 10px;
-                top: 17px;
-            }
+            
         }
 
         .m-contact {
