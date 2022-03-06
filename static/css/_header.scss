@@ -23,9 +23,12 @@
         position: relative;
         width: 32px;
         height: 22px;
-        background: url('../images/ic_globe.svg') no-repeat left center / 45px;
         margin-left: 5px;
         font-size: 10px;
+
+        &::before{
+            @include sprite(21px, 21px, -62px,  -53px)
+        }
 
         span {
             position: absolute;
@@ -59,9 +62,9 @@
                 position: absolute;
                 left: 0;
                 top: -6px;
-                width: 33px;
-                height: 33px;
-                background: url('../images/ic_search_equip.svg') no-repeat center / 60px;
+
+                @include sprite-static(33px, 33px, -10px, -10px); 
+                
             }
         }
     }
@@ -105,10 +108,15 @@
         &__quick-btn {
             width: 35px;
             height: 35px;
-            background: url('../images/ic_notify_2.svg') no-repeat center / 43px;
+            //background: url('../images/ic_notify_2.svg') no-repeat center / 43px;
             margin-left: 10px;
             position: relative;
             cursor: pointer;
+            background-color: transparent;
+
+            &::before{
+                @include sprite(25px, 33px, -10px, -62px);
+            }
 
             .quick-count {
                 position: absolute;
@@ -194,15 +202,10 @@
 
             &::before {
                 content: '';
-                width: 30px;
-                height: 30px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 32px;
+                transform: none;
+                left: 14px;
+                top: 12px; 
                 position: absolute;
-                left: 8px;
-                top: 50%;
-                margin-top: -15px;
             }
 
             strong {
@@ -212,36 +215,35 @@
         }
 
         &--meditalk a::before {
-            background-image: url('../images/ic_meditalk.svg');
+            @include sprite-static(18px, 18px, -10px, -153px);           
         }
 
         &--mycart a::before {
-            background-image: url('../images/ic_mycart.svg');
+            @include sprite-static(18px, 18px, -184px , -48px);
         }
 
         &--buy a::before {
-            background-image: url('../images/ic_purchase.svg');
+            @include sprite-static(18px, 18px, -128px ,-115px);
         }
 
         &--sales a::before {
-            background-image: url('../images/ic_sales.svg');
-            background-size: 36px;
+            @include sprite-static(18px, 18px, -48px ,-153px);
         }
 
         &--calculate a::before {
-            background-image: url('../images/ic_calculate.svg');
+            @include sprite-static(18px, 18px, -184px ,-10px);
         }
 
         &--curation a::before {
-            background-image: url('../images/ic_medicuration.svg');
+           @include sprite-static(18px, 18px, -184px, -86px);
         }
 
         &--mystore a::before {
-            background-image: url('../images/ic_mystore.svg');
+            @include sprite-static(18px, 18px, -86px ,-153px);
         }
 
         &--account a::before {
-            background-image: url('../images/ic_account.svg');
+            @include sprite-static(18px, 18px, -90px ,-115px);
         }
     }
 

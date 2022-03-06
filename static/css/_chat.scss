@@ -56,8 +56,13 @@
         }
 
         .open-chat-option {
-            background: url('../images/ic_menu.svg') no-repeat center;
             right: 46px;
+            width: 24px;
+            height: 24px;
+
+            &::after {
+                @include sprite(18px, 14px, -10px, -225px);
+            }
         }
 
         .chat__opt {
@@ -73,16 +78,6 @@
             display: none;
 
 
-            &::after {
-                content: '';
-                width: 16px;
-                height: 10px;
-                background: url('../images/chat_opt_triangle.png') no-repeat center;
-                position: absolute;
-                top: -10px;
-                left: 50%;
-                margin-left: -8px;
-            }
 
             button {
                 background: transparent;
@@ -104,39 +99,38 @@
                 }
 
                 &::before {
-                    content: '';
-                    width: 25px;
-                    height: 25px;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 27px;
                     position: absolute;
-                    left: 8px;
-                    top: 0;
+                    left: 14px;
+                    top: 5px;
                 }
 
                 &.chat__opt--notify::before {
-                    background-image: url('../images/ic_notify.svg');
+                    @include sprite-static(16px, 16px, -222px, -122px);
                 }
 
                 &.chat__opt--block::before {
-                    background-image: url('../images/ic_block.svg');
+                    @include sprite-static(16px, 16px, -259px, -10px);
                 }
 
                 &.chat__opt--report::before {
-                    background-image: url('../images/ic_warn.svg');
+                    @include sprite-static(16px, 15px, -259px, -118px);
                 }
 
                 &.chat__opt--exit::before {
-                    background-image: url('../images/ic_out.svg');
+                    @include sprite-static(16px, 15px, -259px, -83px);
                 }
 
             }
         }
 
         .close-chat {
-            background: url('../images/ic_close.svg') no-repeat center;
             right: 18px;
+            width: 24px;
+            height: 24px;
+
+            &::after {
+                @include sprite(14px, 14px, -48px, -225px);
+            }
         }
     }
 }
@@ -221,9 +215,9 @@
 }
 
 .chat-list {
-    padding: 25px;
+    padding: 25px 0 25px 25px;
     height: calc(100% - 290px);
-    overflow: auto;
+    //overflow: hidden;
 
 
     li {
@@ -358,7 +352,11 @@
         top: 0;
         width: 60px;
         height: 60px;
-        background: url('../images/ic_close.svg') no-repeat center;
+
+
+        &::after {
+            @include sprite(14px, 14px, -48px, -225px)
+        }
     }
 
     &__title {
@@ -594,15 +592,24 @@
         .btn-emoji {
             width: 30px;
             height: 42px;
-            background: url('../images/ic_smile.svg') no-repeat center / 20px;
             padding: 0;
+            position: relative;
+
+            &::after {
+                @include sprite(17px, 17px, -124px, -153px)
+            }
         }
 
         .btn-attach {
             width: 30px;
             height: 42px;
-            background: url('../images/ic_attach.svg') no-repeat center / 25px;
             padding: 0;
+            position: relative;
+
+            &::after {
+                @include sprite(19px, 19px, -145px, -10px)
+            }
+
         }
     }
 
@@ -644,6 +651,9 @@
         width: 42px;
         height: 42px;
         padding: 0;
-        background: url('../images/ic_send.svg') no-repeat center / 18px;
+       &::after{
+            @include sprite(15px, 15px, -259px, -153px)
+       }
+
     }
 }

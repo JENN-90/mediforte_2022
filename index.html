@@ -9,6 +9,7 @@
         <meta name="author" content="Mediforte">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
         <link rel="stylesheet" href="static/css/swiper.css">
+        <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css">
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
         <title>메디포르테</title>
@@ -24,6 +25,39 @@
 
             <div class="header__search-equip">
                 <a href="#"><span>장비검색하기</span></a>
+            </div>
+            <div class="header__search-equip-box">
+                <div class="header__search ui-search-equip">
+                    <div class="search-select search-select--category">
+                        <select name="selectCategory" id="selectCategory">
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                        </select>
+                    </div>
+                    <div class="search-select search-select--brand">
+                        <select name="selectBrand" id="selectBrand">
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                        </select>
+                    </div>
+                    <div class="search-input">
+                        <input type="text" placeholder="키워드 입력하세요" title="키워드">
+                    </div>
+                    <button type="button" class="go-search"><span>검색하기</span></button>
+                    <a href="#" class="btn-close-search js-close-search"><span class="blind">닫기</span></a>
+                </div>
+                <div class="header__search-tag">
+                    <a href="#item">#피코슈어</a>
+                    <a href="#item">#피코슈어레이저</a>
+                    <a href="#item">#사이노슈어</a>
+                    <a href="#item">#피코레이져</a>
+                </div>
             </div>
             <nav class="header__nav">
                 <ul>
@@ -102,12 +136,13 @@
             </div>
         </header>
 
+
         <section class="hero">
             <div class="hero__container">
                 <p class="hero__text">믿을 수 있는 중고의료기기 구매</p>
                 <p class="hero__text"><b>‘메디포르테’</b>와 <b>‘메디큐레이터’</b>가 도와드립니다.</p>
 
-                <div class="hero__search">
+                <div class="hero__search ui-search-equip">
                     <div class="search-select search-select--category">
                         <select name="selectCategory" id="selectCategory">
                             <option value="null">진료분야</option>
@@ -724,7 +759,8 @@
                 </div>
             </div>
             <div class="footer__cs footer__cs-btm">
-                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00  토, 일, 공휴일 휴무     <a  class="cs-mail" href="mailto:cs@mediforte.co.kr" class="cs-email">cs@mediforte.co.kr</a>
+                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail" href="mailto:cs@mediforte.co.kr"
+                    class="cs-email">cs@mediforte.co.kr</a>
             </div>
 
             <div class="footer__sns">
@@ -737,9 +773,11 @@
 
             <div class="footer__copy">Copyright (c) 2022 Mediforte all right reserved.</div>
         </footer>
+        <div class="dimm"></div>
         <script src="static/js/jquery-1.12.1.min.js"></script>
         <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
         <script src="static/js/swiper.min.js"></script>
+        <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/front.js"></script>
     </body>
 

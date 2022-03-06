@@ -1,7 +1,11 @@
 (() => {
 
-    const body = document.querySelector('body');
+    $(".custom-scroll").mCustomScrollbar({
+        theme: "dark-thin",
+        axis: "y"
+    });
 
+    const body = document.querySelector('body');
     const chat_mutes = document.querySelectorAll('.btn-mute-alert');
     const btn_chat_open = document.querySelector('.js-open-chat');
     const chat = document.querySelector('.chat');
@@ -11,14 +15,14 @@
     const btn_chat_close = document.querySelector('.js-chat-close');
 
     //ALERT BOX
-    const btn_alert_notify = document.querySelector('.js-alert-notify');
-    const btn_alert_block = document.querySelector('.js-alert-block');
-    const btn_alert_report = document.querySelector('.js-alert-report');
-    const btn_alert_exit = document.querySelector('.js-alert-exit');
-    const alert_notifybox = document.querySelector('.chat-alert--notify');
-    const alert_reportbox = document.querySelector('.chat-alert--report');
-    const alert_exitbox = document.querySelector('.chat-alert--exit');
-    const alert_blockbox = document.querySelector('.chat-alert--block');
+    // const btn_alert_notify = document.querySelector('.js-alert-notify');
+    // const btn_alert_block = document.querySelector('.js-alert-block');
+    // const btn_alert_report = document.querySelector('.js-alert-report');
+    // const btn_alert_exit = document.querySelector('.js-alert-exit');
+    // const alert_notifybox = document.querySelector('.chat-alert--notify');
+    // const alert_reportbox = document.querySelector('.chat-alert--report');
+    // const alert_exitbox = document.querySelector('.chat-alert--exit');
+    // const alert_blockbox = document.querySelector('.chat-alert--block');
 
     const btn_mobile_menu = document.querySelector(".header__btn-menu");
     const menu_mobile = document.querySelector('.mobile-menu');
@@ -109,7 +113,6 @@
 
 
     var main_snslist = new Swiper(".sns-list", main_snslist_opt);
-
     snsButtons = $('.js-sns-tab');
     snsWrapper = $('.sns-list .swiper-wrapper');
     snsItem = $('.sns-item')
@@ -164,17 +167,28 @@
         }
     });
 
-    $('.header__search-equip').on('click', function () {
-        
+    $('.header__search-equip').on('click', function (e) {
+        e.preventDefault();
+        $('.dimm').fadeIn(400);
+        $('.header__search-equip-box').fadeIn(400)
     })
+
+    $('.js-close-search').on('click', function (e) {
+        e.preventDefault();
+        $('.dimm').fadeOut(400);
+        $('.header__search-equip-box').fadeOut(400)
+    });
+
 
 
     window.addEventListener('click', (e) => {
         let tg = e.target;
         let tg2 = e.currentTarget;
-        
 
-        // e.stopPropagation();
+        e.stopPropagation();
+
+
+        //MAIN partner_slide 
         if (tg === partner_slide_stop) {
             main_partners.autoplay.stop();
         } else if (tg === partner_slide_play) {
@@ -223,20 +237,18 @@
         }
 
         //CHAT OPTION LIST
-        if (chat_optlist) {
-            if (tg === btn_alert_notify) {
-                alert_notifybox.style.display = 'block'
-            } else if (tg === btn_alert_block) {
-                alert_blockbox.style.display = 'block'
-            } else if (tg === btn_alert_report) {
-                alert_reportbox.style.display = 'block'
-            } else if (tg === btn_alert_exit) {
-                alert_exitbox.style.display = 'block'
-            }
-        }
+        // if (chat_optlist) {
+        //     if (tg === btn_alert_notify) {
+        //         alert_notifybox.style.display = 'block'
+        //     } else if (tg === btn_alert_block) {
+        //         alert_blockbox.style.display = 'block'
+        //     } else if (tg === btn_alert_report) {
+        //         alert_reportbox.style.display = 'block'
+        //     } else if (tg === btn_alert_exit) {
+        //         alert_exitbox.style.display = 'block'
+        //     }
+        // }
 
-
-        
         $('.js-close-alert').click((e) => {
             e.preventDefault();
             $('.chat-alert').hide()
@@ -261,24 +273,48 @@
     let vh;
     window.addEventListener('load', () => {
         setViewHeight();
-
-
-
     });
     window.addEventListener('resize', () => {
         setViewHeight();
     });
 
-    window.addEventListener('scroll', (e) => {
-        ///console.log(pageYOffset);
-        //if (pageYOffset > 0 && ((body.scrollHeight - window.innerHeight) > 200))
-    });
+    window.addEventListener('scroll', (e) => {});
 
 
 
     jQuery.exists = function (selector) {
         return ($(selector).length > 0);
     }
+
+    var $grid = $('.grid').masonry({
+        // disable initial layout
+        initLayout: false,
+        itemSelector: '.grid-item',
+        columnWidth: 300,
+        gutter: 10,
+        //isAnimated: true,
+    });
+    // bind event
+    $grid.masonry('on', 'layoutComplete', function () {
+        console.log('layout is complete');
+        
+    });
+    setTimeout(() => {
+        $grid.masonry();
+    }, 100);
+    // trigger initial layout
+    
+
+
+    // $('.grid').masonry({
+    //     // options
+    //     itemSelector: '.grid-item',
+    //     columnWidth: 300,
+    //     gutter: 10
+    // });
+
+    // $grid.masonry('reloadItems')
+
 
 
 

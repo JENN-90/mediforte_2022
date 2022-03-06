@@ -1,28 +1,31 @@
 .btn-open-chat {
-     width: 60px; height: 60px; 
-     background-color: #242428;
-     border-radius: 100%; 
-     position: fixed; 
-     right: 25px; bottom: 25px; 
-     background-image: url('../images/chat_button.png');
-     background-repeat: no-repeat; 
-     background-position: center;
-     box-shadow: 2px 5px 0 rgba($color: #000000, $alpha: 0.1);
-     cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #242428;
+    border-radius: 100%;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background-image: url('../images/chat_button.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 2px 5px 0 rgba($color: #000000, $alpha: 0.1);
+    cursor: pointer;
 
-     .chat-counter {
-        position: absolute; 
-        right: -5px; top: -7px;
-        background: #ee0c39; 
+    .chat-counter {
+        position: absolute;
+        right: -5px;
+        top: -7px;
+        background: #ee0c39;
         width: 23px;
         height: 23px;
-        line-height: 23px; 
+        line-height: 23px;
         font-style: normal;
-        border-radius: 100%; 
-        text-align: center; 
-        color:#fff;
+        border-radius: 100%;
+        text-align: center;
+        color: #fff;
         font-size: 12px;
-     }
+    }
 }
 
 
@@ -50,11 +53,12 @@
         background: #e5e5e5;
         color: #333;
     }
-        &--white {
-            background: #fff;
-            color: #333;
-            text-align: center;
-        }
+
+    &--white {
+        background: #fff;
+        color: #333;
+        text-align: center;
+    }
 
     //Control
     &-prev--arrow {
@@ -70,19 +74,27 @@
     }
 
     &-mute-alert {
-        width: 16px;
-        height: 16px;
-        background: #fff url('../images/ic_mute_n.svg') no-repeat center / 24px;
+        width: 17px;
+        height: 17px;
         display: inline-block;
         vertical-align: top;
         margin-top: -1px;
+        position: relative;
         border: 0;
         padding: 0;
         margin-left: 3px;
         cursor: pointer;
+        background-color: transparent;
+
+        &::after {
+            @include sprite(16px, 17px, -259px, -46px);
+        }
 
         &.is-mute {
-            background-image: url('../images/ic_mute_y.svg')
+
+            &::after {
+                @include sprite(16px, 17px, -222px, -46px);
+            }
         }
     }
 }
