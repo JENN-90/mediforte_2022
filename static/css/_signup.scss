@@ -1,0 +1,123 @@
+.signup {
+    background-color: #f2f2f2;
+    padding: 10rem 0;
+    //height: 1000px;
+    margin-top: 88px;
+
+    &__container {
+        max-width: 1000px;
+        @include push--auto;
+        background: #fff;
+        padding: 10rem 8rem;
+        border-radius: 20px;
+    }
+
+    &__title {
+        h3 {
+            font-size: 3.7rem;
+            font-weight: 500;
+        }
+
+        >p {
+            font-size: 1.8rem;
+            color: #999999;
+            margin-top: 15px;
+        }
+    }
+
+    &__form {
+        margin-top: 5rem;
+
+    }
+
+    fieldset {
+        border: 0;
+        padding: 0;
+        padding-left: 175px;
+        position: relative;
+        border-top: 3px solid #000;
+        padding-top: 33px;
+
+        legend {
+            position: absolute;
+            top: 39px;
+            left: 0;
+            font-size: 2.4rem;
+        }
+    }
+
+    .inputbox {
+        display: flex;
+        align-items: center;
+        padding-left: 140px;
+        position: relative;
+        width: 100%;
+        margin-top: 3rem;
+
+        &.mt-0 {
+            margin-top: 0;
+        }
+
+
+        .required {
+            color: var(--primary-red);
+            font-style: normal;
+        }
+
+        &__label {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            color: #666666;
+        }
+
+        &__input {
+            width: 100%;
+
+
+            input,
+            select {
+                width: 100%;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 4px;
+
+                &::placeholder {
+                    font-size: 13px;
+                }
+            }
+
+            &--has-btn {
+                display: flex;
+                align-items: center;
+
+                input {
+                    max-width: 354px;
+                }
+
+                .btn-gray {
+                    background: #666;
+                    color: #fff;
+                    font-size: 14px;
+                    text-align: center;
+                    height: 32px;
+                    line-height: 32px;
+                    border-radius: 5px;
+                    padding: 0 15px;
+                    margin-left: 15px;
+                }
+
+                .inputbox__limit {
+                    display: flex;
+                    align-items: center;
+
+                    .time {
+                        color: var(--primary-red);
+                        font-size: 13px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keyword" content="Mediforte">
+        <meta name="description" content="Mediforte">
+        <meta name="author" content="Mediforte">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
+        <link rel="stylesheet" href="static/css/swiper.css">
+        <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
+        <title>untitled</title>
+    </head>
+
+    <body>
+        <!--LOGIN-->
+        <div class="modal modal--login" style="display: none;">
+            <div class="modal__container">
+                <form action="">
+                    <div class="inputbox">
+                        <input type="text" title="userID" placeholder="아이디를 입력해 주세요">
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" id="userPassword" value="samplePSW!@#$%^&*" placeholder="비밀번호를 입력해 주세요">
+                        <button type="button" class="ic-visibility" onclick="pwVisibility();">보이기</button>
+                    </div>
+                    <p class="find-user">아이디/비밀번호 찾기</p>
+
+                    <button type="button" class="btn-login btn--round-b btn--blue">로그인</button>
+
+                    <div class="join-infobox">
+                        <p>계정이 없으신가요?<a href="#">회원가입하기</a></p>
+                    </div>
+                </form>
+                <a href="#" class="btn-close-modal"><span class="blind">닫기</span></a>
+            </div>
+        </div>
+        <!--//LOGIN-->
+
+        <!--AGREEMENT-->
+        <div class="modal modal--agreement" style="display: none;">
+            <div class="modal__container">
+                <form action="">
+                    <div class="agreement__title">
+                        <h3>회원가입으로 <br />메디포르테를 시작합니다.</h3>
+                        <p>안전한 거래를 위해 약관동의 후 <br />회원가입해 주세요.</p>
+                    </div>
+                    <div class="agreement__agree-all">
+                        <label for="joinAgreementAll" class="check-box-round">
+                            <input type="checkbox" id="joinAgreementAll" name="reportSelectType" checked>전체 동의하기
+                            <span class="checkmark radio-box__checkmark"></span>
+                        </label>
+                    </div>
+                    <ul class="agreement-list">
+                        <li>
+                            <label for="joinAgreement_1" class="check-box-round">
+                                <input type="checkbox" id="joinAgreement_1" name="reportSelectType"
+                                    checked><strong>(필수)</strong> 메디포르테 이용약관 모두 동의
+                                <span class="checkmark radio-box__checkmark"></span>
+                            </label>
+                            <button class="btn-show-sublist"><span class="blind">SHOW</span></button>
+                            <div class="agreement-sublist">
+                                <ul>
+                                    <li><a href="#">메디포르테 이용약관</a></li>
+                                    <li><a href="#">개인정보 수집 이용 동의 </a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li>
+                            <label for="joinAgreement_2" class="check-box-round">
+                                <input type="checkbox" id="joinAgreement_2"
+                                    name="reportSelectType"><strong>(필수)</strong> 개인정보 수집/이용 동의
+                                <span class="checkmark radio-box__checkmark"></span>
+                            </label>
+                            <button class="btn-show-sublist"><span class="blind">SHOW</span></button>
+                            <div class="agreement-sublist">
+                                <ul>
+                                    <li><a href="#">개인정보 수집 이용 동의</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="joinAgreement_3" class="check-box-round">
+                                <input type="checkbox" id="joinAgreement_3" name="reportSelectType">(선택) 마케팅 정보 수신 및 활용
+                                동의
+                                <span class="checkmark radio-box__checkmark"></span>
+                            </label>
+                            <button class="btn-show-sublist"><span class="blind">SHOW</span></button>
+                            <div class="agreement-sublist">
+                                <ul>
+                                    <li><a href="#">이메일, SNS, PUSH 수신 동의</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--동의 체크 시 is-active 클래스 추가 버튼색상변경 -->
+                    <button type="button" class="btn-confirm btn--round-b btn--red ">다음</button>
+                </form>
+                <a href="#" class="btn-close-modal"><span class="blind">닫기</span></a>
+            </div>
+        </div>
+        <!--//AGREEMENT-->
+
+        <!-- RULES-->
+        <div class="modal modal--rules" style="display: none;">
+            <div class="modal__container">
+                <h3 class="modal__title">개인정보 수집/이용 동의</h3>
+                <div class="modal__content modal__content--rule  custom-scroll">
+                    <p class="txt--bold">Long time no see! Let's login to get started.. </p>
+                    <ul>
+                        <li>Continue with facebook</li>
+                        <li>Continue with Google</li>
+                        <li>Continue with Email</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae fugiat eaque,
+                            perspiciatis molestias dolor animi possimus vel iusto esse, amet nisi quaerat in facere
+                            unde. Cumque accusantium eligendi porro.</li>
+                    </ul>
+                </div>
+                <a href="#" class="btn-close-modal"><span class="blind">닫기</span></a>
+            </div>
+        </div>
+        <!-- //RULES-->
+
+        <!-- COMPLETE-->
+        <div class="modal modal--complete" style="display: block;">
+            <div class="modal__container">
+                <div class="complete">
+                    <h3 class="logo">
+                        <img src="static/images/logo2.png" alt="Mediforte">
+                    </h3>
+                    <div class="complete__text">
+                        <strong>메디포르테 회원가입 완료되었습니다.</strong>
+                        <p>믿을 수 있는 안전한 거래를 제공하는 중고 의료장비 거래 플렛폼</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-close-modal"><span class="blind">닫기</span></a>
+            </div>
+        </div>
+        <!-- //COMPLETE-->
+
+       
+        <script src="static/js/jquery-1.12.1.min.js"></script>
+        <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
+        <script src="static/js/swiper.min.js"></script>
+        <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="static/js/front.js"></script>
+        <script>
+            $(window).click(function (e) {
+                if (e.target.className === 'btn-show-sublist') {
+                    $(e.target).addClass('is-active').next('.agreement-sublist').slideToggle();
+                }
+                if (e.target.className === 'btn-close-modal') {
+                    $(e.target).parent().parent().fadeOut(400)
+                }
+            });
+        </script>
+    </body>
+
+</html>

@@ -21,11 +21,11 @@
         margin: -1px;
 
         &:checked~.checkmark::before {
-            border-color: var(--red-500);
+            border-color: var(--primary-red);
         }
 
         &:checked~.checkmark::after {
-            background: var(--red-500);
+            background: var(--primary-red);
         }
     }
 
@@ -39,7 +39,7 @@
             margin-top: 0;
             width: 20px;
             height: 20px;
-            border: 1px solid var(--gray-300);
+            border: 1px solid #ddd;
             border-radius: 100%;
             box-sizing: border-box;
             background-color: #fff;
@@ -54,7 +54,7 @@
             width: 8px;
             height: 8px;
             border-radius: 100%;
-            background: var(--gray-300);
+            background: #ddd;
             background: transparent;
             transition: 0.3s;
         }
@@ -84,8 +84,8 @@
         margin: -1px;
 
         &:checked~.checkmark::before {
-            background: var(--red-500) url('../images/ic_checkbox_check_white.svg') no-repeat center / 18px;
-            border-color: var(--red-500);
+            background: var(--primary-red) url('../images/ic_checkbox_check_white.svg') no-repeat center / 18px;
+            border-color: var(--primary-red);
         }
     }
 
@@ -99,7 +99,7 @@
             margin-top: 0;
             width: 20px;
             height: 20px;
-            border: 1px solid var(--gray-300);
+            border: 1px solid #ddd;
             box-sizing: border-box;
             background-color: #fff;
             border-radius: 3px;
@@ -107,6 +107,71 @@
         }
     }
 }
+
+
+
+.check-box-round {
+    display: block;
+    position: relative;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #222;
+    min-height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    color: #666;
+
+    >strong {
+        color: var(--primary-red);
+        font-weight: 700;
+        padding-right: 4px;
+    }
+
+    input {
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+
+        &:checked~.checkmark {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+
+            &::before {
+                @include sprite(10px, 10px, -291px, -218px);
+                opacity: 1;
+            }
+        }
+    }
+
+    .checkmark {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 100%;
+        transition: 0.3s;
+
+         &::before {
+             @include sprite(10px, 10px, -294px ,-114px);
+             opacity: 0.2;
+         }
+    }
+}
+
+
 
 .check-box--border {
     display: block;
@@ -121,9 +186,6 @@
     padding: 15px 10px;
     border-radius: 4px;
 
-
-
-
     .checkmark {
         &::before {
             content: '';
@@ -134,7 +196,7 @@
             margin-top: 0;
             width: 20px;
             height: 20px;
-            border: 1px solid var(--gray-300);
+            border: 1px solid #ddd;
             box-sizing: border-box;
             background-color: #fff;
             border-radius: 3px;
@@ -176,10 +238,11 @@
     }
 
     &--brand {
-       
+
         li {
 
             width: calc(33.333% - 5px);
+
             img {
                 max-height: 28px;
                 margin-bottom: 5px;

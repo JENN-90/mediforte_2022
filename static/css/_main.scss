@@ -1792,10 +1792,14 @@
         overflow: auto;
         //padding-right: 4rem;
     }
-    .mCSB_inside{
-         padding-right: 4rem;
+
+    .mCSB_inside {
+        padding-right: 4rem;
     }
-    .mCSB_inside>.mCSB_container{ margin-right: 0;}
+
+    .mCSB_inside>.mCSB_container {
+        margin-right: 0;
+    }
 
     .product__sort-btn {
         display: flex;
@@ -2044,15 +2048,18 @@
         &.page-first::before {
             @include sprite(13px, 10px, -147px, -300px)
         }
-         &.page-prev::before {
-             @include sprite(7px, 10px, -147px, -300px)
-         }
-          &.page-next::before {
-              @include sprite(7px, 10px, -185px, -300px)
-          }
-           &.page-last::before {
-              @include sprite(13px, 10px, -201px, -300px)
-           }
+
+        &.page-prev::before {
+            @include sprite(7px, 10px, -147px, -300px)
+        }
+
+        &.page-next::before {
+            @include sprite(7px, 10px, -185px, -300px)
+        }
+
+        &.page-last::before {
+            @include sprite(13px, 10px, -201px, -300px)
+        }
     }
 
     >a {

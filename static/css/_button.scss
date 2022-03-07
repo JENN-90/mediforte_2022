@@ -44,8 +44,22 @@
         padding: 4px 23px
     }
 
+    &--round-b {
+        border-radius: 55px;
+    }
+
     &--black {
         background: #333;
+        color: #ffff;
+    }
+
+    &--blue {
+        background: var(--primary-blue);
+        color: #ffff;
+    }
+
+    &--red {
+        background: var(--primary-red);
         color: #ffff;
     }
 

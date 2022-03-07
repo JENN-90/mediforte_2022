@@ -285,35 +285,26 @@
     jQuery.exists = function (selector) {
         return ($(selector).length > 0);
     }
+    if ($('.grid').length > 0) {
 
-    var $grid = $('.grid').masonry({
-        // disable initial layout
-        initLayout: false,
-        itemSelector: '.grid-item',
-        columnWidth: 300,
-        gutter: 10,
-        //isAnimated: true,
-    });
-    // bind event
-    $grid.masonry('on', 'layoutComplete', function () {
-        console.log('layout is complete');
-        
-    });
-    setTimeout(() => {
-        $grid.masonry();
-    }, 100);
-    // trigger initial layout
-    
+        var $grid = $('.grid').masonry({
+            // disable initial layout
+            initLayout: false,
+            itemSelector: '.grid-item',
+            columnWidth: 300,
+            gutter: 10,
+            //isAnimated: true,
+        });
+        // bind event
+        $grid.masonry('on', 'layoutComplete', function () {
+            console.log('layout is complete');
 
+        });
+        setTimeout(() => {
+            $grid.masonry();
+        }, 100);
 
-    // $('.grid').masonry({
-    //     // options
-    //     itemSelector: '.grid-item',
-    //     columnWidth: 300,
-    //     gutter: 10
-    // });
-
-    // $grid.masonry('reloadItems')
+    }
 
 
 

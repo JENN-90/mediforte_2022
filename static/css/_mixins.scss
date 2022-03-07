@@ -182,45 +182,64 @@ $breakpoints: ("phone": 360px,
 
 
 
+// @mixin sprite($width, $height, $x, $y) {
+
+// 	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+// 	only screen and (-moz-min-device-pixel-ratio: 1.5),
+// 	only screen and (-o-min-device-pixel-ratio: 3 / 2),
+// 	only screen and (min-device-pixel-ratio: 1.5),
+// 	only screen and (min-resolution: 1.5dppx) {
+// 		background-image: url('../images/css_sprites_2x.png');
+// 		background-size: 314px 331px;
+// 	}
+
+// 	content: '';
+// 	width: $width;
+// 	height: $height;
+// 	@include push--center;
+// 	background-image: url('../images/css_sprites.png');
+// 	background-repeat: no-repeat;
+// 	background-position: $x $y;
+// }
+
+// @mixin sprite-static($width, $height, $x, $y) {
+
+// 	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+// 	only screen and (-moz-min-device-pixel-ratio: 1.5),
+// 	only screen and (-o-min-device-pixel-ratio: 3 / 2),
+// 	only screen and (min-device-pixel-ratio: 1.5),
+// 	only screen and (min-resolution: 1.5dppx) {
+// 		background-image: url('../images/css_sprites_2x.png');
+// 		background-size: 314px 331px;
+// 	}
+
+// 	content: '';
+// 	width: $width;
+// 	height: $height;
+// 	//@include push--center;
+// 	background-image: url('../images/css_sprites.png');
+// 	background-repeat: no-repeat;
+// 	background-position: $x $y;
+// }
+
+
 @mixin sprite($width, $height, $x, $y) {
-
-	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (-moz-min-device-pixel-ratio: 1.5),
-	only screen and (-o-min-device-pixel-ratio: 3 / 2),
-	only screen and (min-device-pixel-ratio: 1.5),
-	only screen and (min-resolution: 1.5dppx) {
-		background-image: url('../images/css_sprites_2x.png');
-		background-size: 314px 331px;
-	}
-
-
 	content: '';
 	width: $width;
 	height: $height;
 	@include push--center;
-	background-image: url('../images/css_sprites.png');
+	background-image: url('../images/css_sprites_2x.png');
+	background-size: 314px 331px;
 	background-repeat: no-repeat;
 	background-position: $x $y;
 }
 
 @mixin sprite-static($width, $height, $x, $y) {
-
-	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (-moz-min-device-pixel-ratio: 1.5),
-	only screen and (-o-min-device-pixel-ratio: 3 / 2),
-	only screen and (min-device-pixel-ratio: 1.5),
-	only screen and (min-resolution: 1.5dppx) {
-		background-image: url('../images/css_sprites_2x.png');
-		background-size: 314px 331px;
-	}
-
 	content: '';
 	width: $width;
 	height: $height;
-	//@include push--center;
-	background-image: url('../images/css_sprites.png');
+	background-image: url('../images/css_sprites_2x.png');
+	background-size: 314px 331px;
 	background-repeat: no-repeat;
 	background-position: $x $y;
-
-
 }
