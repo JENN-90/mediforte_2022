@@ -1,8 +1,30 @@
+.inputbox {
+    position: relative;
+    margin-top: 4px;
+
+    input,
+    select {
+        border: 1px solid #DEE1E4;
+        color: #999999;
+        height: 55px;
+        line-height: 55px;
+
+        width: 100%;
+        border-radius: 5px;
+        padding: 0;
+        padding-left: 15px;
+        font-size: 14px;
+
+        &::placeholder {
+            color: #999
+        }
+    }
+}
+
 .inputbox__label {
     display: block;
     font-size: 1.4rem;
     line-height: 140%;
-    color: var(--gray-700);
     padding-bottom: 5px;
 }
 
@@ -10,7 +32,24 @@
 
     input {
         width: 100%;
-        border: 1px solid var(--gray-200);
+        border-radius: 8px;
+        height: 50px;
+        line-height: 50px;
+        padding-left: 2rem;
+
+        &::placeholder {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            letter-spacing: 0;
+        }
+    }
+}
+
+.inputbox__input {
+
+    input {
+        width: 100%;
+        border: 1px solid #ddd;
         border-radius: 8px;
         height: 50px;
         line-height: 50px;
@@ -48,7 +87,7 @@
 
     .toggle-slide__checkmark {
 
-        background: var(--gray-200);
+        background: #ddd;
         width: 36px;
         height: 19px;
         display: block;
@@ -83,40 +122,24 @@
 
 
 
+.ic-visibility {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    right: 15px;
+    top: 0;
+    background: transparent;
+    padding: 0;
+    padding-left: 15px;
+    font-size: 12px;
 
-////table 
-.tb-type01 {
-    table {
-        width: 100%;
-        table-layout: fixed;
-        font-size: 1.4rem;
-        color: #fff;
-        letter-spacing: -0.05em;
+    &::after {
+        @include sprite-static(12px, 8px, -184px, -124px);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -4px;
+        ;
 
-
-        th,
-        td {
-            padding: 15px 9px;
-        }
-
-        thead th {
-            background: #AFD1E0;
-            color: #326D8F;
-            font-weight: 700;
-        }
-
-        tbody {
-            color: #fff;
-
-            td,
-            th {
-                border-bottom: 1px solid rgba($color: #fff, $alpha: 0.5);
-                padding: 15px 7px;
-            }
-
-            b {
-                font-weight: 700;
-            }
-        }
     }
 }

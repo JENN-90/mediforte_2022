@@ -57,7 +57,7 @@ html {
 main {
     display: block; //Render the `main` element consistently in IE.
 }
-h1, h2, h3{ margin: 0; }
+h1, h2, h3, h4, h5{ margin: 0; }
 
 hr {
     //Add the correct box sizing in Firefox.
@@ -129,6 +129,7 @@ img {
     vertical-align: top;
     image-rendering: -webkit-optimize-contrast;
     border: 0;
+    max-width: 100%;
 }
 
 button,
@@ -151,6 +152,9 @@ input {
 button,
 select {
     text-transform: none; //Remove the inheritance of text transform in Firefox.
+}
+select{
+     appearance: none;
 }
 
 button,
@@ -208,7 +212,7 @@ textarea {
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
     height: auto; //Correct the cursor style of increment and decrement buttons in Chrome.
-    //-webkit-appearance: none; margin: 0;  증감버튼 삭제(주석처리함)
+    -webkit-appearance: none; margin: 0;  //증감버튼 삭제(주석처리함)
 }
 
 [type="search"] {

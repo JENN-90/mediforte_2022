@@ -64,11 +64,11 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
 
-        },
+        // },
         breakpoints: {
             1200: {
                 slidesPerView: 2,
@@ -165,6 +165,35 @@
                 //spaceBetween: 20,
             },
         }
+    });
+
+
+    var productThumb = new Swiper(".product-slide__thumb", {
+        //loop: true,
+        spaceBetween: 10,
+        slidesPerView: 6.5,
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            640: {
+                slidesPerView: 4.5,
+            },
+            480: {
+                slidesPerView: 3.5,
+            },
+        }
+        
+    });
+    var productSlide = new Swiper(".product-slide__top", {
+        //loop: true,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: ".product-next",
+            prevEl: ".product-prev",
+        },
+        thumbs: {
+            swiper: productThumb,
+        },
     });
 
     $('.header__search-equip').on('click', function (e) {
@@ -291,8 +320,9 @@
             // disable initial layout
             initLayout: false,
             itemSelector: '.grid-item',
-            columnWidth: 300,
+            //columnWidth: 300,
             gutter: 10,
+            percentPosition: true
             //isAnimated: true,
         });
         // bind event
@@ -305,6 +335,11 @@
         }, 100);
 
     }
+
+    $('.open-filter').on('click', function () {
+        $(this).toggleClass('open');
+        $('.product__filter ').toggleClass('open')
+    })
 
 
 
@@ -323,5 +358,14 @@ function resize(chat_textarea) {
     if ((chat_textarea.scrollHeight + 7) <= 80) {
         chat_textarea.style.height = "1px";
         chat_textarea.style.height = (7 + chat_textarea.scrollHeight) + "px";
+    }
+}
+
+function pwVisibility() {
+    var userPassword = document.getElementById("userPassword");
+    if (userPassword.type === "password") {
+        userPassword.type = "text";
+    } else {
+        userPassword.type = "password";
     }
 }

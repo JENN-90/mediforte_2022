@@ -87,6 +87,53 @@
         background: url('../images/ic_search.svg') no-repeat center;
     }
 
+    &-prd-list {
+        background: transparent;
+        color: #333333;
+        border-radius: 55px;
+        width: 225px;
+        height: 53px;
+        line-height: 55px;
+        text-align: center;
+        display: block;
+        margin-top: 5rem;
+        @include push--auto;
+        border: 1px solid #333;
+
+    }
+
+    &-login {
+        background: #00b7f1;
+        color: #fff;
+        width: 100%;
+        margin-top: 3rem;
+        border-radius: 55px;
+        height: 55px;
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+
+    &-confirm {
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        margin-top: 3rem;
+        opacity: 0.35;
+
+        &.is-active {
+            opacity: 1;
+        }
+    }
+
+    &-signup {
+        width: 400px;
+        padding: 23px 20px;
+        @include push--auto;
+        display: block;
+        margin-top: 6rem;
+        font-size: 1.8rem;
+    }
+
     &-mute-alert {
         width: 17px;
         height: 17px;
@@ -109,6 +156,27 @@
             &::after {
                 @include sprite(16px, 17px, -222px, -46px);
             }
+        }
+    }
+
+    &-share {
+        font-size: 14px;
+        padding-left: 25px;
+        line-height: 22px;
+        height: 25px;
+
+        &::before {
+            @include sprite-static(17px, 21px, -145px, -49px);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    @include mq('tablet-small') {
+        &-signup {
+            width: 100%;
+            margin-top: 3rem
         }
     }
 }

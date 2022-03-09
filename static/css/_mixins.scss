@@ -229,7 +229,7 @@ $breakpoints: ("phone": 360px,
 	height: $height;
 	@include push--center;
 	background-image: url('../images/css_sprites_2x.png');
-	background-size: 314px 331px;
+	background-size: 314px 356px;
 	background-repeat: no-repeat;
 	background-position: $x $y;
 }
@@ -239,7 +239,7 @@ $breakpoints: ("phone": 360px,
 	width: $width;
 	height: $height;
 	background-image: url('../images/css_sprites_2x.png');
-	background-size: 314px 331px;
+	background-size: 314px 356px;
 	background-repeat: no-repeat;
 	background-position: $x $y;
 }

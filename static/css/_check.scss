@@ -164,10 +164,10 @@
         border-radius: 100%;
         transition: 0.3s;
 
-         &::before {
-             @include sprite(10px, 10px, -294px ,-114px);
-             opacity: 0.2;
-         }
+        &::before {
+            @include sprite(10px, 10px, -294px, -114px);
+            opacity: 0.2;
+        }
     }
 }
 
@@ -185,6 +185,10 @@
     text-align: center;
     padding: 15px 10px;
     border-radius: 4px;
+
+    @include mq('tablet-wide') {
+        font-size: 12px
+    }
 
     .checkmark {
         &::before {
@@ -275,6 +279,15 @@
                 border: 1px solid #dee2e6;
                 color: #333;
                 margin-bottom: 5px;
+
+            }
+
+            @include mq('tablet-wide') {
+                margin: 0 4px 2px 0;
+
+                label {
+                    padding: 3px 8px;
+                }
             }
 
             input {

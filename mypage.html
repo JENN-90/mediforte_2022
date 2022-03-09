@@ -137,169 +137,137 @@
         </header>
 
 
-        <section class="signup">
-            <div class="signup__container">
-                <div class="signup__title">
-                    <h3>메디포르테 회원가입</h3>
-                    <p>회원가입 진행 후, 장비를 판매하거나 구매하는 서비스를 이용하실 수 있습니다.</p>
+        <!--마이페이지-->
+        <section class="mypage">
+            <div class="mypage__nav">
+                <h3 class="mypage__title">마이페이지</h3>
+                <ul>
+                    <li class="current"><a href="#">홈</a></li>
+                    <li><a href="#">거래상태 조회</a></li>
+                    <li><a href="#">계약현황</a></li>
+                    <li><a href="#">구매내역</a></li>
+                    <li><a href="#">판매 의뢰하기</a></li>
+                    <li><a href="#">관심상품</a></li>
+                    <li><a href="#">팔로잉/팔로워</a></li>
+                    <li><a href="#">포인트</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                    <li><a href="#">회원정보 수정</a></li>
+                    <li><a href="#">회원탈퇴</a></li>
+                    <li><a href="#">판매회원 신청하기 </a></li>
+                </ul>
+            </div>
+
+            <div class="mypage__container">
+
+                <!--등급-->
+                <div class="mypage__top-grade">
+                    <div class="user-grade">
+                        <p><strong>김준식</strong>님은</p>
+                        <p>일반 등급입니다.</p>
+                    </div>
+                    <div class="mypage__point">
+                        <strong>MEDI POINT</strong>
+                        <p class="point">12,000 P</p>
+                        <p class="point-earn">적립 예정 포인트 30,000P</p>
+                    </div>
                 </div>
-                <div class="signup__form">
-                    <form action="">
-                        <fieldset>
-                            <legend>기본정보</legend>
-                            <div class="inputbox mt-0">
-                                <p class="inputbox__label" for="userName">이름(실명) <i class="required">(필수)*</i> </p>
-                                <div class="inputbox__input">
-                                    <input type="text" id="userName" placeholder="실명을 입력해주세요">
-                                </div>
-                            </div>
 
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="userId">아이디<i class="required">(필수)*</i> </p>
-                                <div class="inputbox__input">
-                                    <input type="text" id="userId"
-                                        placeholder="최소 4자이상, 최대 30자이하, 영문.소문자, 숫자와 특수기호(_), (-)만 사용가능">
-                                </div>
-                            </div>
-
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="userPassword">비밀번호<i class="required">(필수)*</i> </p>
-                                <div class="inputbox__input">
-                                    <input type="password" id="userPassword"
-                                        placeholder="영문 대/소문자와 숫자가 모두 포함된 조합으로 8자 이상 " value="medifortepwpw">
-                                    <button type="button" class="ic-visibility" onclick="pwVisibility();">보이기</button>
-                                </div>
-                            </div>
-
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="userPasswordConfirm">비밀번호 확인<i
-                                        class="required">(필수)*</i>
-                                </p>
-                                <div class="inputbox__input">
-                                    <input type="password" id="userPasswordConfirm" placeholder="비밀번호를 다시 한 번 입력해 주세요"
-                                        value="medifortepwpw">
-                                    <button type="button" class="ic-visibility" onclick="pwVisibility();">보이기</button>
-                                </div>
-                            </div>
-
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="userPhone">휴대전화번호<i class="required">(필수)*</i> </p>
-                                <div class="inputbox__input inputbox__input--has-btn">
-                                    <input type="number" id="userPhone" placeholder="숫자만 입력하세요">
-                                    <button class="btn-gray btn-request">인증번호요청</button>
-                                </div>
-                            </div>
-
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="usnerCertiNum">인증번호<i class="required">(필수)*</i> </p>
-                                <div class="inputbox__input inputbox__input--has-btn">
-                                    <input type="number" id="usnerCertiNum" placeholder="인증번호를 입력해 주세요">
-                                    <div class="inputbox__limit">
-                                        <button class="btn-gray btn-check">확인</button>
-                                        <p class="time">남은시간 : 0초</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="userEmail">이메일주소</p>
-                                <div class="inputbox__input inputbox__input--has-btn">
-                                    <input type="text" id="userEmail" placeholder="인증번호요청">
-                                    <button class="btn-gray btn-request">인증번호요청</button>
-                                </div>
-                            </div>
-
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="userEmailNum">이메일주소 인증번호</p>
-                                <div class="inputbox__input inputbox__input--has-btn">
-                                    <input type="text" id="userEmailNum" placeholder="인증번호요청">
-                                      <div class="inputbox__limit">
-                                        <button class="btn-gray btn-check">확인</button>
-                                        <p class="time">남은시간 : 0초</p>
-                                    </div>
-                                </div>
-                            </div>
+                <!--구매현황-->
+                <div class="purchase-status">
+                    <h4 class="title02">구매현황</h4>
+                    <div class="tab-link tab-link--type3">
+                        <a href="#" class="is-selected">일반구매</a>
+                        <a href="#" class="">리스구매</a>
+                        <a href="#" class="">소모품 구매</a>
+                    </div>
+                    <div class="purchase__process">
+                        <ul>
+                            <li class="has-count">
+                                <strong class="count">1</strong>
+                                <p>구매접수</p>
+                            </li>
+                            <li class="">
+                                <strong class="count">0</strong>
+                                <p>결제완료</p>
+                            </li>
+                            <li class="">
+                                <strong class="count">0</strong>
+                                <p>납품준비</p>
+                            </li>
+                            <li class="has-count">
+                                <strong class="count">2</strong>
+                                <p>납품중</p>
+                            </li>
+                            <li class="">
+                                <strong class="count">0</strong>
+                                <p>납품완료</p>
+                            </li>
+                            <li class="">
+                                <strong class="count">0</strong>
+                                <p>검수완료</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
 
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="userAddress">주소<i class="required">(필수)*</i> </p>
-                                <div class="inputbox__input inputbox__input--has-btn inputbox__input--zip">
-                                    <input type="text" id="userAddress">
-                                    <button class="btn-gray btn-check">우편번호 찾기</button>
-                                </div>
-                                <div class="inputbox__input inputbox__input--zip">
-                                    <input type="text" id="userAddress2">
-                                </div>
-                                <div class="inputbox__input inputbox__input--zip">
-                                    <input type="text" id="userAddress3" placeholder="나머지 주소 입력">
-                                </div>
-                            </div>
+                <!--구매리스트-->
+                <div class="ordered-product-list">
+                    <div class="paid-item">
+                        <ul class="paid-group1">
+                            <li>구매번호 22244234324 </li>
+                            <li>구매일 2021.11.23 </li>
+                            <li>판매자 김판매님</li>
+                        </ul>
 
-                        </fieldset>
-
-
-                        <fieldset>
-                            <legend>소속정보</legend>
-                            <div class="inputbox mt-0">
-                                <p class="inputbox__label" for="jobCategory">직업분류<i class="required">(필수)*</i> </p>
-                                <div class="inputbox__input">
-                                    <select name="jobCategory" id="jobCategory">
-                                        <option value="none">선택하기</option>
-                                        <option value="none">선택하기</option>
-                                        <option value="none">선택하기</option>
-                                        <option value="none">선택하기</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="jobContact">근무처 연락처 </p>
-                                <div class="inputbox__input">
-                                    <input type="number" id="jobContact" placeholder="‘-’ 제외하고 숫자만 입력하세요">
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>판매자 신청</legend>
-                            <div class="inputbox mt-0">
-                                <p class="inputbox__label" for="bizName">사업자명</p>
-                                <div class="inputbox__input">
-                                    <input type="text" id="bizName" placeholder="선택하기">
-                                </div>
-                            </div>
-
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="bizContact">근무처 연락처 </p>
-                                <div class="inputbox__input">
-                                    <input type="number" id="bizContact" placeholder="‘-’ 제외하고 숫자만 입력하세요">
-                                </div>
-                            </div>
-
-                            <div class="inputbox">
-                                <p class="inputbox__label" for="bizLicense">사업자등록증 첨부 </p>
-                                <div class="inputbox__input inputbox__input--has-btn">
-                                    <input type="number" id="bizLicense" placeholder="‘-’ 제외하고 숫자만 입력하세요">
-                                    <button class="btn-gray btn-upload">파일찾아 올리기</button>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <div class="signup__info">
-                            <strong class="signup__info-title"><b>판매자 등록을 원하시면 입력</b>해주세요</strong>
-                            <p>판매자 신청하시면 관리자 승인 후 상품판매가 가능합니다. </p>
-
-                            <p class="mt-20">메디포르테는 회원님의 개인정보를 안전하게 보호 하고 있으며 회원님의 동의 없이 입력하신 정보가 공개 되거나 제3자에게 제공되지
-                                않습니다.
-                                자세한 내용은 개인정보 처리방침을 확인하여 주시기 바랍니다.
-                            </p>
+                        <div class="paid-table">
+                            <table>
+                                <colgroup>
+                                    <col width="">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="prd-info">상품정보</th>
+                                        <th class="prd-price">결제금액</th>
+                                        <th class="prd-sec">구분</th>
+                                        <th class="prd-status">진행상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="prd-info">
+                                            <p class="thumb">
+                                                <img src="static/images/mypage_paid_product_thumb.png" alt="img">
+                                            </p>
+                                            <div class="info">
+                                                <span class="info-brand">[사이노슈어] </span>
+                                                <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                                <ul>
+                                                    <li>제조사 : 사이노슈어</li>
+                                                    <li>제조년월 : 2018.11</li>
+                                                    <li>사용기간 : 3년</li>
+                                                    <li>상태 : 상</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td class="prd-price" data-heading="결제금액">23,000,000원</td>
+                                        <td class="prd-sec" data-heading="구분">일반</td>
+                                        <td class="prd-status" data-heading="진행상태">
+                                            <p class="state">구매접수</p>
+                                            <button class="btn-status">취소</button>
+                                            <button class="btn-chat"><span class="blind">채팅</span></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <button type="button" class="btn--round btn--blue btn-signup">회원가입 신청합니다.</button>
-                    </form>
+                    </div>
                 </div>
+
             </div>
         </section>
+        <!--//마이페이지-->
         <section class="main-newsletter">
             <div class="newsletter__container">
                 <h3>메디포르테 뉴스레터신청하기 </h3>
