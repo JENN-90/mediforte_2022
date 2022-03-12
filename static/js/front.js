@@ -1,9 +1,12 @@
 (() => {
 
-    $(".custom-scroll").mCustomScrollbar({
-        theme: "dark-thin",
-        axis: "y"
-    });
+    if ($(".custom-scroll") > 0) {
+        $(".custom-scroll").mCustomScrollbar({
+            theme: "dark-thin",
+            axis: "y"
+        });
+    }
+
 
     const body = document.querySelector('body');
     const chat_mutes = document.querySelectorAll('.btn-mute-alert');
@@ -36,6 +39,8 @@
     const partner_slide_play = document.querySelector('.partner-play');
 
     const searchbtn = document.querySelector('.header__search-equip a ');
+
+    /*
 
     var main_product = new Swiper(".core-product", {
         navigation: {
@@ -182,7 +187,7 @@
                 slidesPerView: 3.5,
             },
         }
-        
+
     });
     var productSlide = new Swiper(".product-slide__top", {
         //loop: true,
@@ -195,7 +200,7 @@
             swiper: productThumb,
         },
     });
-
+     */
     $('.header__search-equip').on('click', function (e) {
         e.preventDefault();
         $('.dimm').fadeIn(400);

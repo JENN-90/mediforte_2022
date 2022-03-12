@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
         <link rel="stylesheet" href="static/css/swiper.css">
         <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" href="static/css/tui-date-picker.min.css">
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
         <title>메디포르테</title>
@@ -159,178 +160,84 @@
             </div>
 
             <div class="mypage__container">
-
+                <h3 class="point-title">김준식의 <strong>포인트</strong></h3>
                 <!--등급-->
                 <div class="mypage__top-grade">
-                    <div class="user-grade">
+                    <!-- <div class="user-grade">
                         <p><strong>김준식</strong>님은</p>
                         <p>일반 등급입니다.</p>
-                    </div>
+                    </div> -->
                     <div class="mypage__point">
                         <strong>MEDI POINT</strong>
                         <p class="point">12,000 P</p>
                         <p class="point-earn">적립 예정 포인트 30,000P</p>
                     </div>
-                </div>
 
-                <!--구매현황-->
-                <div class="purchase-status">
-                    <h4 class="title02">구매현황</h4>
-                    <div class="tab-link tab-link--type3">
-                        <a href="#" class="is-selected">일반구매</a>
-                        <a href="#" class="">리스구매</a>
-                        <a href="#" class="">소모품 구매</a>
-                    </div>
-                    <div class="purchase__process">
+                    <div class="mypage__point-state">
                         <ul>
-                            <li class="has-count">
-                                <strong class="count">1</strong>
-                                <p>구매접수</p>
-                            </li>
-                            <li class="">
-                                <strong class="count">0</strong>
-                                <p>결제완료</p>
-                            </li>
-                            <li class="">
-                                <strong class="count">0</strong>
-                                <p>납품준비</p>
-                            </li>
-                            <li class="has-count">
-                                <strong class="count">2</strong>
-                                <p>납품중</p>
-                            </li>
-                            <li class="">
-                                <strong class="count">0</strong>
-                                <p>납품완료</p>
-                            </li>
-                            <li class="">
-                                <strong class="count">0</strong>
-                                <p>검수완료</p>
-                            </li>
+                            <li><strong>적립 예정</strong> <span class="point">20,000P</span> </li>
+                            <li><strong>이번 달 소멸 예정</strong> <span class="point">0P</span> </li>
                         </ul>
                     </div>
                 </div>
 
+                <div class="tab-link tab-link--type3 mt-50">
+                    <a href="#" class="is-selected">적립/사용</a>
+                    <a href="#" class="">적립예정</a>
+                    <a href="#" class="">소멸예정</a>
+                </div>
 
-                <!--구매리스트-->
-                <div class="ordered-product-list">
-                    <div class="paid-item">
-                        <ul class="paid-group1">
-                            <li><span>구매번호</span> 22244234324 </li>
-                            <li><span>구매일</span> 2021.11.23 </li>
-                            <li><span>판매자</span> 김판매님</li>
+                <div class="check-transaction mt-40">
+                    <div class="check__period-btn">
+                        <h4>기간</h4>
+                        <ul>
+                            <li class="is-selected"><a href="#">3개월</a></li>
+                            <li><a href="#">6개월</a></li>
+                            <li><a href="#">9개월</a></li>
+                            <li><a href="#">1년</a></li>
                         </ul>
-
-                        <div class="paid-table">
-                            <table>
-                                <colgroup>
-                                    <col width="57%">
-                                    <col width="16%">
-                                    <col width="12%">
-                                    <col width="15%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="prd-info">상품정보</th>
-                                        <th class="prd-price">결제금액</th>
-                                        <th class="prd-sec">구분</th>
-                                        <th class="prd-status">진행상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="prd-info">
-                                            <div class="prd-info-box">
-                                                <p class="thumb">
-                                                    <img src="static/images/mypage_paid_product_thumb.png" alt="img">
-                                                </p>
-                                                <div class="info">
-                                                    <span class="info-brand">[사이노슈어] </span>
-                                                    <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
-                                                    <ul>
-                                                        <li>제조사 : 사이노슈어</li>
-                                                        <li>제조년월 : 2018.11</li>
-                                                        <li>사용기간 : 3년</li>
-                                                        <li>상태 : 상</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="prd-price" data-heading="결제금액"><span class="price">23,000,000원</span>
-                                        </td>
-                                        <td class="prd-sec" data-heading="구분">일반</td>
-                                        <td class="prd-status" data-heading="진행상태">
-                                            <p class="state">구매접수</p>
-                                            <div class="status-btns">
-                                                <button class="btn-status">취소</button>
-                                                <button class="btn-chat"><span class="blind">채팅</span></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
-
-                         <div class="paid-item">
-                        <ul class="paid-group1">
-                            <li><span>구매번호</span> 22244234324 </li>
-                            <li><span>구매일</span> 2021.11.23 </li>
-                            <li><span>판매자</span> 김판매님</li>
-                        </ul>
-
-                        <div class="paid-table">
-                            <table>
-                                <colgroup>
-                                    <col width="57%">
-                                    <col width="16%">
-                                    <col width="12%">
-                                    <col width="15%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="prd-info">상품정보</th>
-                                        <th class="prd-price">결제금액</th>
-                                        <th class="prd-sec">구분</th>
-                                        <th class="prd-status">진행상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="prd-info">
-                                            <div class="prd-info-box">
-                                                <p class="thumb">
-                                                    <img src="static/images/mypage_paid_product_thumb.png" alt="img">
-                                                </p>
-                                                <div class="info">
-                                                    <span class="info-brand">[사이노슈어] </span>
-                                                    <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
-                                                    <ul>
-                                                        <li>제조사 : 사이노슈어</li>
-                                                        <li>제조년월 : 2018.11</li>
-                                                        <li>사용기간 : 3년</li>
-                                                        <li>상태 : 상</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="prd-price" data-heading="결제금액"><span class="price">23,000,000원</span>
-                                        </td>
-                                        <td class="prd-sec" data-heading="구분">일반</td>
-                                        <td class="prd-status" data-heading="진행상태">
-                                            <p class="state">구매접수</p>
-                                            <div class="status-btns">
-                                                <button class="btn-status">취소</button>
-                                                <button class="btn-chat"><span class="blind">채팅</span></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="check__period-date">
+                        <!--from-->
+                        <div class="date-input">
+                            <div class="tui-datepicker-input">
+                                <input type="text" id="dateFrom" aria-label="Date-Time" required>
+                            </div>
+                            <div id="dateFromCalendar"></div>
                         </div>
+                        <span class="wave">~</span>
+                        <!--to-->
+                        <div class="date-input">
+                            <div class="tui-datepicker-input">
+                                <input type="text" id="dateTo" aria-label="Date-Time" required>
+                            </div>
+                            <div id="dateToCalendar"></div>
+                        </div>
+                        <button class="btn--black2 btn-check-transaction">조회</button>
                     </div>
                 </div>
 
+
+                <div class="point-table tb-type02 mt-50">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>날짜</th>
+                                <th>구분</th>
+                                <th>구매금액</th>
+                                <th>적립</th>
+                                <th>사용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
         <!--//마이페이지-->
@@ -477,7 +384,27 @@
         <script src="static/js/swiper.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/masonry.pkgd.min.js"></script>
+        <script src="static/js/tui-date-picker.min.js"></script>
         <script src="static/js/front.js"></script>
+
+        <script>
+            let datepickerFrom = new tui.DatePicker('#dateFromCalendar', {
+                language: 'ko',
+                date: new Date(),
+                input: {
+                    element: '#dateFrom',
+                    format: 'yyyy-MM-dd'
+                }
+            });
+            let datepickerTo = new tui.DatePicker('#dateToCalendar', {
+                language: 'ko',
+                date: new Date(),
+                input: {
+                    element: '#dateTo',
+                    format: 'yyyy-MM-dd'
+                }
+            });
+        </script>
     </body>
 
 </html>

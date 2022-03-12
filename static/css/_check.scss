@@ -84,7 +84,7 @@
         margin: -1px;
 
         &:checked~.checkmark::before {
-            background: var(--primary-red) url('../images/ic_checkbox_check_white.svg') no-repeat center / 18px;
+            background: var(--primary-red) url('../images/ic_checkbox_check_white.svg') no-repeat center / 15px;
             border-color: var(--primary-red);
         }
     }

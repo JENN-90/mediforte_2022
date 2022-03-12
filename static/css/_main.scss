@@ -1142,6 +1142,7 @@
 .main-newsletter {
     padding: 7rem 5rem 15rem 5rem;
     background: url('../images/main_newsletter_bg.png') no-repeat center / cover;
+    background-attachment: fixed;
 
 
     .newsletter__container {
@@ -1220,6 +1221,10 @@
     }
 
     @include mq('phone-wide') {
+
+        h3{
+            font-size: 2.5rem;
+        }
         .newsletter__form {
             flex-wrap: wrap;
             padding: 3rem;

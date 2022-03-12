@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
         <link rel="stylesheet" href="static/css/swiper.css">
         <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" href="static/css/tui-date-picker.min.css">
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
         <title>메디포르테</title>
@@ -142,12 +143,12 @@
             <div class="mypage__nav">
                 <h3 class="mypage__title">마이페이지</h3>
                 <ul>
-                    <li class="current"><a href="#">홈</a></li>
+                    <li><a href="#">홈</a></li>
                     <li><a href="#">거래상태 조회</a></li>
                     <li><a href="#">계약현황</a></li>
                     <li><a href="#">구매내역</a></li>
                     <li><a href="#">판매 의뢰하기</a></li>
-                    <li><a href="#">관심상품</a></li>
+                    <li class="current"><a href="#">관심상품</a></li>
                     <li><a href="#">팔로잉/팔로워</a></li>
                     <li><a href="#">포인트</a></li>
                     <li><a href="#">리뷰</a></li>
@@ -160,177 +161,89 @@
 
             <div class="mypage__container">
 
-                <!--등급-->
-                <div class="mypage__top-grade">
-                    <div class="user-grade">
-                        <p><strong>김준식</strong>님은</p>
-                        <p>일반 등급입니다.</p>
-                    </div>
-                    <div class="mypage__point">
-                        <strong>MEDI POINT</strong>
-                        <p class="point">12,000 P</p>
-                        <p class="point-earn">적립 예정 포인트 30,000P</p>
-                    </div>
-                </div>
+                <h3 class="mypage__title">리뷰</h3>
 
-                <!--구매현황-->
-                <div class="purchase-status">
-                    <h4 class="title02">구매현황</h4>
-                    <div class="tab-link tab-link--type3">
-                        <a href="#" class="is-selected">일반구매</a>
-                        <a href="#" class="">리스구매</a>
-                        <a href="#" class="">소모품 구매</a>
-                    </div>
-                    <div class="purchase__process">
-                        <ul>
-                            <li class="has-count">
-                                <strong class="count">1</strong>
-                                <p>구매접수</p>
-                            </li>
-                            <li class="">
-                                <strong class="count">0</strong>
-                                <p>결제완료</p>
-                            </li>
-                            <li class="">
-                                <strong class="count">0</strong>
-                                <p>납품준비</p>
-                            </li>
-                            <li class="has-count">
-                                <strong class="count">2</strong>
-                                <p>납품중</p>
-                            </li>
-                            <li class="">
-                                <strong class="count">0</strong>
-                                <p>납품완료</p>
-                            </li>
-                            <li class="">
-                                <strong class="count">0</strong>
-                                <p>검수완료</p>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="tab-link tab-link--type2 mt-20">
+                    <a href="mypage_review_before.html" class="is-selected">작성 가능한 후기 (5)</a>
+                    <a href="mypage_review_after.html" class="">내가 작성한 후기 (5)</a>
                 </div>
 
 
-                <!--구매리스트-->
-                <div class="ordered-product-list">
-                    <div class="paid-item">
-                        <ul class="paid-group1">
-                            <li><span>구매번호</span> 22244234324 </li>
-                            <li><span>구매일</span> 2021.11.23 </li>
-                            <li><span>판매자</span> 김판매님</li>
-                        </ul>
-
-                        <div class="paid-table">
-                            <table>
-                                <colgroup>
-                                    <col width="57%">
-                                    <col width="16%">
-                                    <col width="12%">
-                                    <col width="15%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="prd-info">상품정보</th>
-                                        <th class="prd-price">결제금액</th>
-                                        <th class="prd-sec">구분</th>
-                                        <th class="prd-status">진행상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="prd-info">
-                                            <div class="prd-info-box">
-                                                <p class="thumb">
-                                                    <img src="static/images/mypage_paid_product_thumb.png" alt="img">
-                                                </p>
-                                                <div class="info">
-                                                    <span class="info-brand">[사이노슈어] </span>
-                                                    <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
-                                                    <ul>
-                                                        <li>제조사 : 사이노슈어</li>
-                                                        <li>제조년월 : 2018.11</li>
-                                                        <li>사용기간 : 3년</li>
-                                                        <li>상태 : 상</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="prd-price" data-heading="결제금액"><span class="price">23,000,000원</span>
-                                        </td>
-                                        <td class="prd-sec" data-heading="구분">일반</td>
-                                        <td class="prd-status" data-heading="진행상태">
-                                            <p class="state">구매접수</p>
-                                            <div class="status-btns">
-                                                <button class="btn-status">취소</button>
-                                                <button class="btn-chat"><span class="blind">채팅</span></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="grid my-review-list">
+                    <div class="grid-item my-review__item">
+                        <div class="thumb">
+                            <img src="static/images/sample4.png" alt="review thumb">
                         </div>
+                        <dl>
+                            <dt>피코슈어레이져</dt>
+                            <dd>구입일 2022-02-03</dd>
+                        </dl>
+                        <button class="btn-write-review">후기쓰기</button>
                     </div>
 
-                         <div class="paid-item">
-                        <ul class="paid-group1">
-                            <li><span>구매번호</span> 22244234324 </li>
-                            <li><span>구매일</span> 2021.11.23 </li>
-                            <li><span>판매자</span> 김판매님</li>
-                        </ul>
-
-                        <div class="paid-table">
-                            <table>
-                                <colgroup>
-                                    <col width="57%">
-                                    <col width="16%">
-                                    <col width="12%">
-                                    <col width="15%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="prd-info">상품정보</th>
-                                        <th class="prd-price">결제금액</th>
-                                        <th class="prd-sec">구분</th>
-                                        <th class="prd-status">진행상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="prd-info">
-                                            <div class="prd-info-box">
-                                                <p class="thumb">
-                                                    <img src="static/images/mypage_paid_product_thumb.png" alt="img">
-                                                </p>
-                                                <div class="info">
-                                                    <span class="info-brand">[사이노슈어] </span>
-                                                    <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
-                                                    <ul>
-                                                        <li>제조사 : 사이노슈어</li>
-                                                        <li>제조년월 : 2018.11</li>
-                                                        <li>사용기간 : 3년</li>
-                                                        <li>상태 : 상</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="prd-price" data-heading="결제금액"><span class="price">23,000,000원</span>
-                                        </td>
-                                        <td class="prd-sec" data-heading="구분">일반</td>
-                                        <td class="prd-status" data-heading="진행상태">
-                                            <p class="state">구매접수</p>
-                                            <div class="status-btns">
-                                                <button class="btn-status">취소</button>
-                                                <button class="btn-chat"><span class="blind">채팅</span></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                     <div class="grid-item my-review__item">
+                        <div class="thumb">
+                            <img src="static/images/sample4.png" alt="review thumb">
                         </div>
+                        <dl>
+                            <dt>피코슈어레이져</dt>
+                            <dd>구입일 2022-02-03</dd>
+                        </dl>
+                        <button class="btn-write-review">후기쓰기</button>
+                    </div>
+                    <div class="grid-item my-review__item">
+                        <div class="thumb">
+                            <img src="static/images/sample5.png" alt="review thumb">
+                        </div>
+                        <dl>
+                            <dt>피코슈어레이져</dt>
+                            <dd>구입일 2022-02-03</dd>
+                        </dl>
+                        <button class="btn-write-review">후기쓰기</button>
+                    </div>
+                     <div class="grid-item my-review__item">
+                        <div class="thumb">
+                            <img src="static/images/sample4.png" alt="review thumb">
+                        </div>
+                        <dl>
+                            <dt>피코슈어레이져</dt>
+                            <dd>구입일 2022-02-03</dd>
+                        </dl>
+                        <button class="btn-write-review">후기쓰기</button>
+                    </div>
+                        <div class="grid-item my-review__item">
+                        <div class="thumb">
+                            <img src="static/images/sample5.png" alt="review thumb">
+                        </div>
+                        <dl>
+                            <dt>피코슈어레이져</dt>
+                            <dd>구입일 2022-02-03</dd>
+                        </dl>
+                        <button class="btn-write-review">후기쓰기</button>
+                    </div>
+                     <div class="grid-item my-review__item">
+                        <div class="thumb">
+                            <img src="static/images/sample4.png" alt="review thumb">
+                        </div>
+                        <dl>
+                            <dt>피코슈어레이져</dt>
+                            <dd>구입일 2022-02-03</dd>
+                        </dl>
+                        <button class="btn-write-review">후기쓰기</button>
                     </div>
                 </div>
 
+                 <div class="pagination">
+                    <a href="#" class="page-first page-arrow"><span class="blind">first</span></a>
+                    <a href="#" class="page-prev page-arrow"><span class="blind">prev</span></a>
+                    <a href="#" class="page-num page-current">1</a>
+                    <a href="#" class="page-num">2</a>
+                    <a href="#" class="page-num">3</a>
+                    <a href="#" class="page-num">4</a>
+                    <a href="#" class="page-num">5</a>
+                    <a href="#" class="page-next page-arrow"><span class="blind">next</span></a>
+                    <a href="#" class="page-last page-arrow"><span class="blind">last</span></a>
+                </div>
             </div>
         </section>
         <!--//마이페이지-->
@@ -474,10 +387,9 @@
         <div class="dimm"></div>
         <script src="static/js/jquery-1.12.1.min.js"></script>
         <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
-        <script src="static/js/swiper.min.js"></script>
-        <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/masonry.pkgd.min.js"></script>
         <script src="static/js/front.js"></script>
+
     </body>
 
 </html>
