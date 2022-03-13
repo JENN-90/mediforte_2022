@@ -21,6 +21,13 @@
     height: 100%;
     background-color: rgba($color: #000000, $alpha: 0.4);
 
+    &--standard {
+         .modal__container {
+              text-align: center;
+              line-height: 1.8;
+         }
+    }
+
     &__title {
         font-weight: 500;
         font-size: 2.4rem
@@ -356,23 +363,28 @@
 
 
 .tb-type02 {
-    border-top: 2px solid #000; 
+    border-top: 2px solid #000;
     border-bottom: 1px solid #000;
-     table {
-         width: 100%;
-         table-layout: fixed;
-         font-size: 1.4rem;
-         text-align: center;
-     }
-     thead> th {
-         color:#000; 
-     }
-     th, td {
-          padding: 2rem 1rem;
-          font-weight: 500;
-          border-bottom: 1px solid #ddd;
-     }
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    thead>th {
+        color: #000;
+    }
+
+    th,
+    td {
+        padding: 2rem 1rem;
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+    }
 }
+
 .find-user {
     text-align: right;
     font-size: 13px;
@@ -509,7 +521,7 @@
         display: block;
         border-left: 1px solid #ddd;
 
-        &:first-of-type{
+        &:first-of-type {
             border-left: 0;
         }
 
@@ -555,4 +567,84 @@
         margin-top: -10px !important;
         background: url('../images/ic_calendar.svg') no-repeat center center / 20px !important;
     }
+}
+
+
+.rate--navy {
+    height: 32px;
+    overflow: hidden;
+    position: relative;
+    letter-spacing: -10px;
+
+
+    .star {
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        left: 0;
+        top: 0;
+        letter-spacing: 0;
+        background: url('../images/review_write_rate_gray.png') no-repeat left top;
+        background-size: auto 32px;
+        margin-right: 10px;
+
+        &.is-selected {
+            background-image: url('../images/review_write_rate_navy.png');
+        }
+    }
+
+    i {
+        font-size: 12px;
+        line-height: 11px;
+        font-style: normal;
+        padding-left: 5px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        ;
+    }
+}
+
+.list-dot {
+    li {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        position: relative;
+        padding-left: 12px;
+
+        &::before {
+            content: '';
+            width: 2px;
+            height: 2px;
+            background: #aaa;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+    }
+}
+
+.agree-box--gray {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-top: 3rem;
+    text-align: center;
+
+    .check-box {
+        display: inline-block;
+    }
+
+    label {
+        font-size: 1.8rem;
+    }
+
+    small {
+        font-size: 1.6rem;
+    }
+}
+
+.seller-infotxt {
+    color: #666;
+    line-height: 1.6;
+    margin-top: 2rem
 }

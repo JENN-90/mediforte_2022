@@ -25,12 +25,66 @@
         }
     }
 
-    &__form {
-        margin-top: 5rem;
 
+    &__info {
+        margin-top: 4rem;
+        padding-bottom: 2.5rem;
+        border-bottom: 3px solid #000;
+
+        &-title {
+            color: var(--primary-red);
+            font-weight: 500;
+
+            b {
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 13px;
+            line-height: 1.6;
+        }
     }
 
-    .ic-visibility { height: 60px; line-height: 60px;}
+    @include mq('tablet-wide') {
+        padding: 4rem 2rem;
+
+        &__container {
+            padding: 4rem 3rem;
+        }
+
+        &__title {
+            h3 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    @include mq('phone-wide') {
+
+        &__container {
+            padding: 3rem 2rem;
+            border-radius: 5px;
+        }
+
+
+    }
+}
+
+
+.signup__form {
+    margin-top: 5rem;
+
+    .ic-visibility {
+        height: 60px;
+        line-height: 60px;
+    }
 
     fieldset {
         border: 0;
@@ -136,48 +190,132 @@
         }
     }
 
-    &__info {
-        margin-top: 4rem;
-        padding-bottom: 2.5rem;
-        border-bottom: 3px solid #000;
 
-        &-title {
-            color: var(--primary-red);
-            font-weight: 500;
+}
 
-            b {
-                font-size: 1.8rem;
-                font-weight: 500;
-            }
-        }
 
-        p {
-            margin-top: 1rem;
-            font-size: 13px;
-            line-height: 1.6;
-        }
+.mypage__modify {
+    position: relative;
+
+    &.mypage__modify--txt {
+         border-top: 2px solid #000;
+         margin-top: 3rem;
+         .inputbox {
+             padding: 3rem 0
+         }
+         
+    }
+    .help-required{
+        text-align: right;
+        color: #ff0000;
+        position: relative;
+        top: 40px;
+    }
+    .mypage__title {
+         border-bottom:2px solid #000;
     }
 
-    @include mq('tablet-wide') {
-        padding: 4rem 2rem;
+    .inputbox {
+        border-bottom: 1px solid #dcdbe4;
+        margin-top: 0;
+        padding: 1.5rem 0;
 
-        &__container {
-            padding: 4rem 3rem;
+        .inputbox__input--zip {
+            margin-top: 0;
+
+            &:not(:first-of-type) {
+                width: 100%;
+                border-top: 1px solid #dcdbe4;
+                padding-left: 160px;
+            }
         }
 
-        &__title {
-            h3 {
-                font-size: 3rem;
-            }
+        &__label {
+            color: #000;
+            font-size: 1.6rem;
+            position: static;
+            width: 160px;
+            padding-bottom: 0;
+        }
 
-            p {
+        .value-txt {
+             color: #cccccc;
+        }
+
+        &__input {
+            width: calc(100% - 160px);
+            input,
+            select,
+            textarea {
+                border: 0;
                 font-size: 1.6rem;
+                color: #666666;
+                text-decoration: underline;
+                text-underline-offset: 2px;
+
+
+                &::placeholder {
+                    font-size: 1.6rem;
+                    color: #666666
+                }
+            }
+
+            &.has-helptxt {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .help-text {
+                    color: #666666;
+                    font-size: 1.3rem;
+                    line-height: 1.5;
+                    max-width: calc(100% - 240px);
+                }
+
+
+                input,
+                select,
+                textarea {
+                    max-width: 240px;
+                }
+            }
+
+            &--has-btn {
+
+                input {
+                    max-width: 240px;
+                }
+
+                .btn-gray {
+                    color: #17469d;
+                    background: transparent;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .time {
+                    margin-top: 0 !important;
+                }
+            }
+
+
+        }
+
+
+        &__input--multi {
+            display: flex;
+            input, select{
+                 max-width: 150px;
             }
         }
 
-        &__form {
-            margin-top: 3rem
-        }
+    }
+}
+
+@include mq('tablet-wide') {
+    .signup__form {
+        margin-top: 3rem;
+
 
         fieldset {
             padding: 2rem 0 4rem 0;
@@ -188,13 +326,33 @@
             }
         }
     }
+}
 
-    @include mq('phone-wide') {
+@include mq('tablet-small') {
+    .biz-attach {
+        flex-wrap: wrap;
 
-        &__container {
-            padding: 3rem 2rem;
-            border-radius: 5px;
+        input {
+            width: 100%;
+            max-width: 100% !important;
         }
+
+        .btn-upload {
+            margin-top: 5px;
+            margin-left: 0 !important;
+        }
+    }
+
+    .mypage__modify .inputbox__input.has-helptxt {
+        .help-text {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@include mq('phone-wide') {
+    .signup__form {
 
         .inputbox {
             flex-wrap: wrap;
@@ -206,19 +364,52 @@
                 font-size: 13px;
             }
 
+
             &__input {
                 &--has-btn {
+
                     .btn-gray {
                         font-size: 13px;
                         margin-left: 5px;
                     }
-                     .inputbox__limit .time{
-                          padding-left:5px;
-                          font-size: 12px;
-                     }
+
+                    .inputbox__limit .time {
+                        padding-left: 5px;
+                        font-size: 12px;
+                    }
                 }
 
             }
+        }
+    }
+
+    
+    .mypage__modify {
+        &.mypage__modify--txt {
+        
+            .inputbox {
+                padding: 2rem 0;
+
+                &__label {
+                     margin-bottom: 7px;
+                }
+            }
+
+        }
+
+        .inputbox{
+             padding: 2rem 0 1rem 0;
+        }
+        .inputbox__input {
+            width: 100%;
+
+            &.inputbox__input--zip:not(:first-of-type) {
+                 padding-left: 0;
+            }
+        }
+
+        .inputbox__input input {
+            padding-left: 0;
         }
     }
 }

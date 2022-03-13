@@ -149,141 +149,63 @@
                     <li><a href="#">구매내역</a></li>
                     <li><a href="#">판매 의뢰하기</a></li>
                     <li><a href="#">관심상품</a></li>
-                    <li class="current"><a href="#">팔로잉/팔로워</a></li>
+                    <li><a href="#">팔로잉/팔로워</a></li>
                     <li><a href="#">포인트</a></li>
                     <li><a href="#">리뷰</a></li>
                     <li><a href="#">1:1문의</a></li>
                     <li><a href="#">회원정보 수정</a></li>
-                    <li><a href="#">회원탈퇴</a></li>
+                    <li class="current"><a href="#">회원탈퇴</a></li>
                     <li><a href="#">판매회원 신청하기 </a></li>
                 </ul>
             </div>
 
             <div class="mypage__container">
 
-                <h3 class="mypage__title">팔로잉/팔로워</h3>
-                <p class="mypage__txt">관심있는 회원을 팔로우 하거나 나를 팔로잉 하고 있는 팔로워를 확인하실 수 있습니다.</p>
+                <h3 class="mypage__title">회원탈퇴</h3>
+                <p class="mypage__txt">고객님의 개인정보 보호를 위해 비밀번호 인증 후 회원탈퇴를 하실 수 있으며 <br />아래의 안내사항을 확인해주시기 바랍니다.</p>
+                <ul class="quit-info-txt">
+                    <li>1. 3개월간 회원가입 불가능
+                        <p>회원탈퇴 후 3개월 동안은 회원가입이 불가능합니다.탈퇴한 아이디는 본인과 타인 모두 재사용 및 복구가 불가하오니 신중하게 선택하시기 바랍니다.탈퇴와 재가입을 통해
+                            아이디를 교체하면서 선량한 이용자들께 피해를 끼치는 행위를 방지하기 위한 조치오니 넓은 양해 부탁드립니다.</p>
+                    </li>
 
+                    <li>2. 회원제 이용 서비스
+                        <p>유료서비스 등에 대한 정보와 데이터는 모두 삭제됩니다.</p>
+                        <ul>
+                            <li>※ 아래와 같은 거래중인 내역이 있을 경우 해당 거래내역이 최종 종료 되기 전까지는 회원탈퇴가 불가합니다.
+                                <p>해당 거래가 완료된 후에 회원탈퇴를 신청해 주시기 바랍니다.</p>
+                            </li>
+                            <li>※ 회원탈퇴를 하시더라도 개별적으로 계약한 AS서비스 및 리스계약의 경우 회원님과 개별 계약주체와의 계약내역에는 변동이 없습니다.</li>
+                            <li>계약이 진행 중일 때</li>
+                            <li>납품이 진행 중일 때</li>
+                            <li>정산이 진행 중일 때</li>
+                        </ul>
+                    </li>
 
-                <div class="tab-link tab-link--type2 mt-40">
-                    <a href="mypage_following.html" class="is-selected">팔로잉</a>
-                    <a href="mypage_follower.html" class="">팔로워</a>
+                    <li>3. 회원탈퇴 신청 처리 기간
+                        <p>신청일 이후 3일 이내에 처리 결과를 문자와 이메일을 통하여 알려 드립니다.</p>
+                    </li>
+
+                </ul>
+
+                <div class="agree-box--gray">
+                    <label for="agreeQuit" class="check-box">
+                        <input type="checkbox" id="agreeQuit">위 내용에 대해 모두 확인하였으며, 동의합니다.
+                        <span class="checkmark radio-box__checkmark"></span>
+                    </label>
                 </div>
 
-                <div class="following-list mt-40">
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-
-                            <div class="following__rate">
-                                <span class="star star4"></span>
-                            </div>
-
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                            <!--
-                                    <button type="button" class="btn-following btn-following--follower"><span>팔로워</span></button>
-                                    <button type="button" class="btn-following btn-following--following"><span>팔로잉</span></button>
-                                    <button type="button" class="btn-following btn-following--follow"><span>팔로우</span></button>
-                                    <button type="button" class="btn-following btn-following--unfollow"><span>언팔로우</span></button>
-                                -->
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star5"></span>
-                            </div>
-                            <button type="button" class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star5"></span>
-                            </div>
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star5"></span>
-                            </div>
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼 마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Incidunt ullam optio natus facere laboriosam consequatur eaque dolorem excepturi
-                                eligendi adipisci, provident nam enim amet, necessitatibus in! Perspiciatis excepturi
-                                asperiores maxime!</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star1"></span>
-                            </div>
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
+                <div class="confirm-quit-info">
+                    <ul>
+                        <li>이름 : 홍길동 </li>
+                        <li>아이디 : home2000 </li>
+                        <li>비밀번호 : <input title="비밀번호" type="password"></li>
+                    </ul>
                 </div>
 
-
-                <div class="pagination">
-                    <a href="#" class="page-first page-arrow"><span class="blind">first</span></a>
-                    <a href="#" class="page-prev page-arrow"><span class="blind">prev</span></a>
-                    <a href="#" class="page-num page-current">1</a>
-                    <a href="#" class="page-num">2</a>
-                    <a href="#" class="page-num">3</a>
-                    <a href="#" class="page-num">4</a>
-                    <a href="#" class="page-num">5</a>
-                    <a href="#" class="page-next page-arrow"><span class="blind">next</span></a>
-                    <a href="#" class="page-last page-arrow"><span class="blind">last</span></a>
+                <div class="btn-area">
+                    <button type="button" class="btn--white2 btn-cancel">취소</button>
+                    <button type="button" class="btn--black3 btn-done">회원탈퇴 신청</button>
                 </div>
             </div>
         </section>
@@ -425,6 +347,8 @@
 
             <div class="footer__copy">Copyright (c) 2022 Mediforte all right reserved.</div>
         </footer>
+
+
         <div class="dimm"></div>
         <script src="static/js/jquery-1.12.1.min.js"></script>
         <script src="static/js/jquery-migrate-1.4.1.min.js"></script>

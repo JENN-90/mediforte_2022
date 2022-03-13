@@ -9,8 +9,8 @@
         <meta name="author" content="Mediforte">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
         <link rel="stylesheet" href="static/css/swiper.css">
-        <link rel="stylesheet" href="static/css/tui-date-picker.min.css">
         <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" href="static/css/tui-date-picker.min.css">
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
         <title>메디포르테</title>
@@ -149,9 +149,9 @@
                     <li><a href="#">구매내역</a></li>
                     <li><a href="#">판매 의뢰하기</a></li>
                     <li><a href="#">관심상품</a></li>
-                    <li class="current"><a href="#">팔로잉/팔로워</a></li>
+                    <li><a href="#">팔로잉/팔로워</a></li>
                     <li><a href="#">포인트</a></li>
-                    <li><a href="#">리뷰</a></li>
+                    <li class="current"><a href="#">리뷰</a></li>
                     <li><a href="#">1:1문의</a></li>
                     <li><a href="#">회원정보 수정</a></li>
                     <li><a href="#">회원탈퇴</a></li>
@@ -161,129 +161,78 @@
 
             <div class="mypage__container">
 
-                <h3 class="mypage__title">팔로잉/팔로워</h3>
-                <p class="mypage__txt">관심있는 회원을 팔로우 하거나 나를 팔로잉 하고 있는 팔로워를 확인하실 수 있습니다.</p>
+                <h3 class="mypage__title">리뷰</h3>
 
-
-                <div class="tab-link tab-link--type2 mt-40">
-                    <a href="mypage_following.html" class="is-selected">팔로잉</a>
-                    <a href="mypage_follower.html" class="">팔로워</a>
+                <div class="tab-link tab-link--type2 mt-20">
+                    <a href="mypage_review_before.html" class="is-selected">작성 가능한 후기 (5)</a>
+                    <a href="mypage_review_after.html" class="">내가 작성한 후기 (5)</a>
                 </div>
 
-                <div class="following-list mt-40">
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
+                <div class="my-review-content mt-40">
 
-                            <div class="following__rate">
-                                <span class="star star4"></span>
-                            </div>
+                    <div class="my-review-product">
 
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                            <!--
-                                    <button type="button" class="btn-following btn-following--follower"><span>팔로워</span></button>
-                                    <button type="button" class="btn-following btn-following--following"><span>팔로잉</span></button>
-                                    <button type="button" class="btn-following btn-following--follow"><span>팔로우</span></button>
-                                    <button type="button" class="btn-following btn-following--unfollow"><span>언팔로우</span></button>
-                                -->
+                        <!--avatar-->
+                        <div class="review-user">
+                            <p class="avatar">
+                                <img src="static/images/chat_profile_base2.png" alt="avatar">
+                            </p>
+                            <p class="user-name"><strong class="user-company">메디코어</strong>장길산 님의 리뷰</p>
                         </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star5"></span>
-                            </div>
-                            <button type="button" class="btn-following btn-following--follower"><span>팔로워</span></button>
+
+                        <!--review product-->
+                        <div class="thumb">
+                            <img src="static/images/filter_product_sample2.png" alt="product">
                         </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star5"></span>
-                            </div>
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star5"></span>
-                            </div>
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼 마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Incidunt ullam optio natus facere laboriosam consequatur eaque dolorem excepturi
-                                eligendi adipisci, provident nam enim amet, necessitatibus in! Perspiciatis excepturi
-                                asperiores maxime!</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star1"></span>
-                            </div>
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                </div>
+                        <div class="product-info">
+                            <p class="product-num">P1202930</p>
+                            <p class="product-name">피코슈어 ND-YAG 피코레이저</p>
+
+                            <p class="product-mf">제조사 : (주)사이노슈어</p>
 
 
-                <div class="pagination">
-                    <a href="#" class="page-first page-arrow"><span class="blind">first</span></a>
-                    <a href="#" class="page-prev page-arrow"><span class="blind">prev</span></a>
-                    <a href="#" class="page-num page-current">1</a>
-                    <a href="#" class="page-num">2</a>
-                    <a href="#" class="page-num">3</a>
-                    <a href="#" class="page-num">4</a>
-                    <a href="#" class="page-num">5</a>
-                    <a href="#" class="page-next page-arrow"><span class="blind">next</span></a>
-                    <a href="#" class="page-last page-arrow"><span class="blind">last</span></a>
+                        </div>
+                    </div>
+
+
+                    <div class="my-review-write">
+                        <form action="">
+                            <div class="form__row">
+                                <div class="inputbox ">
+                                    <p class="inputbox__label">평점</p>
+                                    <div class="inputbox__input">
+                                        <dd class="rate--navy">
+                                            <a href="#" class="star is-selected"></a>
+                                            <a href="#" class="star is-selected"></a>
+                                            <a href="#" class="star"></a>
+                                            <a href="#" class="star"></a>
+                                            <a href="#" class="star"></a>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="form__row">
+                                <div class="inputbox ">
+                                    <p class="inputbox__label" for="mfName">상품명</p>
+                                    <div class="inputbox__input">
+                                        <input type="text" id="mfName" title="상품명">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__row">
+                                <div class="inputbox">
+                                    <!--에디터-->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="btn-area">
+                        <button class="btn--black2 btn-complete">작성완료</button>
+                        <button class="btn--white2 btn-list">목록</button>
+                    </div>
                 </div>
             </div>
         </section>

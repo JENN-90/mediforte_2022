@@ -149,11 +149,11 @@
                     <li><a href="#">구매내역</a></li>
                     <li><a href="#">판매 의뢰하기</a></li>
                     <li><a href="#">관심상품</a></li>
-                    <li class="current"><a href="#">팔로잉/팔로워</a></li>
+                    <li><a href="#">팔로잉/팔로워</a></li>
                     <li><a href="#">포인트</a></li>
                     <li><a href="#">리뷰</a></li>
                     <li><a href="#">1:1문의</a></li>
-                    <li><a href="#">회원정보 수정</a></li>
+                    <li class="current"><a href="#">회원정보 수정</a></li>
                     <li><a href="#">회원탈퇴</a></li>
                     <li><a href="#">판매회원 신청하기 </a></li>
                 </ul>
@@ -161,130 +161,161 @@
 
             <div class="mypage__container">
 
-                <h3 class="mypage__title">팔로잉/팔로워</h3>
-                <p class="mypage__txt">관심있는 회원을 팔로우 하거나 나를 팔로잉 하고 있는 팔로워를 확인하실 수 있습니다.</p>
+                <h3 class="mypage__title">회원정보 수정</h3>
+                <p class="mypage__txt">가입시 입력하신 회원정보 내역입니다. <br />수정을원하시면 내용을 수정하신 후 수정하기 버튼을 클릭해 주세요</p>
 
 
-                <div class="tab-link tab-link--type2 mt-40">
-                    <a href="mypage_following.html" class="is-selected">팔로잉</a>
-                    <a href="mypage_follower.html" class="">팔로워</a>
+
+                <div class="signup__form mypage__modify">
+                    <form action="">
+                        <p class="help-required">* 필수입력</p>
+                        <h3 class="mypage__title">기본정보</h3>
+                        <div class="inputbox mt-0">
+                            <p class="inputbox__label" for="userName">이름(실명) <i class="required">*</i> </p>
+                            <div class="inputbox__input">
+                                <input type="text" id="userName" placeholder="실명을 입력해주세요" value="홍길동">
+                            </div>
+                        </div>
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="userId">아이디<i class="required">*</i> </p>
+                            <div class="inputbox__input">
+                                <input type="text" id="userId"
+                                    placeholder="최소 4자이상, 최대 30자이하, 영문.소문자, 숫자와 특수기호(_), (-)만 사용가능"
+                                    value="1983년 11월 23일 (남)">
+                            </div>
+                        </div>
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="userPassword">비밀번호<i class="required">*</i> </p>
+                            <div class="inputbox__input has-helptxt">
+                                <input type="text" id="userPassword" placeholder="영문 대/소문자와 숫자가 모두 포함된 조합으로 8자 이상 "
+                                    value="a29372010">
+                                <div class="help-text">
+                                    비밀번호를 입력해주세요 영문 대/소문자, 숫자, 특수문자 (~!@#$%^&*()_+|) 중 2종류를 조합하여 10~16자 또는 3종류 이상을
+                                    조합하여 8~16자로 입력해주세요.</div>
+                            </div>
+                        </div>
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="userPasswordConfirm">비밀번호 확인<i class="required">*</i>
+                            </p>
+                            <div class="inputbox__input has-helptxt">
+                                <input type="text" id="userPasswordConfirm" placeholder="비밀번호를 다시 한 번 입력해 주세요"
+                                    value="a29372010">
+                                <div class="help-text">비밀번호를 다시한번 입력해주세요.</div>
+                            </div>
+                        </div>
+
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="userPhone">휴대전화번호<i class="required">*</i> </p>
+                            <div class="inputbox__input inputbox__input--has-btn">
+                                <input type="number" id="userPhone" placeholder="숫자만 입력하세요" value="01072893828">
+                                <button class="btn-gray btn-request">인증번호요청</button>
+                            </div>
+                        </div>
+
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="usnerCertiNum">인증번호<i class="required">*</i> </p>
+                            <div class="inputbox__input inputbox__input--has-btn">
+                                <input type="number" id="usnerCertiNum" placeholder="인증번호를 입력해 주세요">
+                                <div class="inputbox__limit">
+                                    <button class="btn-gray btn-check">확인</button>
+                                    <p class="time">남은시간 : 0초</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inputbox ">
+                            <p class="inputbox__label" for="jobContact">근무처 연락처<i class="required">*</i> </p>
+                            <div class="inputbox__input has-helptxt">
+                                <input type="number" id="jobContact" placeholder="‘-’ 제외하고 숫자만 입력하세요"
+                                    value="0265430989">
+                                <div class="help-text">평생번호(0502, 0504, 0505, 0506) 및 대표번호 (1599,1566 등) 는 050안심번호로 연결이
+                                    불가합니다. 대표번호는 지역번호와 함께 입력해주세요.</div>
+                            </div>
+                        </div>
+
+
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="userEmail">이메일<i class="required">*</i> </p>
+                            <div class="inputbox__input">
+                                <input type="text" id="userEmail" value="example@mediforte.com">
+                            </div>
+                        </div>
+
+
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="userAddress">주소<i class="required">*</i> </p>
+                            <div class="inputbox__input inputbox__input--has-btn inputbox__input--zip">
+                                <input type="text" id="userAddress" value="12345">
+                                <button class="btn-gray btn-check">우편번호 찾기</button>
+                            </div>
+                            <div class="inputbox__input inputbox__input--zip">
+                                <input type="text" id="userAddress2" value="경기도 용인시 기흥구 흥덕1로 13">
+                            </div>
+                            <div class="inputbox__input inputbox__input--zip">
+                                <input type="text" id="userAddress3" placeholder="나머지 주소 입력" value="흥덕아이티밸리 B-415">
+                            </div>
+                        </div>
+
+                        <h3 class="mypage__title mt-80">소속정보</h3>
+                        <div class="inputbox mt-0">
+                            <p class="inputbox__label" for="jobCategory">직업분류<i class="required">*</i> </p>
+                            <div class="inputbox__input has-helptxt">
+                                <select name="jobCategory" id="jobCategory">
+                                    <option value="none">의사</option>
+                                    <option value="none">선택하기</option>
+                                    <option value="none">선택하기</option>
+                                    <option value="none">선택하기</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="medLicenseNum">의사면허번호 <i class="required">*</i> </p>
+                            <div class="inputbox__input has-helptxt">
+                                <input type="text" id="medLicenseNum" value="172625345">
+                                <div class="help-text">의사회원이신 경우 의사면허번호를 꼭 입력해 주세요</div>
+                            </div>
+                        </div>
+
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="officeName">직장명/부서명 </p>
+                            <div class="inputbox__input inputbox__input--multi">
+                                <input type="text" id="officeName" value="홍성형외과의원">
+                                <input type="text" id="officeDept" value="원장">
+                            </div>
+                        </div>
+
+                        <h3 class="mypage__title mt-80">사업자등록정보</h3>
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="bizName">사업명<i class="required">*</i> </p>
+                            <div class="inputbox__input">
+                                <input type="text" id="bizName" value="홍성형외과의원">
+                            </div>
+                        </div>
+
+                        <div class="inputbox">
+                            <p class="inputbox__label" for="bizNumber">사업자등록번호<i class="required">*</i> </p>
+                            <div class="inputbox__input">
+                                <input type="text" id="bizNumber" value="23-356-876">
+                            </div>
+                        </div>
+
+                        <div class="inputbox ">
+                            <p class="inputbox__label" for="fileAttach">파일첨부 </p>
+                            <div class="inputbox__input inputbox__input--has-btn biz-attach">
+                                <input type="text" id="fileAttach" placeholder="‘-’ 제외하고 숫자만 입력하세요"
+                                    value="hong_2022_사업자등록증.pdf">
+                                <button type="button" class="btn-gray btn-upload">파일올리기</button>
+                            </div>
+                        </div>
+
+                        <div class="btn-area">
+                            <button type="button" class="btn--white2 btn-cancel">취소</button>
+                            <button type="button" class="btn--black3 btn-done">확인</button>
+                        </div>
+                    </form>
                 </div>
 
-                <div class="following-list mt-40">
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-
-                            <div class="following__rate">
-                                <span class="star star4"></span>
-                            </div>
-
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                            <!--
-                                    <button type="button" class="btn-following btn-following--follower"><span>팔로워</span></button>
-                                    <button type="button" class="btn-following btn-following--following"><span>팔로잉</span></button>
-                                    <button type="button" class="btn-following btn-following--follow"><span>팔로우</span></button>
-                                    <button type="button" class="btn-following btn-following--unfollow"><span>언팔로우</span></button>
-                                -->
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star5"></span>
-                            </div>
-                            <button type="button" class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star5"></span>
-                            </div>
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star5"></span>
-                            </div>
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                    <div class="following-list__item">
-                        <p class="avatar">
-                            <img src="static/images/sample2.png" alt="avatar">
-                        </p>
-                        <div class="info">
-                            <strong class="store-name">마카오김메디칼 마카오김메디칼</strong>
-                            <p class="store-desc">김준식 님의 스토어 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Incidunt ullam optio natus facere laboriosam consequatur eaque dolorem excepturi
-                                eligendi adipisci, provident nam enim amet, necessitatibus in! Perspiciatis excepturi
-                                asperiores maxime!</p>
-                            <ul class="store-item-count">
-                                <li>상품수 23</li>
-                                <li>팔로워 12</li>
-                            </ul>
-                            <div class="following__rate">
-                                <span class="star star1"></span>
-                            </div>
-                            <button type="button"
-                                class="btn-following btn-following--follower"><span>팔로워</span></button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="pagination">
-                    <a href="#" class="page-first page-arrow"><span class="blind">first</span></a>
-                    <a href="#" class="page-prev page-arrow"><span class="blind">prev</span></a>
-                    <a href="#" class="page-num page-current">1</a>
-                    <a href="#" class="page-num">2</a>
-                    <a href="#" class="page-num">3</a>
-                    <a href="#" class="page-num">4</a>
-                    <a href="#" class="page-num">5</a>
-                    <a href="#" class="page-next page-arrow"><span class="blind">next</span></a>
-                    <a href="#" class="page-last page-arrow"><span class="blind">last</span></a>
-                </div>
             </div>
         </section>
         <!--//마이페이지-->

@@ -171,21 +171,21 @@
                             <div class="form__row form__row--mf">
                                 <div class="form__col">
                                     <div class="inputbox ">
-                                        <p class="inputbox__label" for="mf">제조사 <i class="required">*</i></p>
+                                        <p class="inputbox__label" for="mfCompany">제조사 <i class="required">*</i></p>
                                         <div class="inputbox__input">
-                                            <input type="text" id="mf">
+                                            <input type="text" id="mfCompany">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form__col">
-                                    <label for="maker_selfInput" class="check-box-round">
-                                        <input type="checkbox" id="maker_selfInput" name="maker_selfInput">직접 입력
+                                    <label for="mfCompany_selfInput" class="check-box-round">
+                                        <input type="checkbox" id="mfCompany_selfInput">직접 입력
                                         <span class="checkmark radio-box__checkmark"></span>
                                     </label>
                                     <div class="inputbox inputbox--self">
                                         <div class="inputbox__input">
-                                            <input type="text" id="mf_self">
+                                            <input type="text" title="제조사 직접입력">
                                         </div>
                                     </div>
                                 </div>
@@ -234,7 +234,7 @@
 
                             <div class="form__row">
                                 <div class="inputbox ">
-                                    <p class="inputbox__label" for="mfDate">상태 <i class="required">*</i> </p>
+                                    <p class="inputbox__label">상태 <i class="required">*</i> </p>
                                     <ul class="select-prd-state">
                                         <li>
                                             <label class="radio-box">
@@ -276,9 +276,9 @@
                             </div>
                             <div class="form__row">
                                 <div class="inputbox ">
-                                    <p class="inputbox__label" for="mfNumber">장비 고유번호</p>
+                                    <p class="inputbox__label" for="mfSerialNumber">장비 고유번호</p>
                                     <div class="inputbox__input">
-                                        <input type="text" id="mfNumber">
+                                        <input type="text" id="mfSerialNumber">
                                     </div>
                                 </div>
                             </div>
@@ -307,9 +307,9 @@
                             <div class="form__row">
                                 <div class="form__col">
                                     <div class="inputbox ">
-                                        <p class="inputbox__label" for="mf">희망 판매가격 <i class="required">*</i></p>
+                                        <p class="inputbox__label" for="mfGuidePrice">희망 판매가격 <i class="required">*</i></p>
                                         <div class="inputbox__input inputbox__input--inline">
-                                            <input type="text" id="mf">
+                                            <input type="number" id="mfGuidePrice">
                                             <span class="unit">원</span>
                                         </div>
                                     </div>
@@ -391,7 +391,7 @@
                             </ul>
                         </fieldset>
 
-                        <div class="save--temp-box">
+                        <div class="agree-box--gray">
                             <label for="save--temp" class="check-box">
                                 <input type="checkbox" id="save--temp">임시 저장하기 <small>(추후 마이페이지에서 수정하여 판매등록하실 수 있습니다.)</small>
                                 <span class="checkmark radio-box__checkmark"></span>
@@ -400,8 +400,8 @@
 
 
                         <div class="btn-area">
-                            <button class="btn--white2 btn-cancel">취소</button>
-                            <button class="btn--black3 btn-done">확인</button>
+                            <button type="button" class="btn--white2 btn-cancel">취소</button>
+                            <button type="button" class="btn--black3 btn-done">확인</button>
                         </div>
                     </form>
                 </div>
@@ -548,7 +548,10 @@
         <div class="dimm"></div>
         <script src="static/js/jquery-1.12.1.min.js"></script>
         <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
+        <script src="static/js/masonry.pkgd.min.js"></script>
+        <script src="static/js/swiper.min.js"></script>
         <script src="static/js/tui-date-picker.min.js"></script>
+        <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/front.js"></script>
 
         <script>

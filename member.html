@@ -9,6 +9,7 @@
         <meta name="author" content="Mediforte">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
         <link rel="stylesheet" href="static/css/swiper.css">
+        <link rel="stylesheet" href="static/css/tui-date-picker.min.css">
         <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css">
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
@@ -61,7 +62,7 @@
                                     checked><strong>(필수)</strong> 메디포르테 이용약관 모두 동의
                                 <span class="checkmark radio-box__checkmark"></span>
                             </label>
-                            <button class="btn-show-sublist"><span class="blind">SHOW</span></button>
+                            <button type="button" class="btn-show-sublist"><span class="blind">SHOW</span></button>
                             <div class="agreement-sublist">
                                 <ul>
                                     <li><a href="#">메디포르테 이용약관</a></li>
@@ -76,7 +77,7 @@
                                     name="reportSelectType"><strong>(필수)</strong> 개인정보 수집/이용 동의
                                 <span class="checkmark radio-box__checkmark"></span>
                             </label>
-                            <button class="btn-show-sublist"><span class="blind">SHOW</span></button>
+                            <button type="button" class="btn-show-sublist"><span class="blind">SHOW</span></button>
                             <div class="agreement-sublist">
                                 <ul>
                                     <li><a href="#">개인정보 수집 이용 동의</a></li>
@@ -89,7 +90,7 @@
                                 동의
                                 <span class="checkmark radio-box__checkmark"></span>
                             </label>
-                            <button class="btn-show-sublist"><span class="blind">SHOW</span></button>
+                            <button type="button" class="btn-show-sublist"><span class="blind">SHOW</span></button>
                             <div class="agreement-sublist">
                                 <ul>
                                     <li><a href="#">이메일, SNS, PUSH 수신 동의</a></li>
@@ -184,22 +185,14 @@
         </div>
         <!-- //COMPLETE-->
 
-       
+
         <script src="static/js/jquery-1.12.1.min.js"></script>
         <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
+        <script src="static/js/masonry.pkgd.min.js"></script>
         <script src="static/js/swiper.min.js"></script>
+        <script src="static/js/tui-date-picker.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/front.js"></script>
-        <script>
-            $(window).click(function (e) {
-                if (e.target.className === 'btn-show-sublist') {
-                    $(e.target).addClass('is-active').next('.agreement-sublist').slideToggle();
-                }
-                if (e.target.className === 'btn-close-modal') {
-                    $(e.target).parent().parent().fadeOut(400)
-                }
-            });
-        </script>
     </body>
 
 </html>

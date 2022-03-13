@@ -188,12 +188,6 @@ select {
   text-transform: none;
 }
 
-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
 button,
 [type="button"],
 [type="reset"],
@@ -1261,6 +1255,11 @@ input[type=number] {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.modal--standard .modal__container {
+  text-align: center;
+  line-height: 1.8;
+}
+
 .modal__title {
   font-weight: 500;
   font-size: 2.4rem;
@@ -1683,7 +1682,8 @@ input[type=number] {
   color: #000;
 }
 
-.tb-type02 th, .tb-type02 td {
+.tb-type02 th,
+.tb-type02 td {
   padding: 2rem 1rem;
   font-weight: 500;
   border-bottom: 1px solid #ddd;
@@ -1881,6 +1881,81 @@ input[type=number] {
   height: 20px;
   margin-top: -10px !important;
   background: url("../images/ic_calendar.svg") no-repeat center center/20px !important;
+}
+
+.rate--navy {
+  height: 32px;
+  overflow: hidden;
+  position: relative;
+  letter-spacing: -10px;
+}
+
+.rate--navy .star {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  letter-spacing: 0;
+  background: url("../images/review_write_rate_gray.png") no-repeat left top;
+  background-size: auto 32px;
+  margin-right: 10px;
+}
+
+.rate--navy .star.is-selected {
+  background-image: url("../images/review_write_rate_navy.png");
+}
+
+.rate--navy i {
+  font-size: 12px;
+  line-height: 11px;
+  font-style: normal;
+  padding-left: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.list-dot li {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 12px;
+}
+
+.list-dot li::before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  background: #aaa;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.agree-box--gray {
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.agree-box--gray .check-box {
+  display: inline-block;
+}
+
+.agree-box--gray label {
+  font-size: 1.8rem;
+}
+
+.agree-box--gray small {
+  font-size: 1.6rem;
+}
+
+.seller-infotxt {
+  color: #666;
+  line-height: 1.6;
+  margin-top: 2rem;
 }
 
 .chat {
@@ -5222,147 +5297,6 @@ input[type=number] {
   margin-top: 15px;
 }
 
-.signup__form {
-  margin-top: 5rem;
-}
-
-.signup .ic-visibility {
-  height: 60px;
-  line-height: 60px;
-}
-
-.signup fieldset {
-  border: 0;
-  padding: 0;
-  padding-left: 175px;
-  position: relative;
-  border-top: 3px solid #000;
-  padding-top: 33px;
-  padding-bottom: 4rem;
-}
-
-.signup fieldset legend {
-  position: absolute;
-  top: 39px;
-  left: 0;
-  font-size: 2.4rem;
-}
-
-.signup .inputbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 140px;
-  position: relative;
-  width: 100%;
-  margin-top: 3rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.signup .inputbox.mt-0 {
-  margin-top: 0;
-}
-
-.signup .inputbox .required {
-  color: var(--primary-red);
-  font-style: normal;
-}
-
-.signup .inputbox__label {
-  position: absolute;
-  left: 0;
-  top: 20px;
-  color: #666666;
-}
-
-.signup .inputbox__input {
-  width: 100%;
-  position: relative;
-}
-
-.signup .inputbox__input input,
-.signup .inputbox__input select {
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 4px;
-}
-
-.signup .inputbox__input input::-webkit-input-placeholder,
-.signup .inputbox__input select::-webkit-input-placeholder {
-  font-size: 13px;
-}
-
-.signup .inputbox__input input:-ms-input-placeholder,
-.signup .inputbox__input select:-ms-input-placeholder {
-  font-size: 13px;
-}
-
-.signup .inputbox__input input::-ms-input-placeholder,
-.signup .inputbox__input select::-ms-input-placeholder {
-  font-size: 13px;
-}
-
-.signup .inputbox__input input::placeholder,
-.signup .inputbox__input select::placeholder {
-  font-size: 13px;
-}
-
-.signup .inputbox__input--has-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.signup .inputbox__input--has-btn input {
-  max-width: 354px;
-}
-
-.signup .inputbox__input--has-btn .btn-gray {
-  background: #666;
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-  height: 32px;
-  line-height: 32px;
-  border-radius: 5px;
-  padding: 0 15px;
-  margin-left: 15px;
-}
-
-.signup .inputbox__input--has-btn .inputbox__limit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.signup .inputbox__input--has-btn .inputbox__limit .time {
-  color: var(--primary-red);
-  font-size: 13px;
-  padding-left: 15px;
-  margin-top: 4px;
-}
-
-.signup .inputbox__input--zip {
-  margin-top: 30px;
-}
-
-.signup .inputbox__input--zip:first-of-type {
-  margin-top: 0;
-}
-
 .signup__info {
   margin-top: 4rem;
   padding-bottom: 2.5rem;
@@ -5398,16 +5332,6 @@ input[type=number] {
   .signup__title p {
     font-size: 1.6rem;
   }
-  .signup__form {
-    margin-top: 3rem;
-  }
-  .signup fieldset {
-    padding: 2rem 0 4rem 0;
-  }
-  .signup fieldset legend {
-    position: static;
-    padding-right: 2rem;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -5415,23 +5339,360 @@ input[type=number] {
     padding: 3rem 2rem;
     border-radius: 5px;
   }
-  .signup .inputbox {
+}
+
+.signup__form {
+  margin-top: 5rem;
+}
+
+.signup__form .ic-visibility {
+  height: 60px;
+  line-height: 60px;
+}
+
+.signup__form fieldset {
+  border: 0;
+  padding: 0;
+  padding-left: 175px;
+  position: relative;
+  border-top: 3px solid #000;
+  padding-top: 33px;
+  padding-bottom: 4rem;
+}
+
+.signup__form fieldset legend {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  font-size: 2.4rem;
+}
+
+.signup__form .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 140px;
+  position: relative;
+  width: 100%;
+  margin-top: 3rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.signup__form .inputbox.mt-0 {
+  margin-top: 0;
+}
+
+.signup__form .inputbox .required {
+  color: var(--primary-red);
+  font-style: normal;
+}
+
+.signup__form .inputbox__label {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  color: #666666;
+}
+
+.signup__form .inputbox__input {
+  width: 100%;
+  position: relative;
+}
+
+.signup__form .inputbox__input input,
+.signup__form .inputbox__input select {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 4px;
+}
+
+.signup__form .inputbox__input input::-webkit-input-placeholder,
+.signup__form .inputbox__input select::-webkit-input-placeholder {
+  font-size: 13px;
+}
+
+.signup__form .inputbox__input input:-ms-input-placeholder,
+.signup__form .inputbox__input select:-ms-input-placeholder {
+  font-size: 13px;
+}
+
+.signup__form .inputbox__input input::-ms-input-placeholder,
+.signup__form .inputbox__input select::-ms-input-placeholder {
+  font-size: 13px;
+}
+
+.signup__form .inputbox__input input::placeholder,
+.signup__form .inputbox__input select::placeholder {
+  font-size: 13px;
+}
+
+.signup__form .inputbox__input--has-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup__form .inputbox__input--has-btn input {
+  max-width: 354px;
+}
+
+.signup__form .inputbox__input--has-btn .btn-gray {
+  background: #666;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-left: 15px;
+}
+
+.signup__form .inputbox__input--has-btn .inputbox__limit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.signup__form .inputbox__input--has-btn .inputbox__limit .time {
+  color: var(--primary-red);
+  font-size: 13px;
+  padding-left: 15px;
+  margin-top: 4px;
+}
+
+.signup__form .inputbox__input--zip {
+  margin-top: 30px;
+}
+
+.signup__form .inputbox__input--zip:first-of-type {
+  margin-top: 0;
+}
+
+.mypage__modify {
+  position: relative;
+}
+
+.mypage__modify.mypage__modify--txt {
+  border-top: 2px solid #000;
+  margin-top: 3rem;
+}
+
+.mypage__modify.mypage__modify--txt .inputbox {
+  padding: 3rem 0;
+}
+
+.mypage__modify .help-required {
+  text-align: right;
+  color: #ff0000;
+  position: relative;
+  top: 40px;
+}
+
+.mypage__modify .mypage__title {
+  border-bottom: 2px solid #000;
+}
+
+.mypage__modify .inputbox {
+  border-bottom: 1px solid #dcdbe4;
+  margin-top: 0;
+  padding: 1.5rem 0;
+}
+
+.mypage__modify .inputbox .inputbox__input--zip {
+  margin-top: 0;
+}
+
+.mypage__modify .inputbox .inputbox__input--zip:not(:first-of-type) {
+  width: 100%;
+  border-top: 1px solid #dcdbe4;
+  padding-left: 160px;
+}
+
+.mypage__modify .inputbox__label {
+  color: #000;
+  font-size: 1.6rem;
+  position: static;
+  width: 160px;
+  padding-bottom: 0;
+}
+
+.mypage__modify .inputbox .value-txt {
+  color: #cccccc;
+}
+
+.mypage__modify .inputbox__input {
+  width: calc(100% - 160px);
+}
+
+.mypage__modify .inputbox__input input,
+.mypage__modify .inputbox__input select,
+.mypage__modify .inputbox__input textarea {
+  border: 0;
+  font-size: 1.6rem;
+  color: #666666;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.mypage__modify .inputbox__input input::-webkit-input-placeholder,
+.mypage__modify .inputbox__input select::-webkit-input-placeholder,
+.mypage__modify .inputbox__input textarea::-webkit-input-placeholder {
+  font-size: 1.6rem;
+  color: #666666;
+}
+
+.mypage__modify .inputbox__input input:-ms-input-placeholder,
+.mypage__modify .inputbox__input select:-ms-input-placeholder,
+.mypage__modify .inputbox__input textarea:-ms-input-placeholder {
+  font-size: 1.6rem;
+  color: #666666;
+}
+
+.mypage__modify .inputbox__input input::-ms-input-placeholder,
+.mypage__modify .inputbox__input select::-ms-input-placeholder,
+.mypage__modify .inputbox__input textarea::-ms-input-placeholder {
+  font-size: 1.6rem;
+  color: #666666;
+}
+
+.mypage__modify .inputbox__input input::placeholder,
+.mypage__modify .inputbox__input select::placeholder,
+.mypage__modify .inputbox__input textarea::placeholder {
+  font-size: 1.6rem;
+  color: #666666;
+}
+
+.mypage__modify .inputbox__input.has-helptxt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mypage__modify .inputbox__input.has-helptxt .help-text {
+  color: #666666;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  max-width: calc(100% - 240px);
+}
+
+.mypage__modify .inputbox__input.has-helptxt input,
+.mypage__modify .inputbox__input.has-helptxt select,
+.mypage__modify .inputbox__input.has-helptxt textarea {
+  max-width: 240px;
+}
+
+.mypage__modify .inputbox__input--has-btn input {
+  max-width: 240px;
+}
+
+.mypage__modify .inputbox__input--has-btn .btn-gray {
+  color: #17469d;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.mypage__modify .inputbox__input--has-btn .time {
+  margin-top: 0 !important;
+}
+
+.mypage__modify .inputbox__input--multi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mypage__modify .inputbox__input--multi input, .mypage__modify .inputbox__input--multi select {
+  max-width: 150px;
+}
+
+@media screen and (max-width: 1024px) {
+  .signup__form {
+    margin-top: 3rem;
+  }
+  .signup__form fieldset {
+    padding: 2rem 0 4rem 0;
+  }
+  .signup__form fieldset legend {
+    position: static;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .biz-attach {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .biz-attach input {
+    width: 100%;
+    max-width: 100% !important;
+  }
+  .biz-attach .btn-upload {
+    margin-top: 5px;
+    margin-left: 0 !important;
+  }
+  .mypage__modify .inputbox__input.has-helptxt .help-text {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .signup__form .inputbox {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 0;
   }
-  .signup .inputbox__label {
+  .signup__form .inputbox__label {
     position: static;
     width: 100%;
     font-size: 13px;
   }
-  .signup .inputbox__input--has-btn .btn-gray {
+  .signup__form .inputbox__input--has-btn .btn-gray {
     font-size: 13px;
     margin-left: 5px;
   }
-  .signup .inputbox__input--has-btn .inputbox__limit .time {
+  .signup__form .inputbox__input--has-btn .inputbox__limit .time {
     padding-left: 5px;
     font-size: 12px;
+  }
+  .mypage__modify.mypage__modify--txt .inputbox {
+    padding: 2rem 0;
+  }
+  .mypage__modify.mypage__modify--txt .inputbox__label {
+    margin-bottom: 7px;
+  }
+  .mypage__modify .inputbox {
+    padding: 2rem 0 1rem 0;
+  }
+  .mypage__modify .inputbox__input {
+    width: 100%;
+  }
+  .mypage__modify .inputbox__input.inputbox__input--zip:not(:first-of-type) {
+    padding-left: 0;
+  }
+  .mypage__modify .inputbox__input input {
+    padding-left: 0;
   }
 }
 
@@ -5513,10 +5774,6 @@ input[type=number] {
   .product-page .product__filter.open {
     left: 0;
   }
-}
-
-.product-page .mCSB_inside {
-  padding-right: 4rem;
 }
 
 .product-page .mCSB_inside > .mCSB_container {
@@ -6400,6 +6657,16 @@ input[type=number] {
   line-height: 1.4;
 }
 
+.mypage__txt > .seller {
+  font-size: 3.2rem;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.mypage__txt--gray {
+  color: #999;
+}
+
 .mypage__nav {
   width: 180px;
 }
@@ -6921,6 +7188,11 @@ input[type=number] {
   line-height: 1.4;
 }
 
+.request-form.inquiry-write {
+  border-top: 2px solid #000;
+  margin-top: 4rem;
+}
+
 .request-form .request__subtxt {
   font-size: 1.4rem;
   line-height: 1.5;
@@ -6997,6 +7269,22 @@ input[type=number] {
 
 .request-form .inputbox.mt-0 {
   margin-top: 0;
+}
+
+.request-form .inputbox--mid select,
+.request-form .inputbox--mid input {
+  max-width: 420px;
+}
+
+.request-form .inputbox--file input {
+  padding-left: 0;
+}
+
+.request-form .inputbox--file .btn-attach {
+  width: 120px;
+  height: 45px;
+  line-height: 45px;
+  vertical-align: top;
 }
 
 .request-form .inputbox .required {
@@ -7245,25 +7533,6 @@ input[type=number] {
   top: 0;
   left: 50%;
   margin-left: -10px;
-}
-
-.request-form .save--temp-box {
-  background-color: #f0f0f0;
-  padding: 15px;
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.request-form .save--temp-box .check-box {
-  display: inline-block;
-}
-
-.request-form .save--temp-box label {
-  font-size: 1.8rem;
-}
-
-.request-form .save--temp-box small {
-  font-size: 1.6rem;
 }
 
 .following-info {
@@ -7583,6 +7852,389 @@ input[type=number] {
   margin-top: 2rem;
 }
 
+.my-review-content {
+  position: relative;
+}
+
+.my-review-content .my-review-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-right: 250px;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #000;
+}
+
+.my-review-content .review-user {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.my-review-content .review-user .avatar {
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.my-review-content .review-user .avatar img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.my-review-content .review-user .user-name {
+  width: calc(100% - 55px);
+  padding-left: 20px;
+  line-height: 1.4;
+  color: #777;
+}
+
+.my-review-content .review-user .user-name strong {
+  font-weight: 500;
+  display: block;
+  color: #000;
+}
+
+.my-review-content .thumb {
+  width: 120px;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.my-review-content .product-info {
+  width: calc(100% - 120px);
+  padding-left: 2rem;
+}
+
+.my-review-content .product-info .product-num {
+  font-size: 1.4rem;
+}
+
+.my-review-content .product-info .product-name {
+  font-size: 1.8rem;
+  padding: 8px 0;
+}
+
+.my-review-content .product-info .following__rate {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.my-review-content .product-info .review-title {
+  font-size: 2.4rem;
+  margin-top: 3rem;
+}
+
+.my-review-content .product-info .review-write-date {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.my-review-content .my-review-text {
+  margin-top: 4rem;
+  line-height: 1.5;
+  font-size: 13px;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #000;
+}
+
+.my-review-content .my-review-write {
+  padding-top: 10px;
+}
+
+.my-review-content .my-review-write .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.my-review-content .my-review-write .inputbox__label {
+  width: 125px;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.my-review-content .my-review-write .inputbox__input {
+  width: calc(100% - 125px);
+}
+
+.my-inquiry__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 3px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 4rem 1rem;
+}
+
+.my-inquiry__info .counter {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.my-inquiry__info .counter li {
+  width: 33.333%;
+  text-align: center;
+  position: relative;
+}
+
+.my-inquiry__info .counter li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -30px;
+  background: #f1f1f1;
+  height: 60px;
+  width: 1px;
+}
+
+.my-inquiry__info .counter li:first-child::before {
+  display: none;
+}
+
+.my-inquiry__info .counter li .title {
+  display: block;
+}
+
+.my-inquiry__info .counter li .count {
+  display: block;
+  font-size: 4.2rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.my-inquiry__info .info-text {
+  width: 50%;
+}
+
+.my-inquiry__info .btn-inquiry {
+  width: 165px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  text-align: center;
+  margin-top: 3rem;
+  margin-left: 12px;
+}
+
+.my-inquiry__list {
+  margin-top: 4.5rem;
+  border-top: 3px solid #000;
+}
+
+.my-inquiry__list .list-item {
+  border-bottom: 1px solid #999;
+  padding: 2.5rem 2rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.my-inquiry__list .list-item.is-selected::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.my-inquiry__list .list-item::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-left: 1px solid #999;
+  border-top: 1px solid #999;
+  position: absolute;
+  right: 2rem;
+  top: 30px;
+  display: block;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.my-inquiry__list .list-item__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.my-inquiry__list .list-item__state {
+  position: relative;
+  padding-left: 30px;
+  width: 140px;
+}
+
+.my-inquiry__list .list-item__state::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  border-radius: 100%;
+}
+
+.my-inquiry__list .list-item__state--ing::before {
+  background: #ff3333 url("../images/ic_inquiry_ing.svg") no-repeat center/20px;
+}
+
+.my-inquiry__list .list-item__state--complete::before {
+  background: #17469d url("../images/ic_inquiry_complete.svg") no-repeat center/20px;
+}
+
+.my-inquiry__list .list-item__date {
+  font-size: 1.4rem;
+  color: #999;
+  width: 150px;
+}
+
+.my-inquiry__list .list-item__q {
+  width: calc(100% - 300px);
+  color: #333333;
+}
+
+.my-inquiry__list .list-item__a {
+  display: none;
+  padding-top: 2rem;
+  color: #666666;
+  padding-left: 140px;
+}
+
+.quit-info-txt {
+  border-top: 2px solid #000;
+  padding: 5rem 2rem 3rem 2rem;
+  margin-top: 3rem;
+  line-height: 1.8;
+}
+
+.quit-info-txt > li {
+  margin-top: 5rem;
+}
+
+.quit-info-txt > li:first-child {
+  margin-top: 0;
+}
+
+.confirm-quit-info {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 2rem 2rem 2rem 4rem;
+  margin-top: 3rem;
+}
+
+.confirm-quit-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.confirm-quit-info li:not(:first-child) {
+  margin-left: 5rem;
+}
+
+.confirm-quit-info input[type="password"] {
+  margin-left: 5px;
+  width: 230px;
+  height: 45px;
+  line-height: 45px;
+  border: 1px solid #ddd;
+}
+
+.mypage-quit-transaction {
+  border-top: 2px solid #000;
+  margin-top: 3rem;
+}
+
+.mypage-quit-transaction .transaction-item {
+  border-bottom: 1px solid #ddd;
+  padding: 3rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mypage-quit-transaction .transaction-item .count strong {
+  font-size: 3.2rem;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.mypage-quit-transaction .transaction-item .btn-detail {
+  width: 125px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-left: 3rem;
+}
+
+.mypage-quit-transaction .transaction-item::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: #000;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 @media screen and (max-width: 1200px) {
   .mypage {
     display: block;
@@ -7686,6 +8338,19 @@ input[type=number] {
   .following-list .following__rate {
     margin: 10px 0;
   }
+  .my-review-content .review-user {
+    position: static;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .my-review-content .my-review-product {
+    padding-right: 0;
+  }
+  .my-review-content .my-review-write .inputbox {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 0 10px 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -7694,6 +8359,10 @@ input[type=number] {
   }
   .mypage__nav li {
     width: 33.333%;
+  }
+  .request-form .inputbox--file input {
+    padding-left: 0;
+    max-width: calc(100% - 130px);
   }
 }
 
@@ -7799,6 +8468,12 @@ input[type=number] {
   .request-form .request__subtxt {
     padding-left: 0;
   }
+  .request-form .txt-help {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    font-size: 13px;
+  }
   .request-form .inputbox__input {
     width: 100%;
   }
@@ -7827,6 +8502,39 @@ input[type=number] {
   }
   .request-form .form-infotxt-text .btn-reset {
     top: -33px;
+  }
+  .my-inquiry__info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .my-inquiry__info .counter {
+    width: 100%;
+  }
+  .my-inquiry__info .info-text {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .my-inquiry__list .list-item {
+    padding-right: 5rem;
+  }
+  .my-inquiry__list .list-item__title {
+    display: block;
+  }
+  .my-inquiry__list .list-item__q {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .my-inquiry__list .list-item__a {
+    padding-left: 0;
+  }
+  .confirm-quit-info ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .confirm-quit-info ul li {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 10px;
   }
 }
 
@@ -7942,6 +8650,12 @@ input[type=number] {
     position: absolute;
     right: 0;
     top: 0;
+  }
+  .my-review-content .my-review-write .inputbox__label {
+    width: 70px;
+  }
+  .my-review-content .my-review-write .inputbox__input {
+    width: calc(100% - 70px);
   }
 }
 /*# sourceMappingURL=style.css.map */
