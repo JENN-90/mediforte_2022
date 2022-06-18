@@ -54,7 +54,7 @@
     }
 
     &--round-s {
-        border-radius: 5px;
+        border-radius: 4px;
         padding: 4px 23px
     }
 
@@ -72,13 +72,13 @@
         line-height: 44px;
         background: #000;
         color: #fff;
-        border-radius: 5px;
+        border-radius: 4px;
     }
 
     &--black3 {
         background: #000;
         color: #fff;
-        border-radius: 5px;
+        border-radius: 4px;
     }
 
 
@@ -86,7 +86,7 @@
         background: #fff;
         color: #000; 
         border: 1px solid #000;
-        border-radius: 5px;
+        border-radius: 4px;
     }
     &--blue {
         background: var(--primary-blue);
@@ -224,7 +224,7 @@
       height: 30px;
       line-height: 30px;
       margin-top: 10px;
-      border-radius: 5px;
+      border-radius: 4px;
 
       span {
           padding-left: 40px;

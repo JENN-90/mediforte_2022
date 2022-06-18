@@ -94,7 +94,7 @@
         position: relative;
 
         &::after {
-            @include sprite-static(11px, 6px, -153px, -191px);
+            //@include sprite-static(11px, 6px, -153px, -191px);
             position: absolute;
             right: 15px;
             top: 50%;

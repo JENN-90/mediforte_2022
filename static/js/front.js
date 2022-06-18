@@ -1,3 +1,30 @@
+//common - set viewport height(100%)
+function setViewHeight() {
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+function resize(chat_textarea) {
+    if ((chat_textarea.scrollHeight + 7) <= 80) {
+        chat_textarea.style.height = "1px";
+        chat_textarea.style.height = (7 + chat_textarea.scrollHeight) + "px";
+    }
+}
+
+function pwVisibility() {
+    var userPassword = document.getElementById("userPassword");
+    if (userPassword.type === "password") {
+        userPassword.type = "text";
+    } else {
+        userPassword.type = "password";
+    }
+}
+
+
+function priceComma(price) {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
 (() => {
 
 
@@ -361,27 +388,9 @@
     });
 
 
+    $('.input_price input').on('keyup', (e) => {
+        e.target.value = priceComma(e.target.value)
+
+    })
+
 })();
-
-
-//common - set viewport height(100%)
-function setViewHeight() {
-    vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
-function resize(chat_textarea) {
-    if ((chat_textarea.scrollHeight + 7) <= 80) {
-        chat_textarea.style.height = "1px";
-        chat_textarea.style.height = (7 + chat_textarea.scrollHeight) + "px";
-    }
-}
-
-function pwVisibility() {
-    var userPassword = document.getElementById("userPassword");
-    if (userPassword.type === "password") {
-        userPassword.type = "text";
-    } else {
-        userPassword.type = "password";
-    }
-}

@@ -144,63 +144,58 @@
                 <h3 class="mypage__title">마이페이지</h3>
                 <ul>
                     <li class="current"><a href="#">홈</a></li>
-                    <li><a href="#">거래상태 조회</a></li>
-                    <li><a href="#">계약현황</a></li>
-                    <li><a href="#">구매내역</a></li>
-                    <li><a href="#">판매 의뢰하기</a></li>
-                    <li><a href="#">관심상품</a></li>
-                    <li><a href="#">팔로잉/팔로워</a></li>
-                    <li><a href="#">포인트</a></li>
-                    <li><a href="#">리뷰</a></li>
-                    <li><a href="#">1:1문의</a></li>
-                    <li><a href="#">회원정보 수정</a></li>
-                    <li><a href="#">회원탈퇴</a></li>
-                    <li><a href="#">판매회원 신청하기 </a></li>
+                    <li class="bdline"><a href="#">DEMO 신청관리</a></li>
+                    <li><a href="#">DEMO 예약관리</a></li>
+                    <li class="bdline"><a href="#">마이스토어 관리</a></li>
+                    <li><a href="#">상품 등록 관리</a></li>
+                    <li><a href="#">상품 판매 관리</a></li>
+                    <li class="bdline"><a href="#">정산내역</a></li>
+                    <li><a href="#">구매거래 상태 조회</a></li>
+                    <li class="bdline"><a href="#">관심상품</a></li>
+                    <li><a href="#">키워드 알림</a></li>
+                    <li class="bdline"><a href="#">회원정보 수정</a></li>
+                    <li><a href="#">1:1 문의</a></li>
+                    <li class="bdline disabled"><a href="#">마스터 회원</a></li>
+                    <li class="bdline disabled"><a href="#">추천인 제도</a></li>
                 </ul>
             </div>
 
-            <div class="mypage__container">
+            <div class="mypage__container mypage__main">
 
                 <!--등급-->
-                <div class="mypage__top-grade">
+                <div class="mypage__top-summary">
                     <div class="user-grade">
                         <p><strong>김준식</strong>님은</p>
                         <p>일반 등급입니다.</p>
                     </div>
+                    <div class="mypage__quick-btns">
+                        <p class="inquiry-count">신규문의 <strong>3</strong>건</p>
+                        <button type="button" class="btn btn--round-s  btn--white2 btn-register">상품등록</button>
+                    </div>
                     <div class="mypage__point">
-                        <strong>MEDI POINT</strong>
+                        <strong>메디포인트</strong>
                         <p class="point">12,000 P</p>
-                        <p class="point-earn">적립 예정 포인트 30,000P</p>
+                        <p class="point-earn">적립 예정 포인트 <strong>30,000P</strong></p>
                     </div>
                 </div>
 
-                <!--구매현황-->
+                <!--진행상태 프로세스-->
                 <div class="purchase-status">
-                    <h4 class="title02">구매현황</h4>
-                    <div class="tab-link tab-link--type3">
-                        <a href="#" class="is-selected">일반구매</a>
-                        <a href="#" class="">리스구매</a>
-                        <a href="#" class="">소모품 구매</a>
-                    </div>
-                    <div class="purchase__process">
+                    <div class="order-process order-process-5">
                         <ul>
                             <li class="has-count">
                                 <strong class="count">1</strong>
-                                <p>구매접수</p>
+                                <p>결제대기</p>
                             </li>
                             <li class="">
                                 <strong class="count">0</strong>
                                 <p>결제완료</p>
                             </li>
-                            <li class="">
-                                <strong class="count">0</strong>
-                                <p>납품준비</p>
-                            </li>
                             <li class="has-count">
-                                <strong class="count">2</strong>
-                                <p>납품중</p>
+                                <strong class="count">1</strong>
+                                <p>납품시작</p>
                             </li>
-                            <li class="">
+                            <li>
                                 <strong class="count">0</strong>
                                 <p>납품완료</p>
                             </li>
@@ -212,134 +207,341 @@
                     </div>
                 </div>
 
-
-                <!--구매리스트-->
-                <div class="ordered-product-list">
-                    <div class="paid-item">
-                        <ul class="paid-group1">
-                            <li><span>구매번호</span> 22244234324 </li>
-                            <li><span>구매일</span> 2021.11.23 </li>
-                            <li><span>판매자</span> 김판매님</li>
+                <h3 class="title_lg">판매접수</h3>
+                <div class="goods_group_list ">
+                    <div class="list_item list_item__default">
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">구매일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">구매자</span> <strong><u>김판매</u>님</strong></li>
                         </ul>
-
-                        <div class="paid-table">
-                            <table>
-                                <colgroup>
-                                    <col width="57%">
-                                    <col width="16%">
-                                    <col width="12%">
-                                    <col width="15%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="prd-info">상품정보</th>
-                                        <th class="prd-price">결제금액</th>
-                                        <th class="prd-sec">구분</th>
-                                        <th class="prd-status">진행상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="prd-info">
-                                            <div class="prd-info-box">
-                                                <p class="thumb">
-                                                    <img src="static/images/mypage_paid_product_thumb.png" alt="img">
-                                                </p>
-                                                <div class="info">
-                                                    <span class="info-brand">[사이노슈어] </span>
-                                                    <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
-                                                    <ul>
-                                                        <li>제조사 : 사이노슈어</li>
-                                                        <li>제조년월 : 2018.11</li>
-                                                        <li>사용기간 : 3년</li>
-                                                        <li>상태 : 상</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="prd-price" data-heading="결제금액"><span class="price">23,000,000원</span>
-                                        </td>
-                                        <td class="prd-sec" data-heading="구분">일반</td>
-                                        <td class="prd-status" data-heading="진행상태">
-                                            <p class="state">구매접수</p>
-                                            <div class="status-btns">
-                                                <button class="btn-status">취소</button>
-                                                <button class="btn-chat"><span class="blind">채팅</span></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>일반</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">결제대기</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                         <div class="paid-item">
-                        <ul class="paid-group1">
-                            <li><span>구매번호</span> 22244234324 </li>
-                            <li><span>구매일</span> 2021.11.23 </li>
-                            <li><span>판매자</span> 김판매님</li>
+                    <div class="list_item list_item__default">
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">구매일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">구매자</span> <strong><u>김판매</u>님</strong></li>
                         </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>일반</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">결제대기</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
 
-                        <div class="paid-table">
-                            <table>
-                                <colgroup>
-                                    <col width="57%">
-                                    <col width="16%">
-                                    <col width="12%">
-                                    <col width="15%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="prd-info">상품정보</th>
-                                        <th class="prd-price">결제금액</th>
-                                        <th class="prd-sec">구분</th>
-                                        <th class="prd-status">진행상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="prd-info">
-                                            <div class="prd-info-box">
-                                                <p class="thumb">
-                                                    <img src="static/images/mypage_paid_product_thumb.png" alt="img">
-                                                </p>
-                                                <div class="info">
-                                                    <span class="info-brand">[사이노슈어] </span>
-                                                    <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
-                                                    <ul>
-                                                        <li>제조사 : 사이노슈어</li>
-                                                        <li>제조년월 : 2018.11</li>
-                                                        <li>사용기간 : 3년</li>
-                                                        <li>상태 : 상</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="prd-price" data-heading="결제금액"><span class="price">23,000,000원</span>
-                                        </td>
-                                        <td class="prd-sec" data-heading="구분">일반</td>
-                                        <td class="prd-status" data-heading="진행상태">
-                                            <p class="state">구매접수</p>
-                                            <div class="status-btns">
-                                                <button class="btn-status">취소</button>
-                                                <button class="btn-chat"><span class="blind">채팅</span></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <h3 class="title_lg mt">결제완료</h3>
+                <div class="goods_group_list ">
+                    <div class="list_item list_item__default">
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">결제완료일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">구매자</span> <strong><u>김판매</u>님</strong></li>
+                        </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>리스</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">결제완료</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <h3 class="title_lg mt">납품준비</h3>
+                <div class="goods_group_list ">
+                    <div class="list_item list_item__default">
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">납품시작일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">구매자</span> <strong><u>김판매</u>님</strong></li>
+                        </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>리스</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">납품시작</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="title_lg _insp mt">검수대기</h3>
+                <div class="goods_group_list ">
+                    <div class="list_item list_item__default">
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">납품완료일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">구매자</span> <strong><u>김판매</u>님</strong></li>
+                        </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>리스</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">검수대기</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="title_lg  mt">검수완료</h3>
+                <div class="goods_group_list ">
+                    <div class="list_item list_item__default">
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">검수완료일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">구매자</span> <strong><u>김판매</u>님</strong></li>
+                        </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>리스</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">검수완료</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--NOTICE-->
+                <h3 class="title_lg  mt">공지사항</h3>
+                <div class="board_list">
+                    <table>
+                        <colgroup>
+                            <col width="30%">
+                            <col width="70%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">구분</th>
+                                <th scope="col">제목</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="noti">
+                                <td>공지</td>
+                                <td><a href="#">신규 브랜드 런칭 안내</a></td>
+                            </tr>
+                             <tr class="noti">
+                                <td>공지</td>
+                                <td><a href="#">신규 브랜드 런칭 안내</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
+
         <!--//마이페이지-->
         <section class="main-newsletter">
             <div class="newsletter__container">
                 <h3>메디포르테 뉴스레터신청하기 </h3>
                 <div class="newsletter__form">
-                    <div class="inputbox"><input type="text" placeholder="이메일 주소를 입력해주세요"></div>
+                    <div class="inputbox"><input type="text" placeholder="이메일 주소를 입력해주세요"></div> -->
                     <button type="button">구독하기</button>
                 </div>
             </div>
@@ -363,7 +565,8 @@
                             <div class="news__content">
                                 <a href="#">
                                     <p class="news__title">(주)메디포르테에서는 메디큐레이터를 모집합니다.</p>
-                                    <p class="news__detail">(주)메디포르테에서는 전국에 있는 성실하고 실력있는 메디큐레이터를 모집합니다. 메디큐레이션으로 우선 선발되면
+                                    <p class="news__detail">(주)메디포르테에서는 전국에 있는 성실하고 실력있는 메디큐레이터를 모집합니다. 메디큐레이션으로
+                                        우선 선발되면
                                         여러가지 많은 혜택이 주어집니다. 많은 참여 부탁드립니다.</p>
                                 </a>
                                 <a href="#" class="news__link">자세히 보기</a>
@@ -379,7 +582,8 @@
                             <div class="news__content">
                                 <a href="#">
                                     <p class="news__title">(주)메디포르테에서는 메디큐레이터를 모집합니111다.</p>
-                                    <p class="news__detail">(주)메디포르테에서는 전국에 있는 성실하고 실력있는 메디큐레이터를 모집합니다. 메디큐레이션으로 우선 선발되면
+                                    <p class="news__detail">(주)메디포르테에서는 전국에 있는 성실하고 실력있는 메디큐레이터를 모집합니다. 메디큐레이션으로
+                                        우선 선발되면
                                         여러가지 많은 혜택이 주어집니다. 많은 참여 부탁드립니다.</p>
                                 </a>
                                 <a href="#" class="news__link">자세히 보기</a>

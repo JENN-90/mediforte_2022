@@ -154,7 +154,14 @@ select {
     text-transform: none; //Remove the inheritance of text transform in Firefox.
 }
 select{
-     //appearance: none;
+    appearance: none;
+    background: url('../images/arrow_drop_down.svg') no-repeat ;
+    background-position: right center;
+    color: #000 !important;
+
+    &:disabled {
+        color: #999 !important;
+    }
 }
 
 button,
@@ -256,6 +263,11 @@ input[type=text]::-ms-reveal {display: none;width: 0;height: 0;}
 
 // MOZ INPUT[TYPE="NUMBER"] 텍스트필드로 표시
 input[type=number] { -moz-appearance: textfield; }
+fieldset{
+     padding: 0; border: 0;
+     margin: 0;
+     legend};
+}
 
 /* SKIP TO CONTENT  */
 .skip a {
