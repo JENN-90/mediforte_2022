@@ -1,17 +1,16 @@
 /* COLOR */
 :root {
-  
-     --primary-red : #fb0000;
-     
-     --primary-blue : #00b7f1;
-     --primary-gray: #999;
-     --navy : #003399;
-     --orange: #ff6a1f; 
-     
-  }
+
+   --primary-red: #fb0000;
+
+   --primary-blue: #00b7f1;
+   --primary-gray: #999;
+   --navy: #003399;
+   --orange: #ff3333;
+   --red: #ff3333;
+}
 
 
-  .col-red {
-     color: var(--primary-red);
-  }
-  
+.col-red {
+   color: var(--primary-red);
+}

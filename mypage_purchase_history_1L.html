@@ -145,10 +145,10 @@
                 <ul>
                     <li class=""><a href="#">홈</a></li>
                     <li class=" bdline"><a href="#">DEMO 신청관리</a></li>
-                    <li class="current"><a href="#">DEMO 예약관리</a></li>
+                    <li class=""><a href="#">DEMO 예약관리</a></li>
                     <li class="bdline"><a href="#">마이스토어 관리</a></li>
                     <li><a href="#">상품 등록 관리</a></li>
-                    <li><a href="#">상품 판매 관리</a></li>
+                    <li class="current"><a href="#">상품 판매 관리</a></li>
                     <li class="bdline"><a href="#">정산내역</a></li>
                     <li class="bdline"><a href="#">구매거래 상태 조회</a></li>
                     <li class="bdline"><a href="#">관심상품</a></li>
@@ -160,15 +160,47 @@
                 </ul>
             </div>
 
-            <div class="mypage__container mypage__reserve">
+            <div class="mypage__container mypage__purchaseHistory">
 
-                <h3 class="title_lg">DEMO 예약관리</h3>
-                <p class="first">DEMO 상담을 요청한 고객의 DEMO 예약 처리를 하실 수 있는 화면입니다.</p>
+                <h3 class="title_lg">구매내역 조회</h3>
+                <p class="first">구매하신 상품의 현재 거래상태를 조회 하실 수 있습니다.</p>
+                <div class="transaction_select">
+                    <div class="transaction_select__period">
+                        <h4>기간</h4>
+                        <div class="peropd_btns">
+                            <button class="is-selected">3개월</button>
+                            <button>6개월</button>
+                            <button>9개월</button>
+                            <button>1년</button>
+                        </div>
+                    </div>
+                    <div class="check__period-date">
+                        <!--from-->
+                        <div class="date-input">
+                            <div class="tui-datepicker-input">
+                                <input type="text" id="dateFrom" aria-label="Date-Time" required>
+                            </div>
+                            <div id="dateFromCalendar"></div>
+                        </div>
+                        <span class="wave">~</span>
+                        <!--to-->
+                        <div class="date-input">
+                            <div class="tui-datepicker-input">
+                                <input type="text" id="dateTo" aria-label="Date-Time" required>
+                            </div>
+                            <div id="dateToCalendar"></div>
+                        </div>
+                        <button type="button" class="btn btn_black">조회</button>
+                    </div>
+                </div>
 
                 <div class="goods_group_list ">
                     <div class="list_item list_item__default">
+                        <button type="button" class="btn btn_arrow btn_sm btn_manage">거래 상세보기</button>
                         <ul class="goods_buy_info">
                             <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">구매접수일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">판매자</span> <strong><u>김판매</u>님</strong></li>
                         </ul>
                         <div class="goods_info_table goods_info_table__default">
                             <div class="table_cell goods_thumb ">
@@ -189,56 +221,215 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="table_cell goods_able">
-                                <p class="label">DEMO 가능여/부</p>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
                                 <div class="cell_cont">
-                                    <p>가능</p>
+                                    <p class="price">23,000,000원</p>
                                 </div>
                             </div>
-                            <div class="table_cell goods_methods">
-                                <p class="label">DEMO 방식</p>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
                                 <div class="cell_cont">
-                                    <p>장비이동</p>
+                                    <p>일반</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">결제대기</p>
+                                    <button class="btn  btn_black btn_sm">취소</ㅠ>
+                                        <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_item list_item__default">
+                        <button type="button" class="btn btn_arrow btn_sm btn_manage">거래 상세보기</button>
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">결제완료일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">판매자</span> <strong><u>김판매</u>님</strong></li>
+                        </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="table_cell goods_price">
-                                <p class="label">DEMO 실비</p>
+                                <p class="label">결제금액</p>
                                 <div class="cell_cont">
-                                    <p class="price">200,000원</p>
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>리스</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">결제완료</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
                                 </div>
                             </div>
                         </div>
-                   
-                        <div class="demo_reserve_info demo_reserve_info__period">
-                            <p class="label">DEMO 기간<small>(최대5일)</small></p>
-                            <div class="cell_cont">
-                                <!--from-->
-                                <div class="date-input">
-                                    <label for="dateFrom">DEMO 시작일</label>
-                                    <p class="date_value">2022.04.20</p>
+                    </div>
+                    <div class="list_item list_item__default">
+                        <button type="button" class="btn btn_arrow btn_sm btn_manage">거래 상세보기</button>
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">납품시작일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">판매자</span> <strong><u>김판매</u>님</strong></li>
+                        </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/sample2.png" alt="sample">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <span class="wave">~</span>
-                                <!--to-->
-                                <div class="date-input">
-                                    <label for="dateTo">DEMO 종료일</label>
-                                    <p class="date_value">2022.04.25</p>
+                            </div>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>일반</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">납품시작</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 상태</p>
-                            <div class="cell_cont">
-                                <span class="demo_status _ongoing">DEMO 진행중 (잔여일 3일)</span>
+                    </div>
+                    <div class="list_item list_item__default">
+                        <button type="button" class="btn btn_arrow btn_sm btn_manage">거래 상세보기</button>
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">납품완료일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">판매자</span> <strong><u>김판매</u>님</strong></li>
+                        </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>일반</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">납품완료</p>
+                                    <button class="btn  btn_black btn_sm">검수완료하기</button>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
                             </div>
                         </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 신청인</p>
-                            <div class="cell_cont">
-                                홍길동 jwwon2000@gmail.com
+                    </div>
+                    <div class="list_item list_item__default">
+                        <button type="button" class="btn btn_arrow btn_sm btn_manage">거래 상세보기</button>
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">검수완료일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">판매자</span> <strong><u>김판매</u>님</strong></li>
+                        </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/sample3.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="btn_wrap right">
-                            <button class="btn btn_outline" type="button">목록</button>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p class="price">23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>리스</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">검수완료</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -371,7 +562,8 @@
                 </div>
             </div>
             <div class="footer__cs footer__cs-btm">
-                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail" href="mailto:cs@mediforte.co.kr">cs@mediforte.co.kr</a>
+                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail"
+                    href="mailto:cs@mediforte.co.kr">cs@mediforte.co.kr</a>
             </div>
 
             <div class="footer__sns">
@@ -384,6 +576,22 @@
 
             <div class="footer__copy">Copyright (c) 2022 Mediforte all right reserved.</div>
         </footer>
+
+         <!-- 검수완료안내 -->
+        <div class="modal modal--standard" id="testComplete" style="display: block;">
+            <div class="modal__container">
+                <h3 class="modal_title">메디포르테 검수완료안내</h3>
+                <div class="text">
+                    납품이 완료되면 반드시 납품 후 5일 이내 검수완료를 등록해 주시기 바랍니다. <br>검수완료가 된 후 안전대금이 정산됩니다.
+                </div>
+                <div class="btn_wrap">
+                    <button type="button" class="btn btn_black">확인</button>
+                </div>
+
+                <button type="button" class="btn-close-modal"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+        <!-- //검수완료안내 -->
         <div class="dimm"></div>
         <script src="static/js/jquery-1.12.1.min.js"></script>
         <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
@@ -392,6 +600,25 @@
         <script src="static/js/tui-date-picker.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/front.js"></script>
+
+        <script>
+            let datepickerFrom = new tui.DatePicker('#dateFromCalendar', {
+                language: 'ko',
+                date: new Date(),
+                input: {
+                    element: '#dateFrom',
+                    format: 'yyyy-MM-dd'
+                }
+            });
+            let datepickerTo = new tui.DatePicker('#dateToCalendar', {
+                language: 'ko',
+                date: new Date(),
+                input: {
+                    element: '#dateTo',
+                    format: 'yyyy-MM-dd'
+                }
+            });
+        </script>
     </body>
 
 </html>

@@ -145,10 +145,10 @@
                 <ul>
                     <li class=""><a href="#">홈</a></li>
                     <li class=" bdline"><a href="#">DEMO 신청관리</a></li>
-                    <li class="current"><a href="#">DEMO 예약관리</a></li>
+                    <li class=""><a href="#">DEMO 예약관리</a></li>
                     <li class="bdline"><a href="#">마이스토어 관리</a></li>
                     <li><a href="#">상품 등록 관리</a></li>
-                    <li><a href="#">상품 판매 관리</a></li>
+                    <li class="current"><a href="#">상품 판매 관리</a></li>
                     <li class="bdline"><a href="#">정산내역</a></li>
                     <li class="bdline"><a href="#">구매거래 상태 조회</a></li>
                     <li class="bdline"><a href="#">관심상품</a></li>
@@ -160,15 +160,15 @@
                 </ul>
             </div>
 
-            <div class="mypage__container mypage__reserve">
+            <div class="mypage__container mypage__salesDetail">
 
-                <h3 class="title_lg">DEMO 예약관리</h3>
-                <p class="first">DEMO 상담을 요청한 고객의 DEMO 예약 처리를 하실 수 있는 화면입니다.</p>
-
+                <h3 class="title_lg">상품 판매 관리</h3>
                 <div class="goods_group_list ">
                     <div class="list_item list_item__default">
                         <ul class="goods_buy_info">
                             <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">검수완료일</span> <strong>2021.11.23 </strong></li>
+                            <li><span class="tit">구매자</span> <strong><u>김판매</u>님</strong></li>
                         </ul>
                         <div class="goods_info_table goods_info_table__default">
                             <div class="table_cell goods_thumb ">
@@ -189,60 +189,171 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="table_cell goods_able">
-                                <p class="label">DEMO 가능여/부</p>
-                                <div class="cell_cont">
-                                    <p>가능</p>
-                                </div>
-                            </div>
-                            <div class="table_cell goods_methods">
-                                <p class="label">DEMO 방식</p>
-                                <div class="cell_cont">
-                                    <p>장비이동</p>
-                                </div>
-                            </div>
                             <div class="table_cell goods_price">
-                                <p class="label">DEMO 실비</p>
+                                <p class="label">결제금액</p>
                                 <div class="cell_cont">
-                                    <p class="price">200,000원</p>
+                                    <p class="price">23,000,000원</p>
                                 </div>
                             </div>
-                        </div>
-                   
-                        <div class="demo_reserve_info demo_reserve_info__period">
-                            <p class="label">DEMO 기간<small>(최대5일)</small></p>
-                            <div class="cell_cont">
-                                <!--from-->
-                                <div class="date-input">
-                                    <label for="dateFrom">DEMO 시작일</label>
-                                    <p class="date_value">2022.04.20</p>
-                                </div>
-                                <span class="wave">~</span>
-                                <!--to-->
-                                <div class="date-input">
-                                    <label for="dateTo">DEMO 종료일</label>
-                                    <p class="date_value">2022.04.25</p>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>일반</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 상태</p>
-                            <div class="cell_cont">
-                                <span class="demo_status _ongoing">DEMO 진행중 (잔여일 3일)</span>
+                            <div class="table_cell goods_status">
+                                <p class="label">진행상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">검수완료</p>
+                                    <button class="btn-chat"><span class="blind">채팅</span></button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 신청인</p>
-                            <div class="cell_cont">
-                                홍길동 jwwon2000@gmail.com
-                            </div>
-                        </div>
-                        <div class="btn_wrap right">
-                            <button class="btn btn_outline" type="button">목록</button>
                         </div>
                     </div>
                 </div>
+
+                <h3 class="title_md mt">받는분 정보</h3>
+                <div class="form_wrap">
+                    <div class="column">
+                        <h4 class="label">제목 </h4>
+                        <div class="input_wrap full">
+                            <p>홍길동 <span class="tag">기본 배송지</span></p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">배송주소 </h4>
+                        <div class="input_wrap full">
+                            <p>경기도 용인시 기흥구 흥덕1로 14 B-415</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">연락처 </h4>
+                        <div class="input_wrap full">
+                            <p>010-2457-5687</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="title_md mt">결제 정보</h3>
+                <div class="form_wrap form_payment">
+                    <div class="column">
+                        <h4 class="label">결제수단 <span class="tag tag_card">하나카드</span> </h4>
+                        <div class="input_wrap full">
+                            <p class="price_txt">
+                                <em>총 판매액</em>
+                                <strong class="amount _big">25,000,000원</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">차감액</h4>
+                        <div class="input_wrap full">
+                            <p class="price_txt">
+                                <em>DEMO 비용</em>
+                                <strong class="amount">-200,000원</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">할부 12개월</h4>
+                        <div class="input_wrap full">
+                            <p class="price_txt">
+                                <em>하나카드</em>
+                                <strong class="amount ">24,800,000원</strong>
+                            </p>
+                            <p class="price_txt">
+                                <em>총 결제금액</em>
+                                <strong class="amount _big">24,800,000원</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="title_md mt">상담 <small>거래 히스토리</small></h3>
+                <div class="form_wrap">
+                    <div class="column">
+                        <h4 class="label">상담일</h4>
+                        <div class="input_wrap full">
+                            <p>2022년 1월 21일</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="title_md mt">DEMO <small>거래 히스토리</small></h3>
+                <div class="form_wrap">
+                    <div class="column">
+                        <h4 class="label">신청일</h4>
+                        <div class="input_wrap full">
+                            <p>2022년 1월 21일</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">완료일</h4>
+                        <div class="input_wrap full">
+                            <p>2022년 2월 2일</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">DEMO 방식</h4>
+                        <div class="input_wrap full">
+                            <p>장비이동</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">DEMO 실비</h4>
+                        <div class="input_wrap full">
+                            <p>\200,000원</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">서비스 평가</h4>
+                        <div class="input_wrap full">
+                            <p>완료</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="title_md mt">납품 <small>거래 히스토리</small></h3>
+                <div class="form_wrap">
+                    <div class="column">
+                        <h4 class="label">납품일</h4>
+                        <div class="input_wrap full">
+                            <p>2022년 1월 21일</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">상태</h4>
+                        <div class="input_wrap full">
+                            <p>납품완료</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">납품장소</h4>
+                        <div class="input_wrap full">
+                            <p>
+                                <strong class="destination">배송지와 동일</strong>
+                                경기도 용인시 기흥구 흥덕1로 14 B-415
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="title_md mt">검수완료 <small>거래 히스토리</small></h3>
+                <div class="form_wrap">
+                    <div class="column">
+                        <h4 class="label">검수완료일</h4>
+                        <div class="input_wrap full">
+                            <p>2022년 1월 21일</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap cetner">
+                    <button class="btn btn_black">목록</button>
+                </div>
             </div>
+
+
         </section>
 
         <!--//마이페이지-->
@@ -371,7 +482,8 @@
                 </div>
             </div>
             <div class="footer__cs footer__cs-btm">
-                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail" href="mailto:cs@mediforte.co.kr">cs@mediforte.co.kr</a>
+                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail"
+                    href="mailto:cs@mediforte.co.kr">cs@mediforte.co.kr</a>
             </div>
 
             <div class="footer__sns">
@@ -384,6 +496,22 @@
 
             <div class="footer__copy">Copyright (c) 2022 Mediforte all right reserved.</div>
         </footer>
+
+        <!-- 상태변경 -->
+        <div class="modal modal--standard" id="changeState" style="display: none;">
+            <div class="modal__container">
+                <h3 class="modal_title">메디포르테</h3>
+                <div class="text">
+                    <p>상태가 변경되었습니다.</p>
+                </div>
+                <div class="btn_wrap">
+                    <button type="button" class="btn btn_black">확인</button>
+                </div>
+
+                <button type="button" class="btn-close-modal"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+        <!-- //상태변경 -->
         <div class="dimm"></div>
         <script src="static/js/jquery-1.12.1.min.js"></script>
         <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
@@ -392,6 +520,7 @@
         <script src="static/js/tui-date-picker.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/front.js"></script>
+
     </body>
 
 </html>

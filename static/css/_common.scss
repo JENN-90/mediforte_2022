@@ -22,6 +22,7 @@
     z-index: 1000;
     background-color: rgba($color: #000000, $alpha: 0.4);
     display: none;
+    word-break: keep-all;
 
     &--standard {
         .modal__container {
@@ -353,7 +354,7 @@
     }
 
     &_md {
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 500;
         padding-bottom: 1.5rem;
 
@@ -421,25 +422,73 @@
 
 
 .tb-type02 {
-    border-top: 2px solid #000;
-    border-bottom: 1px solid #000;
+    //border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 
     table {
         width: 100%;
         table-layout: fixed;
         font-size: 1.4rem;
-        text-align: center;
+        //   text-align: center;
     }
 
     thead>th {
         color: #000;
     }
 
-    th,
+    th {
+        background: #f7f7f7;
+        text-align: left;
+        padding-left: 16px !important;
+    }
+
     td {
-        padding: 2rem 1rem;
+        text-align: right;
+    }
+
+
+    .cir_txt {
+        border: 1px solid #000;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center; 
+        line-height: 18px;
+        font-style: normal;
+        border-radius: 100%;
+        font-size: 0.85em;
+        margin:  0 3px;
+    }
+
+    tbody th,
+    tbody td {
+        border-top: 1px solid #ddd;
+        padding: 15px 10px;
         font-weight: 500;
-        border-bottom: 1px solid #ddd;
+    }
+
+    .amount {
+         min-width: 130px;
+         display: inline-block;
+         vertical-align: middle;
+         font-weight: 500;
+         font-style: 1.1em;
+    }
+
+    tfoot {
+
+
+        th,
+        td {
+            background: #fffafa;
+            border-top: 1px solid var(--orange);
+            border-bottom: 1px solid var(--orange);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 10px;
+            font-weight: 500;
+        }
     }
 }
 
@@ -617,6 +666,8 @@
     display: block;
     width: 100%;
     position: relative;
+    border-radius: 4px;
+    overflow: hidden;
 
     &::after {
         content: '';
@@ -736,6 +787,31 @@
     background-color: white;
     cursor: pointer;
 
+
+    &_sm {
+        line-height: 35px;
+        height: 35px;
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    &_arrow {
+        &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border: 1px solid #000;
+            display: inline-block;
+            ;
+            vertical-align: middle;
+            border-left: 0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+            margin-top: -4px;
+            margin-left: 4px;
+        }
+    }
+
     &.block {
         display: block;
     }
@@ -747,6 +823,11 @@
     &_black {
         background: #000;
         color: #fff;
+    }
+
+    &_orange {
+        background: var(--orange);
+        color: #fff
     }
 }
 
@@ -775,13 +856,24 @@
 
 //상태TEXT
 .status_txt {
-    background: #333;
-    color: #fff;
+    //background: #333;
+    color: #333;
     border-radius: 4px;
     max-width: 80px;
-    font-size: 13px;
+    //font-size: 13px;
     padding: 8px 10px;
     @include push--auto;
+
+    &._gray {
+        color: #999;
+        background: #ddd;
+    }
+
+    &._orange {
+        color: var(--orange);
+        background: #fff;
+        border: 1px solid var(--orange);
+    }
 }
 
 .radiobox {
@@ -847,9 +939,13 @@
         display: flex;
         border-top: 1px solid #ddd;
         align-items: flex-start;
-        border-bottom: 1px solid #000; 
+        border-bottom: 1px solid #000;
         margin-bottom: -1px;
-        
+
+        @include mq('tablet') {
+            flex-wrap: wrap;
+        }
+
 
         .label {
             width: 20%;
@@ -859,35 +955,140 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            font-weight: 500;
+            align-self: stretch;
 
-            > small {
-                 display: block;
-                 color: #999;
-                 width: 100%;
+            @include mq('tablet') {
+                width: 100%;
+                background: transparent !important;
+                align-self: auto;
+                height: auto;
+                padding: 10px 10px 10px 0;
+            }
+
+            >small {
+                display: block;
+                color: #999;
+                width: 100%;
             }
         }
+
+        .list_dash {
+            font-size: 14px;
+            margin-top: 10px;
+
+
+            li {
+                margin-top: 5px;
+                color: #999;
+
+                &::before {
+                    top: 6px
+                }
+            }
+        }
+
 
         .input_wrap {
             width: 80%;
             padding: 14px 10px;
+            font-size: 14px;
+            align-self: center;
+
+            @include mq('tablet') {
+                width: 100%;
+                padding: 0 0 10px 0;
+
+                &.input_flex {
+                    flex-wrap: wrap;
+                }
+            }
+
 
             &.input_flex {
                 display: flex;
                 align-items: center;
             }
 
-            select, input {
+            select,
+            input {
                 height: 44px;
                 line-height: 44px;
                 padding-left: 12px;
                 border: 1px solid #ddd;
                 border-radius: 4px;
             }
-            select{
-                 padding-right: 25px;
+
+            select {
+                padding-right: 25px;
             }
 
-            &.full input{ width: 100%;}
+            &.full input {
+                width: 100%;
+            }
+
+            &.mid input {
+                width: 50%;
+            }
         }
     }
+}
+
+.tag {
+    font-size: 13px;
+    background: #999;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+
+    &_pay {
+        background: var(--orange);
+    }
+}
+
+.filter_list {
+    display: flex;
+    align-items: center;
+
+
+    &._right {
+        justify-content: flex-end;
+    }
+
+    .input_wrap {
+        margin-left: 4px;
+
+        select {
+            width: 100%;
+            height: 44px;
+            line-height: 44px;
+            border-radius: 4px;
+            min-width: 160px;
+            padding-left: 10px;
+        }
+
+    }
+}
+
+.text_box {
+     border: 1px solid #ddd; 
+     padding: 1.5rem;
+     border-radius: 4px;
+    color: #666;
+    line-height: 1.55;
+    font-size: 1.4rem;
+    
+    @include mq('tablet') {
+         font-size: 12px;
+    }
+
+     &.gray {
+         background:#f7f7f7
+     }
+     &.noline{
+         border: 0
+     }
 }

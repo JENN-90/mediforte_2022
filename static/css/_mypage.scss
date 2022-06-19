@@ -481,8 +481,6 @@
                          &:first-child {
                               margin-top: 20px;
                          }
-
-                         ;
                     }
                }
           }
@@ -507,6 +505,7 @@
 .goods_group_list {
      .list_item {
           padding: 5rem 0 2rem 0;
+          position: relative;
 
           &+.list_item {
                border-top: 1px solid #000;
@@ -514,6 +513,21 @@
 
           @include mq('tablet') {
                padding-top: 3rem;
+          }
+     }
+
+     .btn_manage {
+          position: absolute;
+          right: 0;
+          top: 51px;
+          color: var(--orange);
+          height: 25px;
+          line-height: 24px;
+          border-radius: 50px;
+
+
+          &::after {
+               border-color: var(--orange);
           }
      }
 
@@ -670,6 +684,13 @@
                     width: 120px;
                     height: 160px;
                     overflow: hidden;
+                    border-radius: 2px;
+
+                    img {
+                         width: 100%;
+                         height: 100%;
+                    }
+
                }
 
                .info {
@@ -711,23 +732,6 @@
                     }
                }
           }
-
-          // .goods_price{
-          //      .price_modify {
-          //           max-width: 150px;
-          //           border: 1px solid #ddd;
-          //           display: flex;
-          //           align-items: center;
-          //           height: 44px; line-height: 44px;
-          //           padding: 0 10px;
-          //           margin-top: 10px;
-          //           input{
-          //                 width: 100%;
-          //                 border: 0
-          //           }
-          //      }
-          // }
-
      }
 
 }
@@ -802,6 +806,10 @@
                font-size: 0.95em;
                line-height: 1.6;
                color: #666;
+
+               &._bg_gray {
+                    background: #f7f7f7;
+               }
           }
 
           td a {
@@ -1652,13 +1660,24 @@
      font-size: 13px;
      width: 100%;
 
-     &.left{
-           text-align: left !important;
+     &.left {
+          text-align: left !important;
+     }
+
+     &.right {
+          text-align: right;
      }
 
      &.red {
           color: var(--primary-red);
      }
+}
+
+.txt {
+     font-size: 1.5rem;
+     line-height: 1.45;
+     color: #333;
+     margin: 10px 0;
 }
 
 .mypage__post_wrt {
@@ -1707,15 +1726,55 @@
           align-items: flex-start;
           flex-wrap: wrap;
 
-          label {
-                min-width: 20%;
-                margin-top:4px; margin-bottom: 4px;
+          &._2type {
+               label {
+                    min-width: 50%;
+               }
           }
 
-          & + textarea {
-               width: 100%; 
+          label {
+               min-width: 20%;
+               margin-top: 4px;
+               margin-bottom: 4px;
+
+               @include mq('tablet') {
+                    min-width: 50%;
+               }
+          }
+     }
+
+     fieldset.video_2 {
+          border-top: 1px solid var(--orange)
+     }
+
+     .column {
+
+
+          .label {
+               background: #f7f7f7;
+               align-self: stretch;
+          }
+
+          select,
+          input {
+               font-size: 14px;
+          }
+
+          .tui-datepicker-input {
+               overflow: hidden;
+               border-radius: 4px;
+               max-width: 200px;
+
+               input {
+                    border: 0;
+                    border-radius: 4px;
+               }
+          }
+
+          textarea {
+               width: 100%;
                border: 1px solid #ddd;
-               border-radius: 4px; 
+               border-radius: 4px;
                padding: 15px;
                margin-top: 10px;
                line-height: 1.6;
@@ -1725,27 +1784,39 @@
           }
      }
 
-     .column {
-
-          
-          .label{
-               background: #f7f7f7;
-               align-self: stretch;
-          }
-          select, input {
-                font-size: 14px;
-          }
-      
-          .tui-datepicker-input{
-               overflow: hidden;
-               border-radius: 4px;
-               max-width: 200px;
-               input{ border: 0;}
-          }
+     .input_wrap.input_price.input_flex label {
+          margin-left: 20px;
      }
 
-      .btn_wrap {
-          margin-top:2rem
+     .btn_wrap {
+          margin-top: 2rem
+     }
+
+     @include mq('tablet') {
+
+
+          #selManufacturer {
+               width: 100%;
+
+               &+input {
+                    width: 100%;
+                    margin-top: 4px;
+               }
+          }
+
+
+          .input_wrap.input_price.input_flex label {
+               width: 100%;
+               margin: 10px 0 0 0;
+          }
+
+          .guaranteeDate {
+               width: 100%;
+
+               .tui-datepicker-input {
+                    max-width: 100%;
+               }
+          }
      }
 
 }
@@ -1755,7 +1826,11 @@
      display: flex;
      align-items: flex-start;
      justify-content: space-between;
+
      ///flex-wrap: wrap;
+     @include mq('tablet') {
+          flex-wrap: wrap;
+     }
 
      .btn_upload {
           min-width: 150px;
@@ -1766,7 +1841,12 @@
           cursor: pointer;
           transition: 0.3s;
 
-          &:hover{
+          @include mq('tablet') {
+               width: 100%;
+               margin-bottom: 6px;
+          }
+
+          &:hover {
                box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: 0.3);
           }
 
@@ -1801,11 +1881,17 @@
           gap: 10px;
           grid-template-columns: repeat(4, 1fr);
 
+          @include mq('tablet') {
+               width: 100%;
+               padding: 0;
+          }
+
           .list_item {
                position: relative;
                border-radius: 4px;
                overflow: hidden;
                transition: 0.3s;
+
                &:hover {
                     box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: 0.3);
                }
@@ -1814,12 +1900,13 @@
                     display: block;
                     width: 100%;
                     height: 100%;
-                    
+
                }
 
-               .img{
+               .img {
                     position: relative;
-                    width: 100%;height: 0;
+                    width: 100%;
+                    height: 0;
                     padding-bottom: 110%;
                     display: block;
 
@@ -1827,11 +1914,11 @@
                          height: 100%;
                          min-width: 100%;
                          width: auto;
-                         
+
                          @include push--center
                     }
                }
-               
+
           }
 
           .btn_delete_picture {
@@ -1844,18 +1931,460 @@
                background: rgba($color: #000000, $alpha: 0.6) url('../images/close_round.svg') no-repeat center;
                cursor: pointer;
                z-index: 1;
+
+               @include mq('tablet') {
+                    right: 5px;
+                    top: 5px;
+                    width: 25px;
+                    height: 25px;
+                    background-size: 20px;
+               }
           }
      }
 
-    
+
 }
- .upload_help {
-      margin-top: 20px;
-      font-size: 14px;
-      li{
-            margin-top:6px
-      }
-      li::before{
-           top: 6px
-      }
- }
+
+.upload_help {
+     margin-top: 20px;
+     font-size: 14px;
+
+     li {
+          margin-top: 6px
+     }
+
+     li::before {
+          top: 6px
+     }
+}
+
+/* 거래상태 조회 */
+.transaction_select {
+     background: #f8f8f8;
+     padding: 4rem 3rem;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 2rem;
+     border-radius: 4px;
+     border: 1px solid #ddd;
+
+     @include mq('tablet-small') {
+          padding: 3rem 2rem;
+     }
+
+     h4 {
+          line-height: 42px;
+          height: 42px;
+          font-weight: 500;
+
+          @include mq('tablet-small') {
+               width: 100%;
+               line-height: 1.5;
+               height: auto;
+          }
+
+     }
+
+     .transaction_select__period {
+          display: flex;
+
+          @include mq('tablet-wide') {
+               width: 100%;
+               margin-bottom: 10px;
+          }
+
+          @include mq('tablet-small') {
+               flex-wrap: wrap;
+          }
+
+
+          .peropd_btns {
+               display: flex;
+               margin-left: 10px;
+
+               @include mq('tablet-small') {
+                    margin-left: 0;
+                    width: 100%;
+
+               }
+
+          }
+
+          button {
+               width: 75px;
+
+               background: #fff;
+               border: 1px solid #dedede;
+               text-align: center;
+               color: #666666;
+               margin-left: 2px;
+               border-radius: 4px;
+               font-size: 14px;
+               height: 44px;
+               line-height: 44px;
+
+               @include mq('tablet-small') {
+                    min-width: calc(25% - 2px);
+               }
+
+
+               &.is-selected {
+                    background: #000;
+                    color: #fff;
+               }
+
+               a {
+                    display: block;
+                    line-height: 42px;
+                    height: 42px;
+               }
+          }
+     }
+
+
+     .check__period-date {
+          //margin-left: 4rem;
+          display: flex;
+          align-items: center;
+          //flex-wrap: wrap;
+
+          @include mq('tablet-wide') {
+               width: 100%;
+          }
+
+          @include mq('tablet-small') {
+               flex-wrap: wrap;
+          }
+
+          .date-input {
+               @include mq('tablet-wide') {
+                    flex-grow: 1;
+               }
+          }
+
+          .wave {
+               width: 15px;
+               text-align: center;
+
+               @include mq('tablet-small') {
+                    width: 100%;
+               }
+
+          }
+
+          .btn {
+               min-width: 80px;
+               height: 44px;
+               line-height: 44px;
+               margin-left: 10px;
+
+               @include mq('tablet-small') {
+                    width: 100%;
+                    min-width: 100%;
+                    margin-top: 4px;
+                    margin-left: 0;
+               }
+          }
+     }
+}
+
+
+.mypage__sales {
+     @include mq('tablet') {
+
+          .goods_group_list {
+               .btn_manage {
+                    top: initial;
+                    bottom: 36px;
+                    color: white;
+                    background-color: var(--orange);
+
+                    &::after {
+                         border-color: white;
+                    }
+               }
+          }
+     }
+}
+
+._emp {
+     color: var(--orange);
+     font-style: normal;
+}
+
+.mypage__salesDetail {
+     .column {
+          .label {
+               background: #f7f7f7;
+          }
+     }
+
+     .tag {
+          margin-left: 6px;
+     }
+
+     .destination {
+          display: block;
+          width: 100%;
+          padding-bottom: 5px;
+          font-size: 1.1em;
+     }
+
+     .price_txt {
+          display: flex;
+          align-items: center;
+          margin: 8px 0;
+
+          em {
+               font-style: normal;
+               min-width: 100px;
+               color: var(--primary-gray);
+          }
+
+          .amount {
+               font-weight: 500;
+               font-size: 1.1em;
+               text-align: right;
+               flex-grow: 1;
+
+               @include mq('tablet') {
+                    font-size: 1em;
+               }
+
+               &._big {
+                    font-size: 1.5em;
+
+                    @include mq('tablet') {
+                         font-size: 1.3em;
+                    }
+               }
+          }
+     }
+
+     .btn_wrap {
+          margin-top: 2rem
+     }
+
+     .form_payment,
+     .form_history {
+
+
+          .label {
+               width: 50%;
+
+               @include mq('tablet') {
+                    width: 100%;
+               }
+          }
+
+          .input_wrap {
+               width: 50%;
+
+               @include mq('tablet') {
+                    width: 100%;
+               }
+          }
+     }
+}
+
+.goods_change_status {
+     text-align: center;
+     border-bottom: 1px solid #ddd;
+     padding: 20px 10px;
+     background: #f7f7f7;
+
+
+     .status_select {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          ul {
+               display: flex;
+               justify-content: center;
+
+               li {
+                    padding: 0 20px;
+               }
+          }
+     }
+}
+
+.mypage__balance {
+
+
+     .board_list table {
+          font-size: 13px;
+     }
+
+
+     .status_txt {
+          margin: 0;
+
+          @include mq('tablet') {
+               height: 25px;
+               line-height: 24px;
+               padding: 0 10px;
+          }
+     }
+
+     .filter_list {
+          margin-bottom: 10px;
+          align-items: flex-end;
+
+          @include mq('tablet') {
+               flex-wrap: wrap;
+               width: 100%;
+          }
+
+
+          .input_wrap {
+               margin: 0 4px 0 0;
+
+
+               @include mq('tablet') {
+                    width: calc(50% - 4px);
+               }
+          }
+
+          .txt_help {
+               @include mq('tablet') {
+                    margin-top: 2rem;
+               }
+          }
+
+
+     }
+}
+
+.mypage__balanceDetail {
+
+     .text_box {
+          margin-top: 2rem;
+     }
+
+     .tb-type02 {
+          margin-top: 20px
+     }
+
+     .btn_wrap {
+          margin-top: 20px
+     }
+
+     .status_txt {
+          margin: 0;
+
+          @include mq('tablet') {
+               height: 25px;
+               line-height: 24px;
+               padding: 0 10px;
+          }
+     }
+
+     @include mq('tablet') {
+          .tb-type02 {
+
+               border-bottom: 0;
+
+               table,
+               tbody,
+               th,
+               td,
+               tfoot {
+                    display: block;
+                    width: 100%;
+               }
+
+               tr {
+                    display: flex;
+                    flex-wrap: wrap;
+               }
+
+               th,
+               td {
+                    width: 50%;
+                    padding-left: 10px !important;
+               }
+
+               .amount {
+                    min-width: 100px;
+               }
+          }
+     }
+}
+
+.mypage__purchaseHistory {
+     .list_item {
+          .txt_help {
+               padding: 10px 10px;
+               color: #fff;
+               margin-top: 20px;
+               border-radius: 4px;
+               text-align: center;
+               font-size: 1.4rem;
+               background: var(--red);
+               line-height: 1.45;
+          }
+     }
+
+     .goods_status .btn_sm {
+          font-size: 13px;
+          padding: 0 2px;
+          line-height: 1;
+          height: 30px;
+          line-height: 30px;
+          min-width: 80px;
+     }
+
+     .status_txt+.btn {
+          margin-bottom: 10px;
+
+          @include mq('tablet') {
+               margin-bottom: 0;
+               margin-right: 10px;
+          }
+     }
+
+
+     @include mq('tablet') {
+
+          .goods_group_list {
+               .list_item {
+                    padding-bottom: 3rem;
+               }
+
+               .btn_manage {
+                    top: initial;
+                    bottom: 5px;
+                    color: white;
+                    font-size: 12px;
+                    background-color: var(--orange);
+
+                    &::after {
+                         border-color: white;
+                    }
+               }
+          }
+     }
+}
+
+.list_btn {
+     border-top: 1px solid #000;
+
+     li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          line-height: 1.5;
+          padding: 15px;
+          border-bottom: 1px solid #ddd;
+
+          p {
+               padding-right: 20px;
+          }
+     }
+}

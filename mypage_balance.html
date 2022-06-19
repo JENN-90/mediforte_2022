@@ -145,11 +145,11 @@
                 <ul>
                     <li class=""><a href="#">홈</a></li>
                     <li class=" bdline"><a href="#">DEMO 신청관리</a></li>
-                    <li class="current"><a href="#">DEMO 예약관리</a></li>
+                    <li class=""><a href="#">DEMO 예약관리</a></li>
                     <li class="bdline"><a href="#">마이스토어 관리</a></li>
                     <li><a href="#">상품 등록 관리</a></li>
                     <li><a href="#">상품 판매 관리</a></li>
-                    <li class="bdline"><a href="#">정산내역</a></li>
+                    <li class="bdline current"><a href="#">정산내역</a></li>
                     <li class="bdline"><a href="#">구매거래 상태 조회</a></li>
                     <li class="bdline"><a href="#">관심상품</a></li>
                     <li><a href="#">키워드 알림</a></li>
@@ -160,88 +160,129 @@
                 </ul>
             </div>
 
-            <div class="mypage__container mypage__reserve">
+            <div class="mypage__container mypage__balance">
 
-                <h3 class="title_lg">DEMO 예약관리</h3>
-                <p class="first">DEMO 상담을 요청한 고객의 DEMO 예약 처리를 하실 수 있는 화면입니다.</p>
-
-                <div class="goods_group_list ">
-                    <div class="list_item list_item__default">
-                        <ul class="goods_buy_info">
-                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
-                        </ul>
-                        <div class="goods_info_table goods_info_table__default">
-                            <div class="table_cell goods_thumb ">
-                                <p class="label">상품정보</p>
-                                <div class="cell_cont">
-                                    <p class="thumb">
-                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
-                                    </p>
-                                    <div class="info">
-                                        <span class="info-brand">[사이노슈어] </span>
-                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
-                                        <ul>
-                                            <li>제조사 : 사이노슈어</li>
-                                            <li>제조년월 : 2018.11</li>
-                                            <li>사용기간 : 3년</li>
-                                            <li>상태 : 상</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="table_cell goods_able">
-                                <p class="label">DEMO 가능여/부</p>
-                                <div class="cell_cont">
-                                    <p>가능</p>
-                                </div>
-                            </div>
-                            <div class="table_cell goods_methods">
-                                <p class="label">DEMO 방식</p>
-                                <div class="cell_cont">
-                                    <p>장비이동</p>
-                                </div>
-                            </div>
-                            <div class="table_cell goods_price">
-                                <p class="label">DEMO 실비</p>
-                                <div class="cell_cont">
-                                    <p class="price">200,000원</p>
-                                </div>
-                            </div>
-                        </div>
-                   
-                        <div class="demo_reserve_info demo_reserve_info__period">
-                            <p class="label">DEMO 기간<small>(최대5일)</small></p>
-                            <div class="cell_cont">
-                                <!--from-->
-                                <div class="date-input">
-                                    <label for="dateFrom">DEMO 시작일</label>
-                                    <p class="date_value">2022.04.20</p>
-                                </div>
-                                <span class="wave">~</span>
-                                <!--to-->
-                                <div class="date-input">
-                                    <label for="dateTo">DEMO 종료일</label>
-                                    <p class="date_value">2022.04.25</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 상태</p>
-                            <div class="cell_cont">
-                                <span class="demo_status _ongoing">DEMO 진행중 (잔여일 3일)</span>
-                            </div>
-                        </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 신청인</p>
-                            <div class="cell_cont">
-                                홍길동 jwwon2000@gmail.com
-                            </div>
-                        </div>
-                        <div class="btn_wrap right">
-                            <button class="btn btn_outline" type="button">목록</button>
-                        </div>
+                <h3 class="title_lg">정산내역</h3>
+                <p class="first">판매등록하신 상품의 판매 상태를 설정 및 관리하실 수 있으며 상품을 신규로 등록하시거나 내용을 수정하실 수 있습니다.</p>
+                <div class="filter_list _right">
+                    <div class="input_wrap">
+                        <label for="selPayMethods" class="blind">결제수단 선택</label>
+                        <select name="selPayMethods" id="selPayMethods">
+                            <option value="0">결제수단</option>
+                            <option value="1">결제수단</option>
+                            <option value="2">결제수단</option>
+                        </select>
                     </div>
+                    <div class="input_wrap">
+                        <label for="balanceStatus" class="blind">정산상태</label>
+                        <select name="balanceStatus" id="balanceStatus">
+                            <option value="0">정산상태</option>
+                            <option value="1">정산상태</option>
+                            <option value="2">정산상태</option>
+                        </select>
+                    </div>
+
+                    <p class="txt_help right">VAT포함</p>
                 </div>
+                
+                <div class="board_list board_list_m">
+                    <table>
+                        <colgroup>
+                            <col width="11%">
+                            <col width="10%">
+                            <col width="12%">
+                            <col width="10%">
+                            <col width="11%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">구매확정일시</th>
+                                <th scope="col">상품번호</th>
+                                <th scope="col">상품명</th>
+                                <th scope="col">결제수단</th>
+                                <th scope="col"><strong>정산예정일</strong></th>
+                                <th scope="col">총판매액(원)</th>
+                                <th scope="col">수수료(원)</th>
+                                <th scope="col"><strong>정산금액(원)</strong></th>
+                                <th scope="col">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-heading="구매확정일시">대기</td>
+                                <td data-heading="상품번호">MF2201020</td>
+                                <td data-heading="상품명">ND-YAG 피코레이저</td>
+                                <td data-heading="결제수단">신용카드</td>
+                                <td class="_bg_gray" data-heading="정산예정일">2021.03.24</td>
+                                <td data-heading="총판매액(원)">8,600,000</td>
+                                <td data-heading="수수료(원)">950,000</td>
+                                <td class="_bg_gray" data-heading="정산금액(원)">7,740,000</td>
+                                <td data-heading="상태"><p class="status_txt _orange">정산대기</p></td>                                
+                            </tr>
+                            <tr>
+                                <td data-heading="구매확정일시">2021.03.23</td>
+                                <td data-heading="상품번호">MF22010</td>
+                                <td data-heading="상품명">ND-YAG 피코레이저</td>
+                                <td data-heading="결제수단">계좌이체</td>
+                                <td class="_bg_gray"  data-heading="정산예정일">2021.03.24</td>
+                                <td data-heading="총판매액(원)">8,600,000</td>
+                                <td data-heading="수수료(원)">950,000</td>
+                                <td class="_bg_gray"  data-heading="정산금액(원)">7,740,000</td>
+                                <td data-heading="상태"><p class="status_txt _orange">정산확정</p></td>                                
+                            </tr>
+                            <tr>
+                                <td data-heading="구매확정일시">2021.03.23</td>
+                                <td data-heading="상품번호">MF22010</td>
+                                <td data-heading="상품명"> ND-YAG 피코레이저ND-YAG 피코레이저</td>
+                                <td data-heading="결제수단">메디큐레이션</td>
+                                <td class="_bg_gray"  data-heading="정산예정일">2021.03.24</td>
+                                <td data-heading="총판매액(원)">8,600,000</td>
+                                <td data-heading="수수료(원)">950,000</td>
+                                <td class="_bg_gray"  data-heading="정산금액(원)">7,740,000</td>
+                                <td data-heading="상태"><p class="status_txt _gray">정산완료</p></td>                                
+                            </tr>   
+                            <tr>
+                                <td data-heading="구매확정일시">2021.03.23</td>
+                                <td data-heading="상품번호">MF22010</td>
+                                <td data-heading="상품명"> ND-YAG 피코레이저ND-YAG 피코레이저</td>
+                                <td data-heading="결제수단">메디큐레이션</td>
+                                <td class="_bg_gray"  data-heading="정산예정일">2021.03.24</td>
+                                <td data-heading="총판매액(원)">8,600,000</td>
+                                <td data-heading="수수료(원)">950,000</td>
+                                <td class="_bg_gray"  data-heading="정산금액(원)">7,740,000</td>
+                                <td data-heading="상태"><p class="status_txt _gray">정산완료</p></td>                                
+                            </tr>   
+                            <tr>
+                                <td data-heading="구매확정일시">2021.03.23</td>
+                                <td data-heading="상품번호">MF22010</td>
+                                <td data-heading="상품명"> ND-YAG 피코레이저ND-YAG 피코레이저</td>
+                                <td data-heading="결제수단">메디큐레이션</td>
+                                <td class="_bg_gray"  data-heading="정산예정일">2021.03.24</td>
+                                <td data-heading="총판매액(원)">8,600,000</td>
+                                <td data-heading="수수료(원)">950,000</td>
+                                <td class="_bg_gray"  data-heading="정산금액(원)">7,740,000</td>
+                                <td data-heading="상태"><p class="status_txt _gray">정산완료</p></td>                                
+                            </tr>                          
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="page-first page-arrow"><span class="blind">first</span></a>
+                    <a href="#" class="page-prev page-arrow"><span class="blind">prev</span></a>
+                    <a href="#" class="page-num page-current">1</a>
+                    <a href="#" class="page-num">2</a>
+                    <a href="#" class="page-num">3</a>
+                    <a href="#" class="page-num">4</a>
+                    <a href="#" class="page-num">5</a>
+                    <a href="#" class="page-next page-arrow"><span class="blind">next</span></a>
+                    <a href="#" class="page-last page-arrow"><span class="blind">last</span></a>
+                </div>
+
             </div>
         </section>
 
@@ -392,6 +433,25 @@
         <script src="static/js/tui-date-picker.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/front.js"></script>
+
+        <script>
+            let datepickerFrom = new tui.DatePicker('#dateFromCalendar', {
+                language: 'ko',
+                date: new Date(),
+                input: {
+                    element: '#dateFrom',
+                    format: 'yyyy-MM-dd'
+                }
+            });
+            let datepickerTo = new tui.DatePicker('#dateToCalendar', {
+                language: 'ko',
+                date: new Date(),
+                input: {
+                    element: '#dateTo',
+                    format: 'yyyy-MM-dd'
+                }
+            });
+        </script>
     </body>
 
 </html>
