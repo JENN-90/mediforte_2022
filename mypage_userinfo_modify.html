@@ -145,101 +145,161 @@
                 <ul>
                     <li class=""><a href="#">홈</a></li>
                     <li class=" bdline"><a href="#">DEMO 신청관리</a></li>
-                    <li class="current"><a href="#">DEMO 예약관리</a></li>
+                    <li class=""><a href="#">DEMO 예약관리</a></li>
                     <li class="bdline"><a href="#">마이스토어 관리</a></li>
                     <li><a href="#">상품 등록 관리</a></li>
-                    <li><a href="#">상품 판매 관리</a></li>
+                    <li class=""><a href="#">상품 판매 관리</a></li>
                     <li class="bdline"><a href="#">정산내역</a></li>
                     <li class="bdline"><a href="#">구매내역 조회</a></li>
                     <li class="bdline"><a href="#">관심상품</a></li>
-                    <li><a href="#">키워드 알림</a></li>
-                    <li class="bdline"><a href="#">회원정보 수정</a></li>
+                    <li class=""><a href="#">키워드 알림</a></li>
+                    <li class="bdline current"><a href="#">회원정보 수정</a></li>
                     <li><a href="#">1:1 문의</a></li>
                     
                 </ul>
             </div>
 
-            <div class="mypage__container mypage__reserve">
+            <div class="mypage__container mypage__user">
 
-                <h3 class="title_lg">DEMO 예약관리</h3>
-                <p class="first">DEMO 상담을 요청한 고객의 DEMO 예약 처리를 하실 수 있는 화면입니다.</p>
+                <h3 class="title_lg">회원정보 수정</h3>
+                <p class="first">가입시 입력하신 회원정보 내역입니다. <br>수정을원하시면 내용을 수정하신 후 수정하기 버튼을 클릭해 주세요</p>
+                <div class="form_wrap">
+                    <form action="">
+                        <fieldset>
+                            <legend class="title_md">기본정보 </legend>
+                            <div class="column">
+                                <label class="label" for="userName">이름</label>
+                                <div class="input_wrap _m_full ">
+                                    <input type="text" id="userName" value="홍길동" disabled>
+                                </div>
+                            </div>
 
-                <div class="goods_group_list ">
-                    <div class="list_item list_item__default">
-                        <ul class="goods_buy_info">
-                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
-                        </ul>
-                        <div class="goods_info_table goods_info_table__default">
-                            <div class="table_cell goods_thumb ">
-                                <p class="label">상품정보</p>
-                                <div class="cell_cont">
-                                    <p class="thumb">
-                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
-                                    </p>
-                                    <div class="info">
-                                        <span class="info-brand">[사이노슈어] </span>
-                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
-                                        <ul>
-                                            <li>제조사 : 사이노슈어</li>
-                                            <li>제조년월 : 2018.11</li>
-                                            <li>사용기간 : 3년</li>
-                                            <li>상태 : 상</li>
-                                        </ul>
+                            <div class="column">
+                                <label class="label" for="userBirth">생년월일</label>
+                                <div class="input_wrap _m_full">
+                                    <input type="text" id="userBirth" value="1983년 11월 23일 (남)" disabled>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <label class="label" for="userNewPassword">새 비밀번호</label>
+                                <div class="input_wrap _m_full">
+                                    <input type="password" id="userNewPassword" value="123456">
+                                    <p class="txt_help red">비밀번호를 입력해주세요.</p>
+                                    <p class="txt_help red">영문 대/소문자, 숫자, 특수문자 (~!@#$%^&*()_+|) 중 2종류를 조합하여 10~16자 또는
+                                        3종류 이상을 조합하여 8~16자로 입력해주세요.</p>
+                                    <!--
+                                        - 공란일경우 
+                                        비밀번호를 입력해주세요.
+                                        - 입력값이 충족되지 않은경우 
+                                        영문 대/소문자, 숫자, 특수문자 (~!@#$%^&*()_+|) 중 2종류를 조합하여 10~16자 또는 3종류 이상을 조합하여 8~16자로 입력해주세요.
+                                    -->
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <label class="label" for="userNewPasswordCheck">새 비밀번호 확인</label>
+                                <div class="input_wrap _m_full">
+                                    <input type="password" id="userNewPasswordCheck" value="123456">
+                                    <p class="txt_help red">비밀번호를 다시한번 입력해주세요.</p>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <label class="label" for="userPhone">휴대전화번호</label>
+                                <div class="input_wrap input_flex input_flex_btn ">
+                                    <input type="number" id="userPhone" value="01024569877">
+                                    <button type="button" class="btn btn_lg btn_black">인증번호 요청 </button>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="userCertCode">인증번호</label>
+                                <div class="input_wrap input_flex input_flex_btn ">
+                                    <input type="number" id="userCertCode" value="" placeholder="입력인증번호">
+                                    <button type="button" class="btn btn_lg btn_black">확인 </button>
+                                    <p class="txt_help red">남은시간 : 03:23</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="workContact">근무처 연락처</label>
+                                <div class="input_wrap _m_full">
+                                    <input type="number" id="workContact" value="01024569877">
+                                    <p class="txt_help gray">평생번호(0502, 0504, 0505, 0506) 및 대표번호 (1599,1566 등) 는
+                                        050안심번호로 연결이 불가합니다. <br />대표번호는 지역번호와 함께 입력해주세요.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="userEmail">이메일</label>
+                                <div class="input_wrap mid _m_full">
+                                    <input type="text" id="userEmail" value="example@mediforte.com">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="userAddress">주소</label>
+                                <div class="input_wrap input_address">
+                                    <div class="input_wrap">
+                                        <input type="text" id="userAddress" value="16954">
+                                        <button type="button" class="btn btn_md btn_black">우편번호 찾기</button>
+                                    </div>
+                                    <div class="input_wrap full">
+                                        <input type="text" id="userAddress_1" value="경기도 용인시 기흥구 흥덕1로 13"
+                                            placeholder="주소입력">
+                                        <input type="text" id="userAddress_2" value="흥덕아이티밸리 B-415"
+                                            placeholder="나머지 주소 입력">
                                     </div>
                                 </div>
                             </div>
-                            <div class="table_cell goods_able">
-                                <p class="label">DEMO 가능여/부</p>
-                                <div class="cell_cont">
-                                    <p>가능</p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend class="title_md">소속정보 </legend>
+                            <div class="column">
+                                <label class="label" for="jobCategory">직업분류</label>
+                                <div class="input_wrap ">
+                                    <select name="jobCategory" id="jobCategory" class="select">
+                                        <option value="0">의사</option>
+                                        <option value="0">의사</option>
+                                        <option value="0">의사</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="table_cell goods_methods">
-                                <p class="label">DEMO 방식</p>
-                                <div class="cell_cont">
-                                    <p>장비이동</p>
+
+                            <div class="column">
+                                <label class="label" for="medicalLicenseNum">의사면허번호</label>
+                                <div class="input_wrap _m_full">
+                                    <input type="text" id="medicalLicenseNum" value="172625345">
+                                    <p class="txt_help gray">의사회원이신 경우 의사면허번호를 꼭 입력해 주세요</p>
                                 </div>
                             </div>
-                            <div class="table_cell goods_price">
-                                <p class="label">DEMO 실비</p>
-                                <div class="cell_cont">
-                                    <p class="price">200,000원</p>
+
+                            <div class="column">
+                                <label class="label" for="companyDept">직장명/부서명</label>
+                                <div class="input_wrap _m_full">
+                                    <input type="text" id="companyDept" value="홍 성형외과 의원">
+                                    <input type="text" id="companyDept_dept" value="원장">
                                 </div>
                             </div>
-                        </div>
-                   
-                        <div class="demo_reserve_info demo_reserve_info__period">
-                            <p class="label">DEMO 기간<small>(최대5일)</small></p>
-                            <div class="cell_cont">
-                                <!--from-->
-                                <div class="date-input">
-                                    <label for="dateFrom">DEMO 시작일</label>
-                                    <p class="date_value">2022.04.20</p>
-                                </div>
-                                <span class="wave">~</span>
-                                <!--to-->
-                                <div class="date-input">
-                                    <label for="dateTo">DEMO 종료일</label>
-                                    <p class="date_value">2022.04.25</p>
+                            <div class="column">
+                                <label class="label" for="businessNum">사업자등록정보</label>
+                                <div class="input_wrap _m_full">
+                                    <input type="text" id="businessNum_corp" value="홍 성형외과 의원">
+                                    <input type="text" id="businessNum" value="23-356-876">
                                 </div>
                             </div>
-                        </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 상태</p>
-                            <div class="cell_cont">
-                                <span class="demo_status _ongoing">DEMO 진행중 (잔여일 3일)</span>
+                            <div class="column">
+                                <p class="label">사업자등록증 첨부</p>
+                                <div class="input_wrap mid">
+                                    <input class="filename" value="선택된 파일이 없음" placeholder="선택된 파일이 없음">
+                                    <label class="btn btn_black" for="businessNumImg">파일선택</label>
+                                    <input type="file" id="businessNumImg">
+                                </div>
                             </div>
+                        </fieldset>
+                        <div class="btn_wrap center mt-20">
+                            <button class="btn btn_black">완료</button>
+                            <button class="btn btn_outline">취소</button>
                         </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 신청인</p>
-                            <div class="cell_cont">
-                                홍길동 jwwon2000@gmail.com
-                            </div>
-                        </div>
-                        <div class="btn_wrap right">
-                            <button class="btn btn_outline" type="button">목록</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -370,7 +430,8 @@
                 </div>
             </div>
             <div class="footer__cs footer__cs-btm">
-                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail" href="mailto:cs@mediforte.co.kr">cs@mediforte.co.kr</a>
+                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail"
+                    href="mailto:cs@mediforte.co.kr">cs@mediforte.co.kr</a>
             </div>
 
             <div class="footer__sns">
@@ -391,6 +452,7 @@
         <script src="static/js/tui-date-picker.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/front.js"></script>
+
     </body>
 
 </html>

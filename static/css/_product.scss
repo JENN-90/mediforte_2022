@@ -209,8 +209,15 @@
     overflow: hidden;
     display: block;
     position: relative;
-    //border: 2px solid transparent;
     transition: 0.3s;
+    border: 2px solid transparent;
+
+    .btn_wrap {
+        margin-top: 10px;
+        .btn{
+            width: 100%
+        };
+    }
 
     @include mq('tablet-wide') {
         width: 32.2%;

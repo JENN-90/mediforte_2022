@@ -190,7 +190,7 @@
                     </button>
 
                     <div class="uploaded_list">
-                        <div class="list_item">
+                         <div class="list_item">
                             <a href="#" class="img"><img src="static/images/sample.png" alt="img"></a>
                             <button type="button" class="btn_delete_picture"><span class="blind">이미지
                                     삭제하기</span></button>
@@ -230,16 +230,20 @@
                             <a href="#" class="img"><img src="static/images/sample.png" alt="img"></a>
                             <button type="button" class="btn_delete_picture"><span class="blind">이미지
                                     삭제하기</span></button>
-                        </div>
+                        </div> 
                     </div>
+                    
                 </div>
+                
                 <div class="upload_help">
                     <ul class="list_dash">
                         <li>장비 상태를 보여 줄 수 있는 사진들을 등록해주세요.</li>
                         <li>상품이미지는 600*800에 최적화되어있습니다.</li>
                         <li>이미지를 클릭할 경우 원본이미지를 확인할 수 있습니다.</li>
                     </ul>
+                    <button class="btn btn_outline">수정하기</button>
                 </div>
+                
                 <!-- //장비이미지 업로드영역 -->
 
                 <h3 class="title_md mt">기본정보<i class="essential">*</i></h3>
@@ -467,10 +471,8 @@
                     </form>
                 </div>
 
-                <h3 class="title_md mt">제품상세설명<i class="essential">*</i></h3>
-                <p class="txt_help red left">*는 필수항목입니다. <br>
-                    필수항목은 반드시 입력해 주셔야 하며 필수가 아닌 항목의 경우도 최대한 상품정보를 등록해 주시면 구매자의 선택에 도움을 주실 수 있습니다.</p>
-
+                <h3 class="title_md mt">제품상세설명</h3>
+                
                 <p class="txt">
                     판매하시는 장비에 대한 보다 상세한 정보를 등록하시면 구매고객의 구매 결정에 큰 도움이 됩니다. 최대한 상세한 설명을 등록해 주시기 바랍니다.
                 </p>
@@ -479,28 +481,27 @@
                         <fieldset>
                             <legend class="blind">제품상세설명 입력</legend>
                             <div class="column">
-                                <label class="label" for="newProductPrice">새장비 가격정보 <i class="essential">*</i></label>
+                                <label class="label" for="newProductPrice">새장비 가격정보 </label>
                                 <div class="input_wrap  input_price">
                                     <input type="text" id="newProductPrice" placeholder="부가세포함 가격입력"> 원
                                     <small>(부가세포함)</small>
                                 </div>
                             </div>
                             <div class="column">
-                                <label class="label" for="productSpecDetail">제품 스펙정보 <i class="essential">*</i></label>
+                                <label class="label" for="productSpecDetail">제품 스펙정보 </label>
                                 <div class="input_wrap full">
                                     <textarea name="productSpecDetail" id="productSpecDetail" cols="30" rows="10"
                                         placeholder="구매자가 참고할 수 있는  제품 스펙 정보를 자유롭게 입력해 주세요"></textarea>
                                 </div>
                             </div>
                             <div class="column">
-                                <label class="label" for="productSerialNumber">장비 고유번호( SN) <i
-                                        class="essential">*</i></label>
+                                <label class="label" for="productSerialNumber">장비 고유번호( SN)</label>
                                 <div class="input_wrap mid">
                                     <input type="text" id="productSerialNumber" placeholder="장비 고유번호">
                                 </div>
                             </div>
                             <div class="column">
-                                <label class="label">보증기간 <i class="essential">*</i></label>
+                                <label class="label">보증기간 </label>
                                 <div class="input_wrap input_price input_flex">
                                     <label class="check-box-round">
                                         <input type="radio" name="guaranteePeriod" checked>보증만료
@@ -520,27 +521,27 @@
                                 </div>
                             </div>
                             <div class="column">
-                                <label class="label" for="expendableCheck">소모품 여부 <i class="essential">*</i></label>
+                                <label class="label" for="expendableCheck">소모품 여부 </label>
                                 <div class="input_wrap full">
                                     <textarea name="expendableCheck" id="expendableCheck" cols="30" rows="10"
                                         placeholder="구매자가 참고할 수 있는 소모품 포함 정보를 자유롭게 입력해 주세요"></textarea>
                                 </div>
                             </div>
                             <div class="column">
-                                <label class="label" for="repairHistory">수리이력 <i class="essential">*</i></label>
+                                <label class="label" for="repairHistory">수리이력 </label>
                                 <div class="input_wrap full">
                                     <textarea name="repairHistory" id="repairHistory" cols="30" rows="10"
                                         placeholder="구매자가 참고할 수 있는 수리이력 내용을 입력해 주세요"></textarea>
                                 </div>
                             </div>
                             <div class="column">
-                                <label class="label" for="productWeight">장비무게 <i class="essential">*</i></label>
+                                <label class="label" for="productWeight">장비무게 </label>
                                 <div class="input_wrap  input_price">
                                     <input type="text" id="productWeight" placeholder="장비무게"> kg
                                 </div>
                             </div>
                             <div class="column">
-                                <label class="label">매뉴얼 유무 <i class="essential">*</i></label>
+                                <label class="label">매뉴얼 유무 </label>
                                 <div class="input_wrap full">
                                     <div class="checkbox_list">
                                         <label class="check-box-round" id="manualCheck_Y">

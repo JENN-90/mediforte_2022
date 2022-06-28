@@ -186,7 +186,13 @@ function priceComma(price) {
         });
         setTimeout(() => {
             $grid.masonry();
-        }, 100);
+        }, 300);
+
+        $(window).on('resize', function () {
+            setTimeout(() => {
+                $grid.masonry();
+            }, 300);
+        })
     }
 
     if ($.exists('.core-product')) {
@@ -390,7 +396,12 @@ function priceComma(price) {
 
     $('.input_price input').on('keyup', (e) => {
         e.target.value = priceComma(e.target.value)
-
     })
+
+    //filebox
+    $("input[type='file']").on('change', function () {
+        var fileName = $(this).val();
+        $(this).siblings('.filename').val(fileName);
+    });
 
 })();

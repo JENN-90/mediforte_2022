@@ -145,102 +145,78 @@
                 <ul>
                     <li class=""><a href="#">홈</a></li>
                     <li class=" bdline"><a href="#">DEMO 신청관리</a></li>
-                    <li class="current"><a href="#">DEMO 예약관리</a></li>
+                    <li class=""><a href="#">DEMO 예약관리</a></li>
                     <li class="bdline"><a href="#">마이스토어 관리</a></li>
                     <li><a href="#">상품 등록 관리</a></li>
-                    <li><a href="#">상품 판매 관리</a></li>
+                    <li class=""><a href="#">상품 판매 관리</a></li>
                     <li class="bdline"><a href="#">정산내역</a></li>
                     <li class="bdline"><a href="#">구매내역 조회</a></li>
                     <li class="bdline"><a href="#">관심상품</a></li>
-                    <li><a href="#">키워드 알림</a></li>
+                    <li class="current"><a href="#">키워드 알림</a></li>
                     <li class="bdline"><a href="#">회원정보 수정</a></li>
                     <li><a href="#">1:1 문의</a></li>
                     
                 </ul>
             </div>
 
-            <div class="mypage__container mypage__reserve">
+            <div class="mypage__container mypage__alarm">
 
-                <h3 class="title_lg">DEMO 예약관리</h3>
-                <p class="first">DEMO 상담을 요청한 고객의 DEMO 예약 처리를 하실 수 있는 화면입니다.</p>
-
-                <div class="goods_group_list ">
-                    <div class="list_item list_item__default">
-                        <ul class="goods_buy_info">
-                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
-                        </ul>
-                        <div class="goods_info_table goods_info_table__default">
-                            <div class="table_cell goods_thumb ">
-                                <p class="label">상품정보</p>
-                                <div class="cell_cont">
-                                    <p class="thumb">
-                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
-                                    </p>
-                                    <div class="info">
-                                        <span class="info-brand">[사이노슈어] </span>
-                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
-                                        <ul>
-                                            <li>제조사 : 사이노슈어</li>
-                                            <li>제조년월 : 2018.11</li>
-                                            <li>사용기간 : 3년</li>
-                                            <li>상태 : 상</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="table_cell goods_able">
-                                <p class="label">DEMO 가능여/부</p>
-                                <div class="cell_cont">
-                                    <p>가능</p>
-                                </div>
-                            </div>
-                            <div class="table_cell goods_methods">
-                                <p class="label">DEMO 방식</p>
-                                <div class="cell_cont">
-                                    <p>장비이동</p>
-                                </div>
-                            </div>
-                            <div class="table_cell goods_price">
-                                <p class="label">DEMO 실비</p>
-                                <div class="cell_cont">
-                                    <p class="price">200,000원</p>
-                                </div>
-                            </div>
-                        </div>
-                   
-                        <div class="demo_reserve_info demo_reserve_info__period">
-                            <p class="label">DEMO 기간<small>(최대5일)</small></p>
-                            <div class="cell_cont">
-                                <!--from-->
-                                <div class="date-input">
-                                    <label for="dateFrom">DEMO 시작일</label>
-                                    <p class="date_value">2022.04.20</p>
-                                </div>
-                                <span class="wave">~</span>
-                                <!--to-->
-                                <div class="date-input">
-                                    <label for="dateTo">DEMO 종료일</label>
-                                    <p class="date_value">2022.04.25</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 상태</p>
-                            <div class="cell_cont">
-                                <span class="demo_status _ongoing">DEMO 진행중 (잔여일 3일)</span>
-                            </div>
-                        </div>
-                        <div class="demo_reserve_info">
-                            <p class="label">DEMO 신청인</p>
-                            <div class="cell_cont">
-                                홍길동 jwwon2000@gmail.com
-                            </div>
-                        </div>
-                        <div class="btn_wrap right">
-                            <button class="btn btn_outline" type="button">목록</button>
-                        </div>
+                <div class="title_wrap">
+                    <h3 class="title_lg">키워드 알림</h3>
+                     <div class="btn_wrap">
+                         <button type="button" class="btn btn_sm btn_black">키워드 등록</button>
+                         <button type="button" class="btn btn_bin"><span class="blind">삭제</span></button>
+                     </div>
+                </div>
+                <p class="first">관심있는 상품에 대한 등록정보를 알림으로 받으실 수 있습니다. <br/>최대 30개까지 등록 가능합니다.</p>
+                <div class="keywords_alarm">
+                    <div class="keywords_alarm__item">
+                        <p class="thumb">
+                            <img src="static/images/sample2.png" alt="image">
+                        </p>
+                        <dl class="text">
+                            <dt><strong>[사이노슈어 키워드 알림]</strong>에어젯 리프팅 AIRJET LIFTING</dt>
+                            <dd><span class="alarm_time">1시간 전</span></dd>
+                        </dl>
+                    </div>
+                    <div class="keywords_alarm__item">
+                        <p class="thumb">
+                            <img src="static/images/detail_slide_sample.png" alt="image">
+                        </p>
+                        <dl class="text">
+                            <dt><strong>[사이노슈어 키워드 알림]</strong>에어젯 리프팅 AIRJET LIFTING</dt>
+                            <dd><span class="alarm_time">1시간 전</span></dd>
+                        </dl>
+                    </div>
+                    <div class="keywords_alarm__item">
+                        <p class="thumb">
+                            <img src="static/images/sample2.png" alt="image">
+                        </p>
+                        <dl class="text">
+                            <dt><strong>[사이노슈어 키워드 알림]</strong>에어젯 리프팅 AIRJET LIFTING</dt>
+                            <dd><span class="alarm_time">1시간 전</span></dd>
+                        </dl>
+                    </div>
+                    <div class="keywords_alarm__item">
+                        <p class="thumb">
+                            <img src="static/images/sample2.png" alt="image">
+                        </p>
+                        <dl class="text">
+                            <dt><strong>[사이노슈어 키워드 알림]</strong>에어젯 리프팅 AIRJET LIFTING</dt>
+                            <dd><span class="alarm_time">1시간 전</span></dd>
+                        </dl>
+                    </div>
+                    <div class="keywords_alarm__item">
+                        <p class="thumb">
+                            <img src="static/images/sample2.png" alt="image">
+                        </p>
+                        <dl class="text">
+                            <dt><strong>[사이노슈어 키워드 알림]</strong>에어젯 리프팅 AIRJET LIFTING</dt>
+                            <dd><span class="alarm_time">1시간 전</span></dd>
+                        </dl>
                     </div>
                 </div>
+                
             </div>
         </section>
 
@@ -370,7 +346,8 @@
                 </div>
             </div>
             <div class="footer__cs footer__cs-btm">
-                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail" href="mailto:cs@mediforte.co.kr">cs@mediforte.co.kr</a>
+                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail"
+                    href="mailto:cs@mediforte.co.kr">cs@mediforte.co.kr</a>
             </div>
 
             <div class="footer__sns">
@@ -391,6 +368,7 @@
         <script src="static/js/tui-date-picker.min.js"></script>
         <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
         <script src="static/js/front.js"></script>
+
     </body>
 
 </html>

@@ -150,13 +150,12 @@
                     <li><a href="#">상품 등록 관리</a></li>
                     <li class=""><a href="#">상품 판매 관리</a></li>
                     <li class="bdline"><a href="#">정산내역</a></li>
-                    <li class="bdline current"><a href="#">구매거래 상태 조회</a></li>
+                    <li class="bdline current"><a href="#">구매내역 조회</a></li>
                     <li class="bdline"><a href="#">관심상품</a></li>
                     <li><a href="#">키워드 알림</a></li>
                     <li class="bdline"><a href="#">회원정보 수정</a></li>
                     <li><a href="#">1:1 문의</a></li>
-                    <li class="bdline disabled"><a href="#">마스터 회원</a></li>
-                    <li class="bdline disabled"><a href="#">추천인 제도</a></li>
+                    
                 </ul>
             </div>
 
@@ -284,13 +283,50 @@
 
                 <h3 class="title_md mt">거래 평가</h3>
                 <p class="first">김판매님과의 거래에 대한 평가를 해주세요</p>
+                <div class="grade_eval">
+                    <label for="gradeEval4" class="radio-box">
+                        <input type="radio" id="gradeEval4" name="gradeEval" checked>우수  
+                        <div class="grade_star">
+                            <p class="grade_star_fill "></p>
+                        </div>
+                        <span class="checkmark radio-box__checkmark"></span>
+                    </label>
+                    <label for="gradeEval3" class="radio-box">
+                        <input type="radio" id="gradeEval3" name="gradeEval">보통
+                         <div class="grade_star">
+                            <p class="grade_star_fill "></p>
+                        </div>
+                        <span class="checkmark radio-box__checkmark"></span>
+                    </label>
+                    <label for="gradeEval2" class="radio-box">
+                        <input type="radio" id="gradeEval2" name="gradeEval">미흡
+                         <div class="grade_star">
+                            <p class="grade_star_fill "></p>
+                        </div>
+                        <span class="checkmark radio-box__checkmark"></span>
+                    </label>
+                    <label for="gradeEval1" class="radio-box">
+                        <input type="radio" id="gradeEval1" name="gradeEval">불만
+                         <div class="grade_star">
+                            <p class="grade_star_fill "></p>
+                        </div>
+                        <span class="checkmark radio-box__checkmark"></span>
+                    </label>
+                </div>
+                <div class="grade_eval_text">
+                    <textarea name="gradeEvalDetail" id="gradeEvalDetail" cols="30" rows="10">거래 후기 내용을 간략히 입력해 주세요</textarea>
+                </div>
+                <div class="btn_wrap right">
+                    <button class="btn btn_outline btn_sm">확인</button>
+                </div>
 
 
 
                 <h3 class="title_md mt">검수완료</h3>
                 <ul class="list_btn">
                     <li>
-                        <p class="title">납품받은 상품이 이상이 없을 경우 검수완료 확인을 해주시기 바랍니다. <br>판매자의 납품완료 등록 후 10일이 경과하면 자동으로 검수완료로 처리됩니다.</p>
+                        <p class="title">납품받은 상품이 이상이 없을 경우 검수완료 확인을 해주시기 바랍니다. <br>판매자의 납품완료 등록 후 10일이 경과하면 자동으로 검수완료로
+                            처리됩니다.</p>
                         <button type="button" class="btn btn_orange btn_sm">검수완료</button>
                     </li>
                 </ul>
@@ -338,7 +374,7 @@
                     </div>
                 </div>
 
-                   <h3 class="title_md mt">납품 <small>거래 히스토리</small></h3>
+                <h3 class="title_md mt">납품 <small>거래 히스토리</small></h3>
                 <div class="form_wrap">
                     <div class="column">
                         <h4 class="label">납품일</h4>
@@ -346,13 +382,13 @@
                             <p>2022년 1월 21일</p>
                         </div>
                     </div>
-                     <div class="column">
+                    <div class="column">
                         <h4 class="label">상태</h4>
                         <div class="input_wrap full">
                             <p>납품완료</p>
                         </div>
                     </div>
-                     <div class="column">
+                    <div class="column">
                         <h4 class="label">납품장소</h4>
                         <div class="input_wrap full">
                             <p>
@@ -362,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="btn_wrap cetner">
                     <button class="btn btn_black">목록</button>
                 </div>

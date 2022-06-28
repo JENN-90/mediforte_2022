@@ -1,3 +1,27 @@
+.chat .btn {
+        font-size: 1.4rem;
+        padding: 4px 13px 1px 13px;
+        vertical-align: top;
+        margin-top: -1px;
+        min-width: initial;
+        height: auto; 
+        line-height: initial;
+
+        &--round {
+            border-radius: 50px;
+        }
+
+        &--round-s {
+                padding: 4px 23px;
+
+        }
+
+        &--black {
+            background: #333;
+            color: #ffff;
+        }
+}
+
 .chat {
     overflow: hidden;
     background: #fff;
@@ -512,13 +536,13 @@
         margin-top: 15px;
     }
 
-    &--sender {}
-
     &--receiver {
         margin-left: auto;
         max-width: 255px;
 
         .btn {
+            width: 100%; 
+
             margin-top: 10px
         }
 
