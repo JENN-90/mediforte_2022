@@ -73,6 +73,7 @@
 
                &.disabled {
                     display: none;
+
                     a {
                          opacity: 0.2;
                          cursor: default;
@@ -642,7 +643,7 @@
                     text-align: left;
                     margin-top: 10px;
                     padding-top: 0;
-                    width: 100%; 
+                    width: 100%;
                }
           }
 
@@ -1889,10 +1890,10 @@
           gap: 10px;
           grid-template-columns: repeat(4, 1fr);
 
-          &._empty { 
+          &._empty {
                border: 1px solid #ddd;
                border-radius: 4px;
-               height: 100X; 
+               height: 100X;
                align-self: stretch;
                margin-left: 10px;
                background: #f9f9f9;
@@ -1965,14 +1966,15 @@
 .upload_help {
      margin-top: 20px;
      font-size: 14px;
-     display: flex; 
+     display: flex;
      justify-content: space-between;
      align-items: flex-start;
      flex-wrap: wrap;
 
-.btn{ 
-     margin-left: auto;
-}
+     .btn {
+          margin-left: auto;
+     }
+
      ul {
           margin-bottom: 10px;
      }
@@ -2264,20 +2266,50 @@
      border-bottom: 1px solid #ddd;
      padding: 20px 10px;
      background: #f7f7f7;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 0 40px;
 
+     >p {
+          width: 100%;
+     }
 
      .status_select {
           margin-top: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
+          gap: 0 20px;
+          flex-wrap: wrap;
+          width: 100%;
 
-          ul {
-               display: flex;
-               justify-content: center;
+          @include mq('tablet-small') {
+               gap: 10px;
+          }
 
-               li {
-                    padding: 0 20px;
+
+          @include mq('tablet-small') {
+               &._type4 {
+                    label {
+                         width: 46%;
+                    }
+               }
+                 &._type3 {
+                      label {
+                           width: 30%;
+                      }
+                 }
+          }
+
+
+
+          .btn_wrap {
+               margin-top: 0;
+
+               @include mq('tablet-small') {
+                    width: 100%;
+                    margin-top: 10px;
                }
           }
      }
@@ -2631,22 +2663,26 @@
           }
 
 
-          .btn_del{
-                position: absolute; 
-                right: 10px;
-                top: 50%; 
-                margin-top: -22px;
-                background: url('../images/close_round_black.svg')  no-repeat center ; 
-                border-radius: 4px;;
-                width: 44px; height: 44px;
-                cursor: pointer;
-                transition: 0.3s;
-                &:hover {
-                     background-color:#000;
-                     border-radius: 100%;
-                     background-image: url('../images/close_round.svg');
-                }
+          .btn_del {
+               position: absolute;
+               right: 10px;
+               top: 50%;
+               margin-top: -22px;
+               background: url('../images/close_round_black.svg') no-repeat center;
+               border-radius: 4px;
+               ;
+               width: 44px;
+               height: 44px;
+               cursor: pointer;
+               transition: 0.3s;
+
+               &:hover {
+                    background-color: #000;
+                    border-radius: 100%;
+                    background-image: url('../images/close_round.svg');
+               }
           }
+
           .thumb {
                width: 100px;
                height: 100px;
@@ -2723,7 +2759,7 @@
                margin-bottom: 6px;
 
                @include mq('tablet') {
-                     font-size: 13px
+                    font-size: 13px
                }
 
                .btn_del {
@@ -2749,13 +2785,17 @@
      .input_wrap {
 
           &._m_full {
-               @include mq('tablet') { 
-                    input{ 
+               @include mq('tablet') {
+                    input {
                          width: 100% !important;
                     }
                }
-               input + input{ margin-top:4px}
+
+               input+input {
+                    margin-top: 4px
+               }
           }
+
           select {
                min-width: 200px;
 
@@ -2770,6 +2810,7 @@
      .btn_wrap {
           .btn {
                min-width: 200px;
+
                @include mq('tablet') {
                     min-width: 49%;
                }

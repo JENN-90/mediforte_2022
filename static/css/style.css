@@ -9672,6 +9672,19 @@ fieldset {
   border-bottom: 1px solid #ddd;
   padding: 20px 10px;
   background: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0 40px;
+}
+
+.goods_change_status > p {
+  width: 100%;
 }
 
 .goods_change_status .status_select {
@@ -9685,19 +9698,36 @@ fieldset {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 0 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
 }
 
-.goods_change_status .status_select ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media screen and (max-width: 640px) {
+  .goods_change_status .status_select {
+    gap: 10px;
+  }
 }
 
-.goods_change_status .status_select ul li {
-  padding: 0 20px;
+@media screen and (max-width: 640px) {
+  .goods_change_status .status_select._type4 label {
+    width: 46%;
+  }
+  .goods_change_status .status_select._type3 label {
+    width: 30%;
+  }
+}
+
+.goods_change_status .status_select .btn_wrap {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .goods_change_status .status_select .btn_wrap {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 .mypage__balance .board_list table {
