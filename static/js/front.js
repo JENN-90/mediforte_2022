@@ -2,8 +2,9 @@
 function setViewHeight() {
     vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+    console.log(`1vh : ${vh}` );
 }
-
+setViewHeight();
 function resize(chat_textarea) {
     if ((chat_textarea.scrollHeight + 7) <= 80) {
         chat_textarea.style.height = "1px";
@@ -188,12 +189,16 @@ function priceComma(price) {
             $grid.masonry();
         }, 300);
 
+
         $(window).on('resize', function () {
             setTimeout(() => {
                 $grid.masonry();
             }, 300);
-        })
+        });
     }
+
+
+
 
     if ($.exists('.core-product')) {
 
@@ -370,6 +375,28 @@ function priceComma(price) {
             theme: "dark-thin",
             axis: "y"
         });
+
+        let filterHt = $('.product__filter .mCSB_container').height();
+        $(window).on('resize', function () {
+
+            console.log(filterHt);
+
+            if ($.exists('.product-page') && $(window).width() > 1023) {
+                //$('.product-page').height(filterHt + 50);
+                document.documentElement.style.setProperty('--filterHt', `${filterHt + 150}px`);
+            } else {
+                $('.product-page').height(`auto`);
+            }
+        });
+
+        $(window).on('load', function () {
+            if ($.exists('.product-page') && $(window).width() > 1023) {
+                document.documentElement.style.setProperty('--filterHt', `${filterHt + 150}px`);
+            } else {
+                $('.product-page').height(`auto`);
+            }
+        });
+
     }
 
     $('.open-filter').on('click', function () {
@@ -403,5 +430,15 @@ function priceComma(price) {
         var fileName = $(this).val();
         $(this).siblings('.filename').val(fileName);
     });
+
+
+    //결제관련 FAQ
+    $('.faq_wrap .faq_q').on('click', function () {
+        $('.faq_wrap .faq_q').removeClass('active'); 
+        $(this).addClass('active')
+        $('.faq_wrap .faq_a').stop().slideUp();
+        $(this).next('.faq_a').stop().slideDown();
+    })
+
 
 })();

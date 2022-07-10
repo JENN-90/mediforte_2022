@@ -1,0 +1,27 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_16_85)">
+<g style="mix-blend-mode:darken">
+<g style="mix-blend-mode:darken">
+<path d="M8.01318 7.07983H24V18.0532V18.9871V24L20.6372 18.9871H8.01318V7.07983Z" fill="#A0C2E8"/>
+</g>
+</g>
+<path d="M1.99694 0H17.9378C19.0413 0 19.9345 0.933906 19.9345 2.08755V13.9399C19.9345 15.0936 19.0413 16.0275 17.9378 16.0275H7.39595C6.74571 16.0275 6.13487 16.3571 5.76048 16.9133L3.62584 20.0927C2.50268 21.7614 -0.00634766 20.9305 -0.00634766 18.891V2.08755C0.000220488 0.933906 0.893488 0 1.99694 0Z" fill="white"/>
+<path d="M17.9641 2.06006H1.9707V13.0334V13.9674V18.9802L5.34016 13.9674H17.9641V2.06006Z" fill="white"/>
+<path d="M2.50937 19.3786L1.31396 18.9871V2.06011L1.97078 1.37341H17.9642L18.621 2.06011V13.9674L17.9642 14.6541H5.68178L2.50937 19.3786V19.3786ZM2.62759 2.7468V16.8103L4.80165 13.576L5.34024 13.2807H17.3074V2.7468H2.62759Z" fill="#201C42"/>
+<g style="mix-blend-mode:darken">
+<g style="mix-blend-mode:darken">
+<path d="M14.5883 5.78198H5.34033V7.15537H14.5883V5.78198Z" fill="#A0C2E8"/>
+</g>
+</g>
+<g style="mix-blend-mode:darken">
+<g style="mix-blend-mode:darken">
+<path d="M14.5883 8.87903H5.34033V10.2524H14.5883V8.87903Z" fill="#A0C2E8"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_16_85">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -608,6 +608,12 @@
                     width: 10%;
                }
 
+               .goods_summary {
+                    width: 25%;
+                    text-align: left !important;
+                    font-size: 0.85em;
+               }
+
                @include mq('tablet') {
                     .goods_thumb {
                          width: 100%;
@@ -621,6 +627,25 @@
                     .goods_status {
                          width: 100%;
                     }
+
+                    .goods_summary {
+                         width: 100%;
+
+                         .label {
+                              display: none;
+                         }
+
+                         .cell_cont {
+                              margin-top: 10px;
+
+                              .list_dash {
+                                   li::before{
+                                         top: 6px;
+                                   }
+                              }
+                         }
+                    }
+
                }
           }
 
@@ -1679,6 +1704,10 @@
      &.gray {
           color: var(--primary-gray);
      }
+
+     &.blue {
+          color: var(--navy);
+     }
 }
 
 .txt {
@@ -2142,6 +2171,12 @@
 ._emp {
      color: var(--orange);
      font-style: normal;
+
+     &--navy {
+          color: var(--navy);
+          font-weight: 500;
+          border-bottom: 1px solid var(--navy);
+     }
 }
 
 .mypage__salesDetail {
@@ -2295,11 +2330,12 @@
                          width: 46%;
                     }
                }
-                 &._type3 {
-                      label {
-                           width: 30%;
-                      }
-                 }
+
+               &._type3 {
+                    label {
+                         width: 30%;
+                    }
+               }
           }
 
 

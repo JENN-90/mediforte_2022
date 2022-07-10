@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keyword" content="Mediforte">
+        <meta name="description" content="Mediforte">
+        <meta name="author" content="Mediforte">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" />
+        <link rel="stylesheet" href="static/css/swiper.css">
+        <link rel="stylesheet" href="static/css/tui-date-picker.min.css">
+        <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="shortcut icon" type="image/jpg" href="static/images/fav.png" />
+        <title>메디포르테</title>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="header__logo">
+                <h1 class="logo"><a href="index.html"><img src="static/images/logo.png" alt="mediforte"></a></h1>
+                <a href="#" class="header__lang header__lang--kor"><span>KOR</span></a>
+            </div>
+
+            <div class="header__search-equip">
+                <a href="#"><span>장비검색하기</span></a>
+            </div>
+            <div class="header__search-equip-box">
+                <div class="header__search ui-search-equip">
+                    <div class="search-select search-select--category">
+                        <select name="selectCategory" id="selectCategory">
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                            <option value="null">진료분야</option>
+                        </select>
+                    </div>
+                    <div class="search-select search-select--brand">
+                        <select name="selectBrand" id="selectBrand">
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                            <option value="null">브랜드</option>
+                        </select>
+                    </div>
+                    <div class="search-input">
+                        <input type="text" placeholder="키워드 입력하세요" title="키워드">
+                    </div>
+                    <button type="button" class="go-search"><span>검색하기</span></button>
+                    <a href="#" class="btn-close-search js-close-search"><span class="blind">닫기</span></a>
+                </div>
+                <div class="header__search-tag">
+                    <a href="#item">#피코슈어</a>
+                    <a href="#item">#피코슈어레이저</a>
+                    <a href="#item">#사이노슈어</a>
+                    <a href="#item">#피코레이져</a>
+                </div>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#">메디포르테 소개</a></li>
+                    <li><a href="#">구매하기</a></li>
+                    <li><a href="#">판매하기</a></li>
+                    <li><a href="#">브랜드관</a></li>
+                    <li><a href="#">뉴스&리뷰</a></li>
+                    <li><a href="#">멤버쉽</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__user">
+                <a href="#" class="header__user__name"><strong>홍길동</strong> 님</a>
+                <button type="button" class="header__user__quick-btn js-open-quick"><span
+                        class="quick-count">33</span></button>
+                <div class="header__quick-container js-quick-container">
+                    <p class="header__quick-status">
+                        홍길동님 <br>
+                        <strong>35개 메시지</strong>가 와있습니다.
+                    </p>
+                    <ul class="header__quick-list">
+                        <li class="header__quick-item header__quick-item--meditalk"><a href="#">메디톡
+                                <strong>(7)</strong></a></li>
+                        <li class="header__quick-item header__quick-item--mycart"><a href="#">마이카트
+                                <strong>(7)</strong></a></li>
+                        <li class="header__quick-item header__quick-item--buy"><a href="#">구매 <strong>(7)</strong></a>
+                        </li>
+                        <li class="header__quick-item header__quick-item--sales"><a href="#">판매 <strong>(7)</strong></a>
+                        </li>
+                        <li class="header__quick-item header__quick-item--calculate"><a href="#">정산
+                                <strong>(7)</strong></a></li>
+                        <li class="header__quick-item header__quick-item--curation"><a href="#">메디큐레이션
+                                <strong>(7)</strong></a></li>
+                        <li class="header__quick-item header__quick-item--mystore"><a href="#">마이스토어</a></li>
+                        <li class="header__quick-item header__quick-item--account"><a href="#">계정</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#" class="header__btn-menu"><span class="blind">모바일메뉴</span></a>
+            <div class="mobile-menu">
+                <div class="container">
+                    <a href="#" class="logo-m"><img src="static/images/logo.png" alt="mediforte"></a>
+                    <ul class="menulist">
+                        <li><a href="#">메디포르테 소개</a></li>
+                        <li><a href="#">구매하기</a></li>
+                        <li><a href="#">판매하기</a></li>
+                        <li><a href="#">브랜드관</a></li>
+                        <li><a href="#">뉴스&리뷰</a></li>
+                        <li><a href="#">멤버쉽</a></li>
+                        <li><a href="#">마이페이지</a></li>
+                    </ul>
+                    <ul class="login-menu">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">체험기</a></li>
+                    </ul>
+                    <div class="lang">
+                        <p>LANGUAGE</p>
+                        <ul class="lang-sel">
+                            <li><a href="#">english</a></li>
+                            <li><a href="#">korean</a></li>
+                        </ul>
+                    </div>
+                    <p class="m-contact"><span class="icm-call"><span class="path1"></span><span
+                                class="path2"></span></span>
+                        1588-1588</p>
+                    <!--모바일메뉴닫기-->
+                    <a href="#" class="close-all"><span></span><span></span></a>
+                </div>
+            </div>
+        </header>
+
+
+        <section class="product-page">
+            <aside class="product__filter custom-scroll">
+                <!--모바일 - 필터메뉴열기 -->
+                <button class="open-filter"><span class="blind">필터메뉴열기</span></button>
+                <div class="product__sort-btn">
+                    <h4>필터</h4>
+                    <a href="#" class="btn-reset">선택초기화</a>
+                    <a href="#" class="btn-recent">최근검색조건</a>
+                </div>
+                <!--정렬기준-->
+                <div class="product__sort-wrap first">
+                    <div class="sort-title">
+                        <h4>정렬기준</h4>
+                    </div>
+                    <div class="sort-button-list">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="sortbyAll" checked>
+                                <label for="sortbyAll" class="check-box--border">모든 매물</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyNew">
+                                <label for="sortbyNew" class="check-box--border">신규등록 매물</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyNormal">
+                                <label for="sortbyNormal" class="check-box--border">일반 매물</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyCuration">
+                                <label for="sortbyCuration" class="check-box--border">메디큐레이션 매물</label>
+                            </li>
+                        </ul>
+                        <p class="sort-result-count">총 <strong>7,293</strong>건의 의료장비가 등록되어 있습니다.</p>
+                    </div>
+                    <a href="#" class="btn-plus"><span class="blind">more</span></a>
+                </div>
+
+                <!--진료분야-->
+                <div class="product__sort-wrap">
+                    <div class="sort-title">
+                        <h4>진료분야</h4>
+                    </div>
+                    <div class="sort-button-list">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="sortbyDerm" checked>
+                                <label for="sortbyDerm" class="check-box--border">피부과</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyCosmetic">
+                                <label for="sortbyCosmetic" class="check-box--border">성형외과</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyeye">
+                                <label for="sortbyeye" class="check-box--border">안과</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyOb">
+                                <label for="sortbyOb" class="check-box--border">산부인과</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyortho">
+                                <label for="sortbyortho" class="check-box--border">정형외과</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyENT">
+                                <label for="sortbyENT" class="check-box--border">이비인후과</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyDental">
+                                <label for="sortbyDental" class="check-box--border">치과</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyProcto">
+                                <label for="sortbyProcto" class="check-box--border">대장항문외과</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn-plus"><span class="blind">more</span></a>
+                </div>
+
+                <!--브랜드-->
+                <div class="product__sort-wrap">
+                    <div class="sort-title">
+                        <h4>브랜드</h4>
+                    </div>
+                    <div class="sort-button-list sort-button-list--brand">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="sortBrand_Syneron" checked>
+                                <label for="sortBrand_Syneron" class="check-box--border">
+                                    <img src="static/images/filter_logo/Syneron.png" alt="logo">
+                                    <p>Syneron&Candela</p>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortBrand_lumenis">
+                                <label for="sortBrand_lumenis" class="check-box--border">
+                                    <img src="static/images/filter_logo/Lumenis.png" alt="logo">
+                                    <p>Lumenis</p>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortBrand_Cutera">
+                                <label for="sortBrand_Cutera" class="check-box--border">
+                                    <img src="static/images/filter_logo/Cutera.png" alt="logo">
+                                    <p>Cutera</p>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortBrand_Fotona">
+                                <label for="sortBrand_Fotona" class="check-box--border">
+                                    <img src="static/images/filter_logo/Fotona.png" alt="logo">
+                                    <p>Fotona</p>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortBrand_Sciton">
+                                <label for="sortBrand_Sciton" class="check-box--border">
+                                    <img src="static/images/filter_logo/Sciton.png" alt="logo">
+                                    <p>Sciton</p>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortBrand_Alma">
+                                <label for="sortBrand_Alma" class="check-box--border">
+                                    <img src="static/images/filter_logo/Alma.png" alt="logo">
+                                    <p>Alma</p>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortBrand_Quanta">
+                                <label for="sortBrand_Quanta" class="check-box--border">
+                                    <img src="static/images/filter_logo/Quanta.png" alt="logo">
+                                    <p>Quanta</p>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortBrand_Wontec">
+                                <label for="sortBrand_Wontec" class="check-box--border">
+                                    <img src="static/images/filter_logo/Wontec.png" alt="logo">
+                                    <p>Wontec</p>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn-plus"><span class="blind">more</span></a>
+                </div>
+
+                <!--태그-->
+                <div class="product__sort-wrap">
+                    <div class="sort-title">
+                        <h4>태그</h4>
+                    </div>
+                    <div class="sort-button-list sort-button-list--tag">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="sortbyAll" checked>
+                                <label for="sortbyAll" class="check-box--border">#피부</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyAll">
+                                <label for="sortbyAll" class="check-box--border">#기미</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyAll">
+                                <label for="sortbyAll" class="check-box--border">#중고</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyAll">
+                                <label for="sortbyAll" class="check-box--border">#피부과</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyAll">
+                                <label for="sortbyAll" class="check-box--border">#피코슈어</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sortbyAll">
+                                <label for="sortbyAll" class="check-box--border">#피코슈어레이저</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn-plus"><span class="blind">more</span></a>
+                </div>
+            </aside>
+
+            <div class="product_purchase">
+                <h3 class="title_lg">구매가 완료되었습니다.</h3>
+                <p class="first">장비가 납품되면 검수를 진행해 주시고 검수 확인을 해주시기 바랍니다.</p>
+
+
+
+                <h3 class="title_md mt2">받는분 정보</h3>
+                <div class="form_wrap">
+                    <div class="column">
+                        <h4 class="label">제목 </h4>
+                        <div class="input_wrap full">
+                            <p>홍길동 <span class="tag">기본 배송지</span></p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">배송주소 </h4>
+                        <div class="input_wrap input_flex_btn input_flex full">
+                            <div>경기도 용인시 기흥구 흥덕1로 14 B-415</div>
+                            <button class="btn btn_lg btn_black">배송지 변경</button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">연락처 </h4>
+                        <div class="input_wrap full">
+                            <p>010-2457-5687</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="title_md mt">상품정보</h3>
+                <div class="goods_group_list">
+                    <div class="list_item list_item__default">
+                        <ul class="goods_buy_info">
+                            <li><span class="tit">상품번호</span> <strong>22244234324</strong> </li>
+                            <li><span class="tit">결제일</span> <strong>2022.03.03</strong> </li>
+                            <li><span class="tit">판매자</span> <strong>김판매님</strong> </li>
+                        </ul>
+                        <div class="goods_info_table goods_info_table__default">
+                            <div class="table_cell goods_thumb ">
+                                <p class="label">상품정보</p>
+                                <div class="cell_cont">
+                                    <p class="thumb">
+                                        <img src="static/images/mypage_paid_product_thumb.png" alt="">
+                                    </p>
+                                    <div class="info">
+                                        <span class="info-brand">[사이노슈어] </span>
+                                        <p class="info-name">피코슈어 ND-YAG 피코레이저</p>
+                                        <ul>
+                                            <li>제조사 : 사이노슈어</li>
+                                            <li>제조년월 : 2018.11</li>
+                                            <li>사용기간 : 3년</li>
+                                            <li>상태 : 상</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_price">
+                                <p class="label">결제금액</p>
+                                <div class="cell_cont">
+                                    <p>23,000,000원</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_category">
+                                <p class="label">구분</p>
+                                <div class="cell_cont">
+                                    <p>일반</p>
+                                </div>
+                            </div>
+                            <div class="table_cell goods_status">
+                                <p class="label">결제상태</p>
+                                <div class="cell_cont">
+                                    <p class="status_txt">결제완료</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="title_lg mt">결제 정보</h3>
+                <div class="form_wrap form_payment">
+                    <div class="column">
+                        <h4 class="label">결제수단 <span class="tag tag_card">무통장입금</span> </h4>
+                        <div class="input_wrap full">
+                            <p class="price_txt">
+                                <em>총 판매액</em>
+                                <strong class="amount _big">25,000,000원</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label">차감액</h4>
+                        <div class="input_wrap full">
+                            <p class="price_txt">
+                                <em>DEMO 비용</em>
+                                <strong class="amount">-200,000원</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="label _emp">결제대기</h4>
+                        <div class="input_wrap full">
+                            <p class="price_txt">
+                                <em>무통장입금</em>
+                                <strong class="amount ">24,800,000원</strong>
+                            </p>
+                            <p class="price_txt">
+                                <em>총 결제금액</em>
+                                <strong class="amount _big">24,800,000원</strong>
+                            </p>
+                        </div>
+                    </div>
+                     <div class="column">
+                        <h4 class="label _emp">예금주 (주)메디포르테</h4>
+                        <div class="input_wrap full _emp">
+                            <p>입금계좌번호 : 기업은행 999-9999-9999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="title_md mt">현금영수증 및 세금계산서</h3>
+                <div class="text_box">
+                    <p>현금영수증 및 세금계산서 처리는 거래 완료 후 정산 단계에서 이루어집니다.</p>
+                    <p>납품 및 검수 과정은 <strong class="_emp--navy">마이페이지>납품 및 검수</strong> 항목에서 확인하시기 바랍니다.</p>
+                </div>
+                
+                <div class="btn_wrap mt-20">
+                    <button type="button" class="btn btn_black btn_lg">확인</button>
+                </div>
+            </div>
+        </section>
+        <section class="main-newsletter">
+            <div class="newsletter__container">
+                <h3>메디포르테 뉴스레터신청하기 </h3>
+                <div class="newsletter__form">
+                    <div class="inputbox"><input type="text" placeholder="이메일 주소를 입력해주세요"></div>
+                    <button type="button">구독하기</button>
+                </div>
+            </div>
+        </section>
+        <section class="main-news">
+            <div class="main-news__title">
+                <h3>NEWS & NOTICE <span>다양한 소식을 쉽고 빠르게 만나보세요.</span></h3>
+                <div class="controls">
+                    <div class="news-prev"></div>
+                    <div class="news-next"></div>
+                </div>
+            </div>
+            <div class="news__container">
+                <div class="swiper news-list">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="news__date">
+                                <strong class="date-day">10</strong>
+                                <p class="date-year-month">2021-11</p>
+                            </div>
+                            <div class="news__content">
+                                <a href="#">
+                                    <p class="news__title">(주)메디포르테에서는 메디큐레이터를 모집합니다.</p>
+                                    <p class="news__detail">(주)메디포르테에서는 전국에 있는 성실하고 실력있는 메디큐레이터를 모집합니다. 메디큐레이션으로 우선 선발되면
+                                        여러가지 많은 혜택이 주어집니다. 많은 참여 부탁드립니다.</p>
+                                </a>
+                                <a href="#" class="news__link">자세히 보기</a>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="news__date">
+                                <strong class="date-day">10</strong>
+                                <p class="date-year-month">2021-11</p>
+                            </div>
+                            <div class="news__content">
+                                <a href="#">
+                                    <p class="news__title">(주)메디포르테에서는 메디큐레이터를 모집합니111다.</p>
+                                    <p class="news__detail">(주)메디포르테에서는 전국에 있는 성실하고 실력있는 메디큐레이터를 모집합니다. 메디큐레이션으로 우선 선발되면
+                                        여러가지 많은 혜택이 주어집니다. 많은 참여 부탁드립니다.</p>
+                                </a>
+                                <a href="#" class="news__link">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-partners">
+            <div class="partner__title">
+                <h3>함께하는 기업</h3>
+                <div class="controls">
+                    <div class="controls__btn partner-prev"></div>
+                    <div class="controls__btn partner-pause"></div>
+                    <div class="controls__btn partner-play"></div>
+                    <div class="controls__btn partner-next"></div>
+                </div>
+            </div>
+            <div class="partner__list">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="static/images/logo_candela.png" alt="candela">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="static/images/logo_bison.png" alt="logo_bison">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="static/images/logo_cynosure.png" alt="logo_cynosure">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="static/images/logo_quantasystem.png" alt="logo_quantasystem">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="static/images/logo_wontech.png" alt="logo_wontech">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="static/images/logo_hironic.png" alt="logo_hironic">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="static/images/logo_fotona.png" alt="logo_fotona">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="static/images/logo_ilooda.png" alt="logo_ilooda">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="copyrights">
+            <div class="footer__policy">
+                <a href="#">개인정보처리방침 </a>
+                <a href="#">이메일무단수집거부</a>
+                <a href="#">윤리경영 </a>
+                <a href="#">고객센터</a>
+                <a href="#">이용후기</a>
+            </div>
+            <div class="footer__container">
+                <h2 class="footer__logo"><span class="blind">Mediforte</span></h2>
+                <ul class="footer__contact-list">
+                    <li>상호명 : (주)메디포르테
+                    <li>대표자명 : 엄지원
+                    <li>사업자등록번호 : 891-87-02079</li>
+                </ul>
+                <ul class="footer__contact-list">
+                    <li>통신판매업신고번호 : 제2021-용인기흥-1662호 </li>
+                    <li>의료기기판매업신고증 : 제2021-3780064-00182호 </li>
+                </ul>
+                <address>주소: (16954) 경기도 용인시 기흥구 기흥로58 기흥ICT밸리 B-2207호 </address>
+            </div>
+
+            <div class="footer__cs footer__cs-top">
+                <div class="footer__cs-number"><span>CS CENTER</span> 031-546-0314</div>
+                <div class="footer__ads">
+                    <a href="#">광고문의</a>
+                    <a href="#">제휴문의</a>
+                </div>
+            </div>
+            <div class="footer__cs footer__cs-btm">
+                MON-FRI 10:00~17:00 / LUNCH 12:00~13:00 토, 일, 공휴일 휴무 <a class="cs-mail"
+                    href="mailto:cs@mediforte.co.kr">cs@mediforte.co.kr</a>
+            </div>
+
+            <div class="footer__sns">
+                <a href="#" class="sns--instagram"><span class="blind">인스타그램</span></a>
+                <a href="#" class="sns--kakao"><span class="blind">카카오스토리</span></a>
+                <a href="#" class="sns--facebook"><span class="blind">페이스북</span></a>
+                <a href="#" class="sns--youtube"><span class="blind">유튜브</span></a>
+                <a href="#" class="sns--blog"><span class="blind">블로그</span></a>
+            </div>
+
+            <div class="footer__copy">Copyright (c) 2022 Mediforte all right reserved.</div>
+        </footer>
+
+
+        <!--배송지선택-->
+        <div class="modal modal--addressSelect" id="addressSelect" style="display: none;">
+            <div class="modal__container">
+                <h3 class="modal_title">배송지 선택</h3>
+                <div class="address_list custom-scroll">
+                    <ul>
+                        <li>
+                            <p class="addr_name">홍길동 <span class="tag">기본배송지</span></p>
+                            <div class="addr_detail">
+                                <p>서울들별시 중구 충무로 1가 22-12 4층 402호</p>
+                                <p>010-2222-3333</p>
+                            </div>
+                            <div class="btn_wrap">
+                                <button class="btn btn_sm btn_outline">수정</button>
+                                <button class="btn btn_sm btn_black">선택</button>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="addr_name">홍길동 <span class="tag">기본배송지</span></p>
+                            <div class="addr_detail">
+                                <p>서울들별시 중구 충무로 1가 22-12 4층 402호</p>
+                                <p>010-2222-3333</p>
+                            </div>
+                            <div class="btn_wrap">
+                                <button class="btn btn_sm btn_outline">수정</button>
+                                <button class="btn btn_sm btn_black">선택</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="btn_wrap">
+                    <button type="button" class="btn btn_gray">배송지 추가 +</button>
+                </div>
+
+                <button type="button" class="btn-close-modal"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+        <!--//배송지선택-->
+
+        <!--배송지 추가-->
+        <div class="modal modal--addressAdd" id="addressAdd" style="display: none;">
+            <div class="modal__container">
+                <h3 class="modal_title">배송지 추가</h3>
+
+                <div class="form_wrap custom-scroll">
+                    <form action="">
+                        <fieldset>
+                            <legend class="blind">배송정보 입력</legend>
+                            <div class="column">
+                                <label class="label" for="receiverName">받는사람</label>
+                                <div class="input_wrap full ">
+                                    <input type="text" id="receiverName" value="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="receiverPhone">휴대전화</label>
+                                <div class="input_wrap full ">
+                                    <input type="text" id="receiverPhone" value="" placeholder="- 없이 숫자만 입력">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="userAddress">도로명</label>
+                                <div class="input_wrap input_address">
+                                    <div class="input_wrap">
+                                        <input type="text" id="userAddress">
+                                        <button type="button" class="btn btn_md btn_black">찾기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="userAddress_1">상세주소</label>
+                                <div class="input_wrap full ">
+                                    <input type="text" id="userAddress_1" value="" placeholder="상세주소 입력">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="userRequest">요청사항</label>
+                                <div class="input_wrap full ">
+                                    <input type="text" id="userRequest" value="" placeholder="배송 시 요청사항 입력">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </form>
+
+                    <div class="setAddress">
+                        <label for="setAddress" class="check-box-round">
+                            <input type="checkbox" id="setAddress">기본 배송지로 지정
+                            <span class="checkmark radio-box__checkmark"></span>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="btn_wrap">
+                    <button type="button" class="btn btn_gray">저장</button>
+                </div>
+
+                <button type="button" class="btn-close-modal"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+        <!--//배송지 추가-->
+
+        <!--배송지 수정-->
+        <div class="modal modal--addressModify" id="addressAdd" style="display: none;">
+            <div class="modal__container">
+                <h3 class="modal_title">배송지 수정</h3>
+
+                <div class="form_wrap custom-scroll">
+                    <form action="">
+                        <fieldset>
+                            <legend class="blind">배송정보 입력</legend>
+                            <div class="column">
+                                <label class="label" for="receiverName">받는사람</label>
+                                <div class="input_wrap full ">
+                                    <p>홍길동</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="receiverPhone">휴대전화</label>
+                                <div class="input_wrap full ">
+                                    <p>01022223333</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="userAddress">도로명</label>
+                                <div class="input_wrap input_address">
+                                    <p>경기도 용인시 기흥구 흥덕1로13 (양덕동)</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="userAddress_1">상세주소</label>
+                                <div class="input_wrap full ">
+                                    <p>흥덕IT밸리 123</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label" for="userRequest">요청사항</label>
+                                <div class="input_wrap full ">
+                                    <p>-</p>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </form>
+
+                    <div class="setAddress">
+                        <label for="setAddress" class="check-box-round">
+                            <input type="checkbox" id="setAddress">기본 배송지로 지정
+                            <span class="checkmark radio-box__checkmark"></span>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="btn_wrap">
+                    <button type="button" class="btn btn_gray">저장</button>
+                </div>
+
+                <button type="button" class="btn-close-modal"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+        <!--//배송지 수정-->
+
+        <div class="dimm"></div>
+        <script src="static/js/jquery-1.12.1.min.js"></script>
+        <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
+        <script src="static/js/masonry.pkgd.min.js"></script>
+        <script src="static/js/swiper.min.js"></script>
+        <script src="static/js/tui-date-picker.min.js"></script>
+        <script src="static/js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="static/js/front.js"></script>
+    </body>
+
+</html>

@@ -33,6 +33,146 @@
         }
     }
 
+    &--addressSelect {
+        .btn-close-modal {
+            right: 0;
+            top: 6px
+        }
+
+        .modal__container {
+            padding: 0;
+            min-width: 480px;
+            overflow: hidden;
+
+            @include mq('tablet-small') {
+                min-width: 95%;
+            }
+
+            .modal_title {
+                padding: 15px;
+                background: #f7f7f7;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
+        .btn_wrap>.btn_gray {
+            width: 100%;
+            background: #555;
+            color: white;
+        }
+
+        .address_list {
+            max-height: 360px;
+
+            .mCSB_inside>.mCSB_container {
+                margin-right: 5px;
+            }
+
+            li {
+                border-bottom: 1px solid #ddd;
+                padding: 2.5rem 1.5rem;
+                margin: 0 10px;
+
+                .addr_name {
+                    font-size: 1.8rem;
+                }
+
+                .addr_detail {
+                    color: #999;
+                    font-size: 0.9em;
+                    line-height: 1.6;
+                    margin-top: 10px;
+                }
+
+                .btn_wrap {
+                    justify-content: space-between;
+                    margin-top: 20px;
+
+                    .btn {
+                        width: 49%;
+                    }
+                }
+            }
+        }
+    }
+
+    &--addressAdd, 
+    &--addressModify {
+        .btn-close-modal {
+            right: 0;
+            top: 6px
+        }
+
+        .modal__container {
+            padding: 0;
+            min-width: 480px;
+            overflow: hidden;
+
+            @include mq('tablet-small') {
+                min-width: 95%;
+            }
+
+            .modal_title {
+                padding: 15px;
+                background: #f7f7f7;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
+        .form_wrap {
+            @include mq('tablet') {
+                max-height: 60vh;
+                margin: 0 5px 0 10px;
+            }
+
+            .column {
+                border-color: #ddd;
+                @include mq('tablet') {
+                    padding: 10px;
+                    border-top: 0;
+                }
+
+                .label {
+                    @include mq('tablet') {
+                        padding: 0;
+                        line-height: 25px;
+                        min-height: initial;
+                    }
+                }
+                .input_wrap.input_address {
+                    input {
+                        @include mq('tablet') {
+                            width: calc(100% - 90px);
+                        }
+                    }
+                    .btn {
+                        @include mq('tablet') {
+                            min-width: 80px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .btn_wrap>.btn_gray {
+            width: 100%;
+            background: #555;
+            color: white;
+        }
+
+        .setAddress {
+            padding: 20px 1.5rem;
+            background: #f9f9f9;
+            border-top: 1px solid #ddd;
+
+            label {
+                font-size: 16px;
+            }
+        }
+    }
+
     &__title {
         font-weight: 500;
         font-size: 2.4rem
@@ -348,6 +488,7 @@
             margin-top: 8rem;
         }
 
+       
         &._insp {
             color: #dc2b2b;
         }
@@ -366,6 +507,9 @@
         &.mt {
             margin-top: 8rem;
         }
+         &.mt2 {
+             margin-top: 4rem
+         }
     }
 }
 
@@ -829,7 +973,6 @@
             height: 6px;
             border: 1px solid #000;
             display: inline-block;
-            ;
             vertical-align: middle;
             border-left: 0;
             border-bottom: 0;
@@ -854,6 +997,11 @@
 
     &_orange {
         background: var(--orange);
+        color: #fff
+    }
+
+    &_gray {
+        background: var(--primary-gray);
         color: #fff
     }
 
@@ -1055,10 +1203,19 @@
         }
 
 
+        .input_outer {
+            width: 80%;
+
+            >.input_wrap {
+                width: 100%;
+            }
+        }
+
         .input_wrap {
             width: 80%;
             padding: 14px 10px;
             font-size: 14px;
+            display: flex;
             align-items: center;
             align-self: center;
 
@@ -1207,5 +1364,53 @@
 
     &.noline {
         border: 0
+    }
+}
+
+.faq_wrap {
+    border-top: 2px solid #000;
+
+    .faq {
+        &_q {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            padding: 2.5rem;
+            position: relative;
+            color: #999;
+            transition: 0.3s;
+
+            &.active {
+                color: #000;
+                border-bottom: 0;
+
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-right: 2px solid #000;
+                border-top: 2px solid #000;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                margin-top: -5px;
+                transform: rotate(135deg);
+                transition: 0.3s;
+            }
+        }
+
+        &_a {
+            background: #f7f7f7;
+            padding: 4rem 2.5rem;
+            display: none;
+            font-size: 0.9em;
+            border-bottom: 1px solid #ddd;
+            ;
+        }
     }
 }

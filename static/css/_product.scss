@@ -6,6 +6,8 @@
     position: relative;
     overflow: hidden;
     padding-top: 88px;
+    min-height: calc(var(--filterHt));
+
 
     @include mq('tablet-wide') {
         padding-left: 20px;
@@ -42,8 +44,9 @@
         position: absolute;
         top: 88px;
         left: 0;
-        padding: 4rem 3rem 8rem 3rem;
+        padding: 4rem 1.5rem 8rem 3rem;
         height: calc(100% - 88px);
+        min-height: calc(var(--filterHt));
         overflow: auto;
         z-index: 10;
 
@@ -53,6 +56,7 @@
             width: 310px;
             position: fixed;
             height: calc(100% - 70px);
+            min-height: initial;
             padding-left: 1.5rem;
             padding-bottom: 4rem;
 
@@ -195,7 +199,8 @@
 }
 
 //리스트
-.product-list {
+.product-list,
+.product_purchase {
     margin-top: 40px;
 }
 
@@ -214,9 +219,12 @@
 
     .btn_wrap {
         margin-top: 10px;
-        .btn{
+
+        .btn {
             width: 100%
-        };
+        }
+
+        ;
     }
 
     @include mq('tablet-wide') {
@@ -356,6 +364,485 @@
         span {
             word-break: keep-all;
             display: inline-block;
+        }
+    }
+}
+
+
+.product-page {
+
+    .mCSB_scrollTools .mCSB_draggerContainer {
+        right: -25px !important;
+    }
+}
+
+.product_purchase {
+    max-width: 1180px;
+    padding: 5rem 4rem;
+    border-radius: 4px;
+    box-shadow: 5px 4px 10px rgba($color: #000000, $alpha: 0.05);
+    background: white;
+    border: 1px solid #c2c2c2;
+
+
+    //결제정보
+    .form_payment {
+        .column {
+            .label {
+                background: #f7f7f7;
+            }
+        }
+
+        .tag {
+            margin-left: 6px;
+        }
+
+        .destination {
+            display: block;
+            width: 100%;
+            padding-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .price_txt {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+
+            em {
+                font-style: normal;
+                min-width: 100px;
+                color: var(--primary-gray);
+            }
+
+            .amount {
+                font-weight: 500;
+                font-size: 1.1em;
+                text-align: right;
+                flex-grow: 1;
+
+                @include mq('tablet') {
+                    font-size: 1em;
+                }
+
+                &._big {
+                    font-size: 1.5em;
+
+                    @include mq('tablet') {
+                        font-size: 1.3em;
+                    }
+                }
+            }
+        }
+
+
+        .label {
+            width: 50%;
+
+            @include mq('tablet') {
+                width: 100%;
+            }
+        }
+
+        .input_wrap {
+            width: 50%;
+
+            @include mq('tablet') {
+                width: 100%;
+            }
+        }
+    }
+
+
+    //결제수단 항목별 스타일
+    .payment_select {
+        margin-top: 4rem;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        label {
+            font-size: 16px;
+        }
+
+        li {
+            &:not(:first-child) {
+                margin-left: 2.5rem;
+            }
+        }
+    }
+
+    .personal_info {
+        margin-top: 25px;
+
+        li {
+            margin-top: 15px;
+
+            &::before {
+                top: 8px
+            }
+
+            >a {
+                color: #999;
+                border-bottom: 1px solid #999;
+            }
+        }
+    }
+
+    .purchase_caution {
+        padding: 10px 0;
+        color: #992f36;
+        font-size: 0.9em;
+    }
+
+    .purchase_agree {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+
+        label {
+            font-size: 1.6rem;
+            color: black
+        }
+    }
+
+
+    .payment_selected_cnt {
+        display: block;
+        margin-top: 2rem;
+        background: #f7f7f7;
+        width: 100%;
+        padding: 2.5rem;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+
+
+        >li {
+            display: none;
+
+            &.on {
+                display: block;
+            }
+
+            .select_wrap {
+                display: flex;
+                align-items: center;
+
+                &+.select_wrap {
+                    margin-top: 12px
+                }
+
+                .check_own {
+                    margin-left: 20px;
+                }
+
+                label {
+                    min-width: 100px;
+                }
+
+                .inputbox {
+                    flex-grow: 1;
+                    margin-top: 0;
+                    max-width: 200px;
+
+                    &.full {
+                        max-width: initial;
+                    }
+
+                    select {
+                        background-color: white;
+                        height: 44px;
+                        line-height: 44px;
+                    }
+                }
+            }
+
+        }
+
+
+        ._virtual {
+            .caution_virtual {
+                margin-top: 3rem;
+                padding: 20px;
+                background: #fff;
+                border-radius: 4px;
+                font-size: 0.9em;
+
+                >strong {
+                    display: inline-block;
+                    font-weight: 500;
+                    padding-bottom: 10px;
+                    color: var(--navy)
+                }
+
+                li {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    &._lease {
+        .form_wrap.mt{ margin-top:4rem}
+        
+        .checkbox_list {
+             display: flex ;
+             gap: 20px;
+             align-items:  center;
+        }
+
+         .column .tui-datepicker-input {
+              max-width: 200px;
+              border: 0;
+         }
+        select {
+             min-width: 200px;
+        }
+
+        .input_wrap {
+            &._cal {
+                flex-wrap: wrap;
+            }
+        }
+        .date_summary {
+             width: 100%;
+             margin-top: 15px;
+
+             .period{
+                  width: 40px;
+                  display: inline-block;
+                  border-bottom: 1px solid #000;
+                  text-align: center;
+
+             }
+        }
+        .form_wrap + .text_box { 
+            margin-top: 20px;
+            color:#992f36;
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+}
+
+
+.lease_flow {
+    background: #f3f3f3;
+    padding: 4rem;
+    border-radius: 6px;
+
+    @include mq('phone-wide') {
+        padding: 3rem;
+    }
+
+
+    &+.lease_flow_txt {
+        color: #08509e;
+        margin-top: 2rem;
+        text-decoration: underline;
+        text-align: center;
+
+    }
+
+    ul {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0 40px;
+
+        @include mq('tablet-wide') {
+            flex-wrap: wrap;
+        }
+
+        @include mq('phone-wide') {
+            gap: 20px
+        }
+
+        li {
+            width: 16.6666%;
+            text-align: center;
+            padding-bottom: 2rem;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+
+            @include mq('tablet-wide') {
+                width: 25%;
+
+                &:nth-child(4)::before {
+                    display: none;
+                }
+            }
+
+            @include mq('phone-wide') {
+                width: 40%;
+                ;
+
+                &:nth-child(3)::before,
+                &:nth-child(5)::before {
+                    display: none
+                }
+
+                &:nth-child(4)::before {
+                    display: block;
+                }
+            }
+
+            &:not(:first-child) {
+                &::before {
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    border: 2px solid #000;
+                    position: absolute;
+                    left: -35px;
+                    top: 50%;
+                    margin-top: -10px;
+                    transform: rotate(135deg);
+                    border-bottom: 0;
+                    border-right: 0;
+
+                    @include mq('tablet-wide') {}
+                }
+            }
+
+            &.active {
+                background-color: white;
+                box-shadow: 4px 4px 0 rgba($color: #000000, $alpha: 0.05);
+            }
+
+            strong {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .flow_txt {
+        display: none;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 45px;
+        display: block;
+        margin: auto;
+
+        &_01 {
+            background-image: url('../images/icon_lease_flow_01.svg');
+        }
+
+        &_02 {
+            background-image: url('../images/icon_lease_flow_02.svg');
+        }
+
+        &_03 {
+            background-image: url('../images/icon_lease_flow_03.svg');
+        }
+
+        &_04 {
+            background-image: url('../images/icon_lease_flow_04.svg');
+        }
+
+        &_05 {
+            background-image: url('../images/icon_lease_flow_05.svg');
+        }
+
+        &_06 {
+            background-image: url('../images/icon_lease_flow_06.svg');
+        }
+    }
+}
+
+.purchase_lease_flow {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 4rem 1rem 1rem 1rem;
+
+    >h4 {
+        color: #333;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 20px;
+
+        @include mq('tablet') {
+            flex-wrap: wrap;
+        }
+
+        li {
+            border: 1px solid #ddd;
+            width: 100%;
+            border-radius: 4px;
+            background: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            word-break: keep-all;
+            position: relative;
+
+            &:nth-child(1) {
+
+                &::before,
+                &::after {
+                    display: none;
+
+                    // @include mq('tablet') {
+                    //     display: block;
+                    // }
+                }
+
+
+            }
+
+            &::before {
+                content: '';
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                background: rgba($color: #000000, $alpha: 0.6);
+                border-radius: 100%;
+                left: -18px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include mq('tablet') {
+                    left: 50%;
+                    margin-left: -12px;
+                    transform: none;
+                    top: -20px;
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-top: 2px solid #fff;
+                border-left: 2px solid #fff;
+                position: absolute;
+                left: -12px;
+                top: 50%;
+                transform: translateY(-50%) rotate(135deg);
+
+                @include mq('tablet') {
+                    left: 50%;
+                    top: -14px;
+                    transform: rotate(-135deg);
+                    margin-left: -4px;
+                }
+            }
         }
     }
 }
