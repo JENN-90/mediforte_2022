@@ -134,10 +134,28 @@
 
     .sort-title {
         margin-top: 3rem;
+        display: flex ;
+        align-items: center; 
+        justify-content: space-between;
 
         h4 {
             font-weight: 500;
             margin-bottom: 15px;
+        }
+
+        .btn-reset {
+            padding-left: 22px;
+            font-size: 12px;
+            text-decoration: underline;
+            margin-left: 20px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                @include sprite-static(15px, 18px, -222px, -84px);
+                top: -3px;
+            }
         }
     }
 

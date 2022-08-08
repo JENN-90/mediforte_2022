@@ -212,8 +212,6 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
   border: 0;
-  background: transparent;
-  padding: 0;
 }
 
 button::-moz-focus-inner,
@@ -888,11 +886,13 @@ fieldset {
 .btn-prev--arrow {
   width: 24px;
   height: 24px;
+  /* background: url("../images/ic_prev.svg") no-repeat center; */
 }
 
 .btn-search {
   width: 24px;
   height: 24px;
+  /* background: url("../images/ic_search.svg") no-repeat center; */
 }
 
 .btn-prd-list {
@@ -3241,6 +3241,7 @@ fieldset {
   content: '';
   width: 20px;
   height: 20px;
+  /* background: url("../images/ic_warn.svg") no-repeat center; */
   display: inline-block;
   background-size: 28px;
   vertical-align: middle;
@@ -3599,12 +3600,6 @@ fieldset {
           align-items: center;
 }
 
-@media screen and (max-width: 1600px) {
-  .header__logo {
-    padding-left: 20px;
-  }
-}
-
 .header__lang {
   position: relative;
   width: 32px;
@@ -3692,36 +3687,6 @@ fieldset {
           align-items: center;
   position: relative;
   padding-right: 120px;
-}
-
-@media screen and (max-width: 1600px) {
-  .header__user {
-    padding-right: 20px;
-  }
-}
-
-.header__user._off .user_login {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-@media screen and (max-width: 1024px) {
-  .header__user._off .user_login {
-    display: none;
-  }
-}
-
-.header__user._off .user_login a {
-  font-size: 15px;
-  padding: 0 5px;
-  color: #555;
-}
-
-.header__user._off .user_login a:hover {
-  color: #003399;
 }
 
 .header__user__name strong {
@@ -6713,41 +6678,11 @@ fieldset {
 
 .product-page .sort-title {
   margin-top: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .product-page .sort-title h4 {
   font-weight: 500;
   margin-bottom: 15px;
-}
-
-.product-page .sort-title .btn-reset {
-  padding-left: 22px;
-  font-size: 12px;
-  text-decoration: underline;
-  margin-left: 20px;
-  position: relative;
-}
-
-.product-page .sort-title .btn-reset::before {
-  position: absolute;
-  left: 0;
-  content: '';
-  width: 15px;
-  height: 18px;
-  background-image: url("../images/css_sprites_2x.png");
-  background-size: 314px 400px;
-  background-repeat: no-repeat;
-  background-position: -222px -84px;
-  top: -3px;
 }
 
 .product-page .product__sort-wrap {
@@ -11330,4 +11265,3 @@ fieldset {
     background: #f9f9f9;
   }
 }
-/*# sourceMappingURL=style.css.map */

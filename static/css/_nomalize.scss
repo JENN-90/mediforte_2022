@@ -170,6 +170,8 @@ button,
 [type="submit"] {
     -webkit-appearance: button; //Correct the inability to style clickable types in iOS and Safari.
     border: 0; 
+    background: transparent;
+    padding: 0;
 }
 
 button::-moz-focus-inner,

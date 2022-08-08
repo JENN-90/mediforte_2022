@@ -258,7 +258,7 @@
                 &::after {
                     width: 20px;
                     height: 18px;
-                    background: url('css_sprites.png') -10px -115px;
+                    background: url('../images/css_sprites.png') -10px -115px;
                     @include sprite(20px, 18px, -10px, -115px)
                 }
 
